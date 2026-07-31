@@ -1,0 +1,63 @@
+YNERA — PERFIL DE LA NUEVA PÁGINA
+
+Objetivo
+Crear una landing premium para Ynera que haga entendible, para personas no técnicas, cómo Datos e Inteligencia Artificial transforman un problema en una solución concreta. La página debe sentirse creativa, cuidada y confiable; no como una demo técnica ni como un videojuego aislado.
+
+Audiencia
+Personas no técnicas que necesitan resolver un problema operativo, analizar datos, crear un sistema o evaluar la seguridad de su infraestructura. Deben entender el valor sin jerga.
+
+Posicionamiento
+Ynera transforma problemas reales en sistemas que funcionan. Datos e Inteligencia Artificial son la especialidad principal. Los sistemas son la forma de llevar esa inteligencia a producción. La ciberseguridad protege la solución antes de ponerla en marcha.
+
+Concepto principal: aventura de scroll
+La parte superior es una experiencia de pixel art premium, narrativa y fluida. El scroll impulsa una sola aventura continua: no son secciones separadas ni saltos bruscos.
+
+Estética
+- Pixel art pulido, expresivo y premium; evitar el look retro tosco o infantil.
+- Referencia de energía: animación de videojuego clásica, con una calidad más elegante y contemporánea.
+- Personajes con vida: caminar, detenerse, mirar, reaccionar y celebrar.
+- Movimiento suave en cámara, personajes y cambios de escena. Debe sentirse agradable tanto en desktop como en celular.
+- El árbol lleva una Y integrada como símbolo de marca Ynera.
+
+Historia del juego
+1. Un árbol con la Y de Ynera se está marchitando.
+2. Un personaje lo observa y detecta que hay un problema.
+3. Toma los datos relevantes.
+4. Va a otro cuarto o estación y los analiza en una computadora: representa Datos e Inteligencia Artificial.
+5. Regresa con una respuesta.
+6. Antes de intervenir, coloca un cerco protector alrededor del árbol: representa Ciberseguridad.
+7. Riega o aplica la solución.
+8. El árbol florece.
+9. El personaje celebra con un salto de victoria de videojuego clásico.
+
+Principio narrativo
+El juego representa el viaje del cliente usando Ynera: problema -> datos -> inteligencia -> protección -> solución -> resultado. Debe leerse sin texto técnico y sin necesidad de explicar mecánicas.
+
+Contenido debajo del juego
+Después de la victoria, una transición breve conecta el relato con la información comercial. Las tarjetas no deben sentirse como un folleto desconectado.
+
+Orden decidido
+1. Juego / historia de scroll.
+2. Transición de victoria: Ynera convierte problemas en soluciones que funcionan.
+3. Servicios, en este orden: Datos, Inteligencia Artificial, Sistemas en producción.
+4. Proyectos y casos reales como prueba del trabajo.
+5. Cierre y llamada a la acción.
+
+Lenguaje
+- Hablar de resultados, claridad, tiempo ahorrado, decisiones y problemas resueltos.
+- Evitar jerga como modelos, infraestructura o arquitectura salvo cuando aporte claridad real.
+- Datos e IA son el motor, no el espectáculo vacío.
+
+CTA
+Al terminar el recorrido y la celebración, invitar a agendar una reunión. La CTA llega como el siguiente paso natural después de ver la solución, no interrumpe la historia.
+
+Criterios adversariales de calidad
+- La página no puede parecer un estudio de videojuegos.
+- La animación debe demostrar la promesa de Ynera, no reemplazarla.
+- Datos e IA deben estar respaldados por servicios y proyectos concretos.
+- Seguridad es una acción específica dentro de la historia, no un adorno repetido.
+- El diseño debe ser fluido y legible en celular; incluir una alternativa de movimiento reducido.
+- Las tarjetas deben funcionar como evidencia comercial, no como contenido agregado al final.
+
+Estado
+Este documento reúne decisiones de dirección y storytelling. Todavía no autoriza implementar ni modificar la página; faltan definir las escenas con mayor detalle antes de producción.
