@@ -1,7 +1,8 @@
+[rtk] /!\ No hook installed — run `rtk init -g` for automatic token savings
 # Ynera 5
 
 Design direction for the next Ynera landing page.
 
-This repository deliberately begins with the approved page profile only. It contains no implementation and does not reuse the earlier Ynera4 site.
+This repository contains approved design material only. It has no page implementation and does not reuse the earlier Ynera4 site.
 
-See [YNERA_PAGINA_PERFIL.txt](YNERA_PAGINA_PERFIL.txt) for the source-of-truth design brief.
+Start with [YNERA_PAGINA_PERFIL.txt](YNERA_PAGINA_PERFIL.txt), the source-of-truth profile, then read the concise [current-state handoff](docs/design/YNERA5_DECISION_LOG_AND_STORYBOARD.md). The latest [non-final storyboard concept](docs/design/concepts/storyboard-latest-return-direction.png) accompanies those documents.
