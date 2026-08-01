@@ -1,3 +1,4 @@
+[rtk] /!\ No hook installed — run `rtk init -g` for automatic token savings
 YNERA — PERFIL DE LA NUEVA PÁGINA
 
 Objetivo
@@ -61,3 +62,13 @@ Criterios adversariales de calidad
 
 Estado
 Este documento reúne decisiones de dirección y storytelling. Todavía no autoriza implementar ni modificar la página; faltan definir las escenas con mayor detalle antes de producción.
+
+Proceso visual acordado
+Antes de crear los recursos finales, presentar opciones visuales de referencia para que el usuario elija la dirección de arte. No producir por cuenta propia todas las imágenes ni fijar una estética final sin esa validación.
+
+Dirección visual seleccionada
+- Opción C2: arquitectura futurista continua en corte lateral, con zonas conectadas para problema, análisis y solución.
+- Tratamiento 2.5D liviano mediante capas ilustradas, parallax y sprites; evitar 3D pesado.
+- Personaje en carrera entre hitos; desacelera y se detiene para observar, tomar datos, analizar, proteger y regar.
+- Símbolos narrativos mínimos: signo de pregunta al detectar el problema; signo de admiración al descubrir la solución.
+- Final sin otro signo: árbol florecido, salto del personaje y destello de victoria.
