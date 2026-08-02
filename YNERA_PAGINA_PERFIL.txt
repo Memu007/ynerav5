@@ -91,3 +91,38 @@ Dirección de arte y producción
 
 Estado
 Este perfil reemplaza cualquier lectura de la preview local como dirección final. No autoriza publicar la preview ni material exploratorio; el único visual vigente en el repositorio es el storyboard actual indicado en el README.
+
+DECISIONES CONFIRMADAS DE PLANIFICACIÓN — 1 DE AGOSTO DE 2026
+
+Mensaje inmediato
+“Convertimos problemas reales en sistemas que funcionan” aparece desde el primer segundo.
+
+Duración y dispositivos
+- Escritorio: recorrido breve, con objetivo de 12 a 15 segundos de avance intencional.
+- Móvil: versión más corta y directa, no un recorte automático de escritorio.
+- El recorrido puede saltearse y contempla prefers-reduced-motion.
+
+Cámara y mundo
+- Cámara lateral.
+- El scroll vertical controla el avance horizontal.
+- Un único mundo continuo con transiciones graduales.
+- Dos zonas claramente distintas dentro de ese mundo: jardín del árbol Y y laboratorio de Datos/IA, conectadas por un corredor futurista.
+- La narrativa ocupa la pantalla completa durante el recorrido.
+
+Movimiento
+- Sistema híbrido: el scroll gobierna desplazamiento, cámara y parallax; en cada hito se completa una microanimación breve y fluida.
+- El personaje, el fondo y los objetos interactivos se producen en capas separadas.
+- El personaje puede correr, frenar, mirar, reaccionar y festejar independientemente de la escena.
+- Textos: una frase breve flotante e integrada por acción; evitar una banda fija dominante.
+
+Protagonista
+Representa al cliente. Usa un traje futurista de exploración, neutro y sin género marcado. No debe parecer un astronauta literal ni convertir el concepto en un juego espacial.
+
+Dirección visual
+Se confirma un 2.5D futurista, luminoso y premium, con pixelado sutil. No usar 8-bit tosco. La paleta vigente es provisional: cualquier rediseño requiere un estudio serio de marca y aprobación antes de aplicarse.
+
+Prueba comercial posterior
+Aira, CDI y ReservaYá son los casos confirmados. Se mostrarán y enlazarán sus páginas reales. Mientras no existan resultados cuantitativos documentados, no inventar métricas.
+
+Prioridad actual
+Primero cerrar correctamente la experiencia visual y narrativa. Los detalles comerciales secundarios se resolverán después; no deben desviar la definición del mundo, la interacción ni el movimiento.
