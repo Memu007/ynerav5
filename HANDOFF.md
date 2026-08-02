@@ -97,8 +97,11 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Tarjetas de proyectos compactas, sin altura forzada y con imágenes 16:9.
 - Ejes horizontales del encabezado y las secciones unificados a 6 vw; anclas compensadas para el header fijo.
 - En móvil, problemas, capacidades, proyectos y método usan carruseles nativos con `scroll-snap`; el recorrido baja a 240 vh y se compactan tipografía, espacios y cierre.
+- Los cuatro carruseles móviles muestran una barra de avance que refleja la porción visible y progresa hasta el último slide.
+- La pausa de análisis ocupa el bloque completo 03; la vuelta conserva cuadros de carrera y se detiene en un cuadro estable cuando cesa el scroll.
+- La computadora de análisis fue reducida y desplazada para que el personaje quede frente al teclado sin atravesar el pedestal.
 - La v24 precarga los sprites y usa dos capas con crossfade de 75 ms. La prueba real demostró que no resuelve el problema: el fundido dura más que cada cuadro de 70 ms, superpone poses incompatibles y genera ghosting.
-- Caché invalidada mediante `styles.css?v=24` y `app.js?v=24`.
+- Caché invalidada mediante `styles.css?v=28` y `app.js?v=28`.
 - Preparación Railway documentada en `RAILWAY.md`; el hosting estático vigente funciona sin build ni servidor propio.
 
 ## Diagnóstico multiagente de fluidez (pendiente crítico)

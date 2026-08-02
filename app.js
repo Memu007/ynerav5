@@ -39,17 +39,18 @@ function draw(time=0){
   lastTime=time;
   const damping=1-Math.exp(-delta/72);
   current=reduce?target:lerp(current,target,damping);
-  const outward=smooth(range(current,.18,.46));
-  const returning=smooth(range(current,.49,.78));
+  const moving=Math.abs(target-current)>.001;
+  const outward=smooth(range(current,.18,.4));
+  const returning=smooth(range(current,.6,.8));
   const travel=current<.5?outward:1-returning;
   const worldX=-travel*48;
   const storyPhase=Math.min(7,Math.floor(current*8));
   const phase=Math.min(4,Math.floor(current*5));
-  const running=(current>.18&&current<.46)||(current>.49&&current<.78);
+  const running=(current>.18&&current<.4)||(current>.6&&current<.8);
   const facing=running?(current>.5?-1:1):([0,1,5,6].includes(storyPhase)?-1:1);
-  const bob=running?Math.sin(time/70*Math.PI)*3:0;
-  const frame=running?Math.floor(time/70)%runFrames.length:1;
-  const action=storyPhase===0?0:storyPhase===1?1:storyPhase===3?2:storyPhase===5?3:storyPhase===6?4:storyPhase===7?5:1;
+  const bob=running&&moving?Math.sin(time/70*Math.PI)*3:0;
+  const frame=running&&moving?Math.floor(time/70)%runFrames.length:1;
+  const action=current>=.4&&current<.6?2:storyPhase===0?0:storyPhase===1?1:storyPhase===5?3:storyPhase===6?4:storyPhase===7?5:1;
 
   world.style.transform=`translate3d(${worldX}vw,0,0)`;
   trees.forEach(tree=>tree.style.transform=`translate3d(${worldX}vw,0,0)`);
@@ -83,7 +84,7 @@ function draw(time=0){
   bloom.style.opacity=String(range(current,.85,.94));
   bloom.style.transform=`scale(${lerp(.6,1.15,range(current,.85,.97))})`;
 
-  if(Math.abs(target-current)>.001||running) raf=requestAnimationFrame(draw); else raf=0;
+  if(moving) raf=requestAnimationFrame(draw); else raf=0;
 }
 
 document.querySelector('.skip').addEventListener('click',()=>{
@@ -94,3 +95,16 @@ document.querySelector('.skip').addEventListener('click',()=>{
 addEventListener('scroll',readScroll,{passive:true});
 addEventListener('resize',readScroll);
 readScroll();
+
+document.querySelectorAll('.problem-grid,.capability-path,.project-grid,.method-steps').forEach(carousel=>{
+  const progress=document.createElement('div');
+  const bar=document.createElement('i');
+  const update=()=>bar.style.transform=`scaleX(${clamp((carousel.scrollLeft+carousel.clientWidth)/carousel.scrollWidth)})`;
+  progress.className='carousel-progress';
+  progress.setAttribute('aria-hidden','true');
+  progress.append(bar);
+  carousel.after(progress);
+  carousel.addEventListener('scroll',update,{passive:true});
+  addEventListener('resize',update);
+  update();
+});
