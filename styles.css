@@ -19,3 +19,9 @@ a{color:inherit;text-decoration:none}
 .closing{position:relative;min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 6vw;text-align:center;background:#113c3a;color:#f7f2e8;overflow:hidden}.closing h2{max-width:920px}.primary-cta{display:inline-flex;align-items:center;gap:38px;margin-top:35px;padding:17px 20px 17px 28px;border-radius:99px;background:#e8c36f;color:#173c3b;font-weight:700}.primary-cta span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#173c3b;color:#fff}.mini-tree{position:absolute;inset:auto 0 0;height:65%;opacity:.09}.mini-tree i{position:absolute;left:50%;bottom:-25%;width:18px;height:100%;border-radius:30px;background:#fff;transform-origin:bottom}.mini-tree i:nth-child(2){transform:rotate(42deg)}.mini-tree i:nth-child(3){transform:rotate(-42deg)}
 @media(max-width:800px){.site-header nav a:not(.nav-cta){display:none}.intro{left:6vw;right:auto;top:17vh;width:88vw}.intro h1{font-size:48px}.story{height:360vh}.explorer{left:46vw;width:155px}.beats{width:84vw}.beat p{font-size:12px}.capability-path{grid-template-columns:1fr}.capability-path:before{display:none}.capability-path article{padding-top:30px}.capability-path article>span{display:none}.case-line a{grid-template-columns:1fr auto}.case-line span{grid-column:1/-1}.world-image{width:190vw}.skip{top:76px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-cue span{animation:none}.beat{transition:none}}
+
+/* Keep the moving layers GPU-cheap and crossfade narrative beats. */
+.world{contain:layout paint}
+.world-image:after{background:linear-gradient(90deg,rgba(224,232,213,.78) 42%,rgba(224,232,213,.62) 68%,transparent);backdrop-filter:none;-webkit-backdrop-filter:none}
+.tree-decay{backdrop-filter:none;-webkit-backdrop-filter:none}
+.beat{visibility:visible;pointer-events:none;transition:opacity .32s ease,transform .32s ease}

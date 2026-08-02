@@ -19,10 +19,12 @@ const runFrames=Array.from({length:6},(_,i)=>`assets/run-frame-${i}.webp`);
 const actionFrames=Array.from({length:6},(_,i)=>`assets/action-frame-${i}.webp`);
 [...runFrames,...actionFrames].forEach(src=>{const image=new Image();image.src=src});
 let target=0,current=0,raf=0;
+let lastTime=0,lastPhase=-1,lastFrame='';
 
 const clamp=(n,min=0,max=1)=>Math.min(max,Math.max(min,n));
 const range=(n,a,b)=>clamp((n-a)/(b-a));
 const lerp=(a,b,t)=>a+(b-a)*t;
+const smooth=n=>n*n*(3-2*n);
 
 function readScroll(){
   const rect=story.getBoundingClientRect();
@@ -31,29 +33,35 @@ function readScroll(){
 }
 
 function draw(time=0){
-  current=reduce?target:lerp(current,target,.22);
-  const outward=range(current,.25,.375);
-  const returning=range(current,.5,.625);
+  const delta=Math.min(48,lastTime?time-lastTime:16.7);
+  lastTime=time;
+  const damping=1-Math.exp(-delta/72);
+  current=reduce?target:lerp(current,target,damping);
+  const outward=smooth(range(current,.18,.46));
+  const returning=smooth(range(current,.49,.78));
   const travel=current<.5?outward:1-returning;
   const worldX=-travel*48;
   const phase=Math.min(7,Math.floor(current*8));
-  const running=(current>.25&&current<.375)||(current>.5&&current<.625);
+  const running=(current>.18&&current<.46)||(current>.49&&current<.78);
   const facing=running?(current>.5?-1:1):([0,1,5,6].includes(phase)?-1:1);
-  const bob=running?Math.sin(time/85*Math.PI)*4:0;
-  const frame=running?Math.floor(time/85)%runFrames.length:1;
+  const bob=running?Math.sin(time/70*Math.PI)*3:0;
+  const frame=running?Math.floor(time/70)%runFrames.length:1;
   const action=phase===0?0:phase===1?1:phase===3?2:phase===5?3:phase===6?4:phase===7?5:1;
 
   world.style.transform=`translate3d(${worldX}vw,0,0)`;
   trees.forEach(tree=>tree.style.transform=`translate3d(${worldX}vw,0,0)`);
   computer.style.transform=`translate3d(${worldX}vw,0,0)`;
   const characterFrame=running?runFrames[frame]:actionFrames[action];
-  if(!explorer.src.endsWith(characterFrame)) explorer.src=characterFrame;
-  explorer.style.transform=`translate3d(${(outward-returning)*14}vw,${bob}px,0) scaleX(${facing})`;
+  if(characterFrame!==lastFrame){explorer.src=characterFrame;lastFrame=characterFrame}
+  explorer.style.transform=`translate3d(${(outward-returning)*18}vw,${bob}px,0) scaleX(${facing})`;
   explorer.style.opacity='1';
   progressBar.style.transform=`scaleX(${current})`;
   intro.style.opacity=String(1-range(current,.04,.15));
   intro.style.transform=`translateY(${-range(current,.04,.15)*18}px)`;
-  beats.forEach((beat,i)=>beat.classList.toggle('is-active',i===phase));
+  if(phase!==lastPhase){
+    beats.forEach((beat,i)=>beat.classList.toggle('is-active',i===phase));
+    lastPhase=phase;
+  }
   question.style.opacity=String(1-range(current,.08,.14));
   trail.style.opacity=String(range(current,.14,.22)*(1-range(current,.46,.5)));
   trail.style.transform=`scaleX(${range(current,.14,.375)})`;

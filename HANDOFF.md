@@ -44,7 +44,10 @@ Cada hito integra tres capas en la misma escena: acción narrativa, capacidad co
 - Signo de pregunta al detectar, signo de admiración al resolver, rastro de datos, perímetro de seguridad, riego y celebración.
 - Ocho hitos con duraciones equivalentes para reducir saltos de contenido.
 - Recorrido reducido a `440vh`: aproximadamente 3,4 pantallas de desplazamiento efectivo, frente a más de cinco en la versión anterior.
-- Respuesta del scroll ajustada a `0.22` para que texto, cámara y personaje se mantengan sincronizados.
+- Suavizado independiente de los FPS mediante amortiguación temporal; cámara y personaje mantienen la misma respuesta en pantallas de distinta frecuencia.
+- Carrera extendida durante los trayectos completos, con cuadros a 70 ms y desplazamiento continuo de 18 vw.
+- Cambios de texto con fundido cruzado y actualizaciones del DOM sólo cuando cambia el hito.
+- Los filtros costosos sobre capas móviles fueron reemplazados por gradientes estáticos para evitar tirones.
 - Opción visible para saltar el recorrido.
 - Manejo básico de `prefers-reduced-motion`.
 - HTML, CSS y JavaScript nativos; no hay dependencias externas.
@@ -82,7 +85,7 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Recorrido probado desde una visita nueva con desplazamientos grandes y normales.
 - Se comprobó la secuencia de los ocho servicios, el laboratorio, el regreso del árbol y la transformación final.
 - Consola del navegador sin errores.
-- Caché invalidada mediante `styles.css?v=14` y `app.js?v=14`.
+- Caché invalidada mediante `styles.css?v=15` y `app.js?v=15`.
 
 ## Limitaciones y siguientes prioridades
 
