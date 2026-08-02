@@ -39,13 +39,13 @@ Cada hito integra tres capas en la misma escena: acción narrativa, capacidad co
 
 - Cámara lateral en un único mundo continuo con jardín, corredor y laboratorio.
 - El fondo, el árbol y la computadora comparten coordenadas de mundo: no se difuminan ni teletransportan; salen del encuadre cuando la cámara viaja.
-- Personaje en capa independiente con seis cuadros de carrera y seis poses de acción.
+- Personaje en capa independiente con seis cuadros de carrera y seis poses de acción. La implementación v24 usa dos capas con crossfade, pero queda **rechazada como solución final** por ghosting y cadencia irregular.
 - El árbol enfermo permanece como base; el árbol sano se revela de abajo hacia arriba, sin un corte de desaparición.
 - Signo de pregunta al detectar, signo de admiración al resolver, rastro de datos, perímetro de seguridad, riego y celebración.
 - Cinco hitos comerciales condensan las ocho acciones visuales sin perder la historia.
 - Recorrido reducido a `340vh` para evitar fatiga.
-- Suavizado independiente de los FPS mediante amortiguación temporal; cámara y personaje mantienen la misma respuesta en pantallas de distinta frecuencia.
-- Carrera extendida durante los trayectos completos, con cuadros a 70 ms y desplazamiento continuo de 18 vw.
+- Suavizado de cámara mediante amortiguación temporal y desplazamiento continuo de 18 vw.
+- La posición espacial se interpola a la frecuencia de pantalla, pero el ciclo corporal vigente cambia imágenes cada 70 ms; esa combinación todavía se percibe trabada en Brave/Chromium.
 - Cambios de texto con fundido cruzado y actualizaciones del DOM sólo cuando cambia el hito.
 - Los filtros costosos sobre capas móviles fueron reemplazados por gradientes estáticos para evitar tirones.
 - Opción visible para saltar el recorrido.
@@ -97,18 +97,43 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Tarjetas de proyectos compactas, sin altura forzada y con imágenes 16:9.
 - Ejes horizontales del encabezado y las secciones unificados a 6 vw; anclas compensadas para el header fijo.
 - En móvil, problemas, capacidades, proyectos y método usan carruseles nativos con `scroll-snap`; el recorrido baja a 240 vh y se compactan tipografía, espacios y cierre.
-- El personaje usa dos capas de sprites con precarga/decodificación y crossfade de 75 ms para evitar cortes al cambiar de cuadro en Brave y Chromium.
+- La v24 precarga los sprites y usa dos capas con crossfade de 75 ms. La prueba real demostró que no resuelve el problema: el fundido dura más que cada cuadro de 70 ms, superpone poses incompatibles y genera ghosting.
 - Caché invalidada mediante `styles.css?v=24` y `app.js?v=24`.
 - Preparación Railway documentada en `RAILWAY.md`; el hosting estático vigente funciona sin build ni servidor propio.
 
+## Diagnóstico multiagente de fluidez (pendiente crítico)
+
+Tres revisiones independientes —motion, rendimiento Chromium y diseño premium— coincidieron en que el cuello de botella no es Brave:
+
+1. Los seis sprites tienen encuadres y apoyos diferentes; al cambiar de cuadro el cuerpo y los pies saltan.
+2. El crossfade dura `75 ms` y el cuadro sólo `70 ms`, por lo que una transición comienza antes de terminar la anterior.
+3. `draw()` continúa solicitando frames mientras el personaje está dentro de una zona de carrera, aunque el usuario haya detenido el scroll. Esto mantiene CPU/GPU activas y degrada la cadencia.
+4. Cada evento de scroll lee `getBoundingClientRect()` y `offsetHeight`; conviene cachear inicio y distancia en carga/resize y durante scroll leer únicamente `scrollY`.
+5. El árbol sano se revela con `clip-path` sobre una imagen grande y varias capas móviles conservan `drop-shadow`; pueden producir picos de pintura al final del recorrido.
+
+### Orden exacto recomendado para continuar
+
+1. **Eliminar el crossfade del ciclo de carrera.** Mantener fundidos sólo para poses narrativas, con 120–160 ms y únicamente al cambiar de acción.
+2. **Crear una sola sprite sheet de carrera** con los seis cuadros normalizados al mismo canvas, escala y punto de apoyo. Animarla con CSS `steps(6)` a 10–12 fps; la posición del personaje y la cámara continúan a 60 fps.
+3. **Quitar el `bob` rápido actual** o sustituirlo por 1–2 px en un ciclo de 320–380 ms. El sprite ya comunica el movimiento vertical.
+4. **Detener el rAF al terminar el suavizado.** El ciclo de piernas puede seguir en CSS; JavaScript no debe permanecer activo sólo porque el scroll quedó dentro de un tramo de carrera.
+5. **Cachear métricas del recorrido** en carga y resize para evitar lecturas de layout en cada scroll.
+6. Después, si todavía hay tirones, reemplazar el `clip-path` del árbol por opacidad/transform y agrupar las capas del mundo para aplicar una sola transformación.
+
+Objetivo de validación: movimiento espacial estable a 60 fps, al menos 55 fps sostenidos en Chromium/Brave, ningún frame largo mayor a 50 ms y CPU en reposo aproximadamente 250 ms después de detener el scroll.
+
 ## Limitaciones y siguientes prioridades
 
-1. Diseñar una versión móvil nativa más corta; la actual es sólo una adaptación básica.
+1. Resolver y validar la fluidez según el plan anterior antes de sumar cualquier efecto.
 2. Agregar enlace y captura de Aira cuando estén confirmados.
 3. Incorporar una agenda real cuando esté definida.
-4. Optimizar las imágenes a WebP/AVIF y medir carga en dispositivos reales.
+4. Optimizar las imágenes y medir carga en dispositivos reales.
 5. Revisar accesibilidad de contraste, teclado y reduced motion antes de producción.
 6. Hacer un estudio de marca antes de cambiar la paleta provisional.
+
+## Nota Railway
+
+Si Railpack muestra una ruta como `snapshot-target-unpack/https:/github.com/Memu007/ynerav5`, el campo **Root Directory** está mal configurado. Debe quedar vacío o como `/`; la URL del repositorio se selecciona en **Source**, no como directorio.
 
 ## Criterio adversarial
 
