@@ -96,7 +96,8 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - El carril del personaje comienza a 53 vw para que el panel narrativo no tape su cuerpo al apoyarlo en el piso.
 - Tarjetas de proyectos compactas, sin altura forzada y con imágenes 16:9.
 - Ejes horizontales del encabezado y las secciones unificados a 6 vw; anclas compensadas para el header fijo.
-- Caché invalidada mediante `styles.css?v=22` y `app.js?v=22`.
+- En móvil, problemas, capacidades, proyectos y método usan carruseles nativos con `scroll-snap`; el recorrido baja a 240 vh y se compactan tipografía, espacios y cierre.
+- Caché invalidada mediante `styles.css?v=23` y `app.js?v=23`.
 - Preparación Railway documentada en `RAILWAY.md`; el hosting estático vigente funciona sin build ni servidor propio.
 
 ## Limitaciones y siguientes prioridades
