@@ -91,7 +91,10 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Recorrido probado desde una visita nueva con desplazamientos grandes y normales.
 - Se comprobó la secuencia visual completa, los cinco mensajes, el laboratorio, el regreso del árbol y la transformación final.
 - Consola del navegador sin errores.
-- Caché invalidada mediante `styles.css?v=16` y `app.js?v=16`.
+- Piso visual elevado a 16 vh para alinear árbol, personaje y laboratorio por encima del panel narrativo.
+- El sprite usa altura automática para que sus pies, y no una caja transparente de 512 px, queden anclados al piso.
+- El carril del personaje comienza a 53 vw para que el panel narrativo no tape su cuerpo al apoyarlo en el piso.
+- Caché invalidada mediante `styles.css?v=19` y `app.js?v=19`.
 
 ## Limitaciones y siguientes prioridades
 

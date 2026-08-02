@@ -25,7 +25,10 @@ a{color:inherit;text-decoration:none}
 .world-image:after{background:linear-gradient(90deg,rgba(224,232,213,.78) 42%,rgba(224,232,213,.62) 68%,transparent);backdrop-filter:none;-webkit-backdrop-filter:none}
 .tree-decay{backdrop-filter:none;-webkit-backdrop-filter:none}
 .beat{visibility:visible;pointer-events:none;transition:opacity .32s ease,transform .32s ease}
-.explorer{bottom:7vh}
+.explorer{left:53vw;bottom:15.5vh;height:auto}
+.story-tree{bottom:15.5vh}
+.analysis-computer{bottom:13.5vh}
+.world:before{content:"";position:absolute;z-index:6;left:0;right:0;bottom:0;height:16vh;border-top:1px solid rgba(185,255,227,.28);background:linear-gradient(180deg,rgba(18,62,59,.18),rgba(7,31,32,.5));box-shadow:0 -18px 42px rgba(9,45,43,.12);pointer-events:none}
 a:focus-visible,button:focus-visible{outline:3px solid #e8c36f;outline-offset:4px}
 
 .skip-link{position:fixed;z-index:100;left:16px;top:12px;padding:10px 14px;background:#fff;color:var(--ink);transform:translateY(-150%)}.skip-link:focus{transform:none}
