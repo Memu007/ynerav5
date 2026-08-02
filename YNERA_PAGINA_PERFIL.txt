@@ -1,128 +1,44 @@
-YNERA — PERFIL DE LA NUEVA PÁGINA
+YNERA 5 — PERFIL VIGENTE
 
 Objetivo
-Crear una landing premium para Ynera que haga entendible, para personas no técnicas, cómo Datos e Inteligencia Artificial transforman un problema en una solución concreta. La página debe sentirse creativa, cuidada y confiable; no como una demo técnica ni como un videojuego aislado.
+Crear una web premium para personas no técnicas que muestre cómo Ynera convierte problemas reales en sistemas que funcionan. Datos e Inteligencia Artificial son el motor; Sistemas lleva la solución a producción y Ciberseguridad la protege.
 
 Audiencia
-Personas no técnicas que necesitan resolver un problema operativo, analizar datos, crear un sistema o evaluar la seguridad de su infraestructura. Deben entender el valor sin jerga.
+Dueños, responsables y equipos de negocio que necesitan analizar información, crear una solución digital, automatizar una operación o evaluar riesgos, sin exigirles conocimientos técnicos.
 
-Posicionamiento
-Ynera transforma problemas reales en sistemas que funcionan. Datos e Inteligencia Artificial son la especialidad principal. Los sistemas son la forma de llevar esa inteligencia a producción. La ciberseguridad protege la solución antes de ponerla en marcha.
+Concepto
+Un Scroll World lateral continuo. El cliente-personaje detecta un árbol Y marchito, toma datos, viaja a un laboratorio, analiza con IA, vuelve, protege, implementa y consigue que el árbol florezca. El scroll controla cámara y avance; las microanimaciones completan cada acción.
 
-Concepto principal: aventura de scroll
-La parte superior es una experiencia de pixel art premium, narrativa y fluida. El scroll impulsa una sola aventura continua: no son secciones separadas ni saltos bruscos.
+Mensaje principal
+“Convertimos problemas reales en sistemas que funcionan.”
 
-Estética
-- Pixel art pulido, expresivo y premium; evitar el look retro tosco o infantil.
-- Referencia de energía: animación de videojuego clásica, con una calidad más elegante y contemporánea.
-- Personajes con vida: caminar, detenerse, mirar, reaccionar y celebrar.
-- Movimiento suave en cámara, personajes y cambios de escena. Debe sentirse agradable tanto en desktop como en celular.
-- El árbol lleva una Y integrada como símbolo de marca Ynera.
-
-Historia del juego
-1. Un árbol con la Y de Ynera se está marchitando.
-2. Un personaje lo observa y detecta que hay un problema.
-3. Toma los datos relevantes.
-4. Va a otro cuarto o estación y los analiza en una computadora: representa Datos e Inteligencia Artificial.
-5. Regresa con una respuesta.
-6. Antes de intervenir, coloca un cerco protector alrededor del árbol: representa Ciberseguridad.
-7. Riega o aplica la solución.
-8. El árbol florece.
-9. El personaje celebra con un salto de victoria de videojuego clásico.
-
-Principio narrativo
-El juego representa el viaje del cliente usando Ynera: problema -> datos -> inteligencia -> protección -> solución -> resultado. Debe leerse sin texto técnico y sin necesidad de explicar mecánicas.
-
-Contenido debajo del juego
-Después de la victoria, una transición breve conecta el relato con la información comercial. Las tarjetas no deben sentirse como un folleto desconectado.
-
-Orden decidido
-1. Juego / historia de scroll.
-2. Transición de victoria: Ynera convierte problemas en soluciones que funcionan.
-3. Servicios, en este orden: Datos, Inteligencia Artificial, Sistemas en producción.
-4. Proyectos y casos reales como prueba del trabajo.
-5. Cierre y llamada a la acción.
-
-Lenguaje
-- Hablar de resultados, claridad, tiempo ahorrado, decisiones y problemas resueltos.
-- Evitar jerga como modelos, infraestructura o arquitectura salvo cuando aporte claridad real.
-- Datos e IA son el motor, no el espectáculo vacío.
-
-CTA
-Al terminar el recorrido y la celebración, invitar a agendar una reunión. La CTA llega como el siguiente paso natural después de ver la solución, no interrumpe la historia.
-
-Criterios adversariales de calidad
-- La página no puede parecer un estudio de videojuegos.
-- La animación debe demostrar la promesa de Ynera, no reemplazarla.
-- Datos e IA deben estar respaldados por servicios y proyectos concretos.
-- Seguridad es una acción específica dentro de la historia, no un adorno repetido.
-- El diseño debe ser fluido y legible en celular; incluir una alternativa de movimiento reducido.
-- Las tarjetas deben funcionar como evidencia comercial, no como contenido agregado al final.
-
-Estado
-Este documento reúne decisiones de dirección y storytelling. Todavía no autoriza implementar ni modificar la página; faltan definir las escenas con mayor detalle antes de producción.
-
-Proceso visual acordado
-Antes de crear los recursos finales, presentar opciones visuales de referencia para que el usuario elija la dirección de arte. No producir por cuenta propia todas las imágenes ni fijar una estética final sin esa validación.
-
-Dirección visual seleccionada
-- Opción C2: arquitectura futurista continua en corte lateral, con zonas conectadas para problema, análisis y solución.
-- Tratamiento 2.5D liviano mediante capas ilustradas, parallax y sprites; evitar 3D pesado.
-- Personaje en carrera entre hitos; desacelera y se detiene para observar, tomar datos, analizar, proteger y regar.
-- Símbolos narrativos mínimos: signo de pregunta al detectar el problema; signo de admiración al descubrir la solución.
-- Final sin otro signo: árbol florecido, salto del personaje y destello de victoria.
-
-Actualización vigente — estructura de la experiencia
-El HTML/mockup actual queda rechazado como diseño final: no debe existir un storyboard/juego arriba y una landing genérica de “AI SaaS” debajo. Scroll World es la estructura de la página, no una imagen decorativa. La experiencia debe ser un mundo narrativo sticky, continuo y de scroll breve, con progreso suavizado que mueva protagonista, cámara, capas de parallax y transiciones de escena.
-
-La propuesta de valor debe aparecer inmediatamente y el recorrido debe poder saltearse. El balance objetivo es aproximadamente 60% viaje narrativo y 40% información/proof estable: no todo párrafo se anima. Datos aparece al medir y recolectar; Inteligencia Artificial en el laboratorio separado; Seguridad al desplegar el perímetro; Sistemas/implementación al aplicar la solución y restaurar el árbol. Tras el florecimiento, el mismo mundo transiciona hacia Aira, CDI y ReservaYá, y a una CTA breve, sin un corte duro a tarjetas ajenas.
-
-Continuidad aprobada
-Árbol claramente en forma de Y y marchito -> signo de pregunta -> recolección de datos -> carrera hacia la derecha a un laboratorio separado -> análisis sin árbol presente -> signo de admiración -> regreso desde la derecha -> instalación de protección -> riego/aplicación -> árbol florece -> salto de victoria y destello contenidos -> CTA.
-
-Dirección de arte y producción
-- El storyboard vigente es un blueprint, no arte de producción final.
-- Crear ilustración propia, por capas, 2.5D, luminosa, futurista y liviana; evitar laboratorio blanco/azul genérico, anime/JRPG, cyberpunk oscuro y estética infantil.
-- Sustituir la cerca doméstica blanca por un perímetro tecnológico refinado y desplegable.
-- Dar al protagonista una silueta/vestuario distintivo de Ynera; mantener la Y del árbol legible pero orgánica.
-- Eliminar de la imagen final etiquetas genéricas “Data & AI” y exceso de gráficos/dashboards; mantener la victoria sobria.
-- El resultado debe sentirse premium, inteligente y creativo, propio de un desarrollo a medida de alta gama.
-- Conservar HTML semántico, accesibilidad y contenido legible. Incluir alternativa mobile-first y prefers-reduced-motion.
-
-Estado
-Este perfil reemplaza cualquier lectura de la preview local como dirección final. No autoriza publicar la preview ni material exploratorio; el único visual vigente en el repositorio es el storyboard actual indicado en el README.
-
-DECISIONES CONFIRMADAS DE PLANIFICACIÓN — 1 DE AGOSTO DE 2026
-
-Mensaje inmediato
-“Convertimos problemas reales en sistemas que funcionan” aparece desde el primer segundo.
-
-Duración y dispositivos
-- Escritorio: recorrido breve, con objetivo de 12 a 15 segundos de avance intencional.
-- Móvil: versión más corta y directa, no un recorte automático de escritorio.
-- El recorrido puede saltearse y contempla prefers-reduced-motion.
-
-Cámara y mundo
-- Cámara lateral.
-- El scroll vertical controla el avance horizontal.
-- Un único mundo continuo con transiciones graduales.
-- Dos zonas claramente distintas dentro de ese mundo: jardín del árbol Y y laboratorio de Datos/IA, conectadas por un corredor futurista.
-- La narrativa ocupa la pantalla completa durante el recorrido.
-
-Movimiento
-- Sistema híbrido: el scroll gobierna desplazamiento, cámara y parallax; en cada hito se completa una microanimación breve y fluida.
-- El personaje, el fondo y los objetos interactivos se producen en capas separadas.
-- El personaje puede correr, frenar, mirar, reaccionar y festejar independientemente de la escena.
-- Textos: una frase breve flotante e integrada por acción; evitar una banda fija dominante.
-
-Protagonista
-Representa al cliente. Usa un traje futurista de exploración, neutro y sin género marcado. No debe parecer un astronauta literal ni convertir el concepto en un juego espacial.
+Capacidades integradas al recorrido
+1. Diagnóstico: entender el problema.
+2. Datos: capturar y ordenar señales.
+3. Ingeniería: conectar fuentes y sistemas.
+4. IA aplicada: encontrar patrones y respuestas.
+5. Producto: traducir el hallazgo a una solución usable.
+6. Ciberseguridad: probar y reducir riesgos.
+7. Sistemas: integrar, automatizar y poner en producción.
+8. Impacto: medir y mejorar resultados.
 
 Dirección visual
-Se confirma un 2.5D futurista, luminoso y premium, con pixelado sutil. No usar 8-bit tosco. La paleta vigente es provisional: cualquier rediseño requiere un estudio serio de marca y aprobación antes de aplicarse.
+- Arquitectura 2.5D futurista, lateral, luminosa y premium.
+- Pixelado sutil, nunca 8-bit tosco.
+- Marfil, verdes botánicos, teal y oro suave como paleta provisional.
+- Personaje neutral con traje de exploración.
+- Árbol con Y de marca claramente legible.
+- Evitar anime, cyberpunk oscuro, estilo infantil y estética genérica de AI SaaS.
 
-Prueba comercial posterior
-Aira, CDI y ReservaYá son los casos confirmados. Se mostrarán y enlazarán sus páginas reales. Mientras no existan resultados cuantitativos documentados, no inventar métricas.
+Estructura
+1. Promesa y recorrido narrativo breve, saltable.
+2. Puente: “Lo que viste es cómo trabajamos”.
+3. Servicios como explicación estable.
+4. Casos: Aira, CDI y ReservaYá.
+5. CTA: “Agendá una reunión”.
 
-Prioridad actual
-Primero cerrar correctamente la experiencia visual y narrativa. Los detalles comerciales secundarios se resolverán después; no deben desviar la definición del mundo, la interacción ni el movimiento.
+Estado
+Existe una versión de escritorio funcional en HTML, CSS y JavaScript nativos. El recorrido ocupa aproximadamente 3,4 pantallas efectivas, tiene ocho hitos equivalentes y fue probado sin errores de consola. Mobile, enlaces reales, optimización de imágenes y agenda definitiva quedan pendientes antes de producción.
+
+Fuente de detalle
+Consultar HANDOFF.md. El storyboard de docs/current-storyboard.png es referencia conceptual histórica y no arte final.
