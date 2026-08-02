@@ -1,4 +1,3 @@
-[rtk] /!\ No hook installed — run `rtk init -g` for automatic token savings
 # Ynera 5
 
 Design direction for the next Ynera landing page.
