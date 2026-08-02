@@ -40,3 +40,18 @@ No separar juego y sitio comercial; no hacer una landing AI intercambiable; no a
 ## Referencia vigente
 
 [docs/current-storyboard.png](docs/current-storyboard.png) es el único storyboard publicado y es **concept art no final**.
+
+## Decisiones de planificación confirmadas — 1 de agosto de 2026
+
+- La promesa **“Convertimos problemas reales en sistemas que funcionan”** aparece desde el primer segundo.
+- El recorrido de escritorio debe sentirse breve: objetivo de **12–15 segundos** de avance intencional. En móvil habrá una versión todavía más corta y directa.
+- Cámara **lateral**. El scroll vertical hace avanzar horizontalmente al personaje y al mundo.
+- Un solo mundo continuo, dividido narrativamente en dos zonas: **jardín del árbol Y** y **laboratorio de Datos/IA**, conectados mediante un corredor futurista y cambios graduales.
+- El recorrido ocupa la pantalla completa durante la parte narrativa y ofrece una opción visible para **saltearlo**.
+- Movimiento híbrido: el scroll controla cámara y desplazamiento; al llegar a cada hito se completan microanimaciones breves y fluidas.
+- El protagonista representa al cliente. Lleva un traje de exploración futurista neutro, sin género marcado y sin parecer un astronauta literal.
+- Personaje, fondos y elementos interactivos deben producirse en capas separadas. El personaje tendrá animación propia para correr, frenar, observar, reaccionar y celebrar.
+- Dirección confirmada: **2.5D futurista con pixelado sutil**, luminosa y refinada; evitar 8-bit tosco.
+- Cada acción puede llevar una frase breve flotante integrada en el mundo; evitar una franja de texto fija y pesada.
+- La paleta actual es provisional. No se rediseña sin un estudio serio de marca y aprobación explícita.
+- Casos confirmados para una etapa posterior: **Aira, CDI y ReservaYá**. Mostrar las páginas reales y enlazarlas; no inventar métricas.
