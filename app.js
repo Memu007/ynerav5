@@ -41,12 +41,13 @@ function draw(time=0){
   const returning=smooth(range(current,.49,.78));
   const travel=current<.5?outward:1-returning;
   const worldX=-travel*48;
-  const phase=Math.min(7,Math.floor(current*8));
+  const storyPhase=Math.min(7,Math.floor(current*8));
+  const phase=Math.min(4,Math.floor(current*5));
   const running=(current>.18&&current<.46)||(current>.49&&current<.78);
-  const facing=running?(current>.5?-1:1):([0,1,5,6].includes(phase)?-1:1);
+  const facing=running?(current>.5?-1:1):([0,1,5,6].includes(storyPhase)?-1:1);
   const bob=running?Math.sin(time/70*Math.PI)*3:0;
   const frame=running?Math.floor(time/70)%runFrames.length:1;
-  const action=phase===0?0:phase===1?1:phase===3?2:phase===5?3:phase===6?4:phase===7?5:1;
+  const action=storyPhase===0?0:storyPhase===1?1:storyPhase===3?2:storyPhase===5?3:storyPhase===6?4:storyPhase===7?5:1;
 
   world.style.transform=`translate3d(${worldX}vw,0,0)`;
   trees.forEach(tree=>tree.style.transform=`translate3d(${worldX}vw,0,0)`);
@@ -76,7 +77,11 @@ function draw(time=0){
   if(Math.abs(target-current)>.001||running) raf=requestAnimationFrame(draw); else raf=0;
 }
 
-document.querySelector('.skip').addEventListener('click',()=>document.querySelector('#capacidades').scrollIntoView());
+document.querySelector('.skip').addEventListener('click',()=>{
+  const destination=document.querySelector('#servicios');
+  destination.scrollIntoView();
+  destination.focus({preventScroll:true});
+});
 addEventListener('scroll',readScroll,{passive:true});
 addEventListener('resize',readScroll);
 readScroll();

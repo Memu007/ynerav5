@@ -14,10 +14,11 @@ Abrir `http://127.0.0.1:4175/`.
 
 ## Archivos principales
 
-- `index.html`: estructura, contenido comercial y ocho hitos narrativos.
+- `index.html`: estructura, contenido comercial y cinco hitos narrativos.
 - `styles.css`: layout, mundo sticky, responsive y dirección visual.
 - `app.js`: sincronización de scroll, cámara, personaje, objetos y estados.
 - `assets/`: únicamente los recursos utilizados por la web.
+- `robots.txt` y `sitemap.xml`: base de rastreo para Google.
 - `HANDOFF.md`: estado funcional, decisiones y próximos pasos.
 - `YNERA_PAGINA_PERFIL.txt`: perfil breve de producto y marca.
 - `docs/current-storyboard.png`: referencia conceptual anterior; no es el arte final.

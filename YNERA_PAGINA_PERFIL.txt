@@ -34,11 +34,11 @@ Estructura
 1. Promesa y recorrido narrativo breve, saltable.
 2. Puente: “Lo que viste es cómo trabajamos”.
 3. Servicios como explicación estable.
-4. Casos: Aira, CDI y ReservaYá.
-5. CTA: “Agendá una reunión”.
+4. Método de trabajo verificable, sin clientes ni métricas inventadas.
+5. CTA: “Escribir a Ynera”.
 
 Estado
-Existe una versión de escritorio funcional en HTML, CSS y JavaScript nativos. El recorrido ocupa aproximadamente 3,4 pantallas efectivas, tiene ocho hitos equivalentes y fue probado sin errores de consola. Mobile, enlaces reales, optimización de imágenes y agenda definitiva quedan pendientes antes de producción.
+Existe una versión de escritorio funcional en HTML, CSS y JavaScript nativos. El recorrido ocupa aproximadamente 2,4 pantallas efectivas y presenta cinco hitos comerciales. La web no afirma tener clientes ni resultados todavía. Mobile y una agenda definitiva quedan pendientes antes de producción.
 
 Fuente de detalle
 Consultar HANDOFF.md. El storyboard de docs/current-storyboard.png es referencia conceptual histórica y no arte final.
