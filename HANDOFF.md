@@ -94,7 +94,9 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Piso visual elevado a 16 vh para alinear árbol, personaje y laboratorio por encima del panel narrativo.
 - El sprite usa altura automática para que sus pies, y no una caja transparente de 512 px, queden anclados al piso.
 - El carril del personaje comienza a 53 vw para que el panel narrativo no tape su cuerpo al apoyarlo en el piso.
-- Caché invalidada mediante `styles.css?v=21` y `app.js?v=21`.
+- Tarjetas de proyectos compactas, sin altura forzada y con imágenes 16:9.
+- Ejes horizontales del encabezado y las secciones unificados a 6 vw; anclas compensadas para el header fijo.
+- Caché invalidada mediante `styles.css?v=22` y `app.js?v=22`.
 - Preparación Railway documentada en `RAILWAY.md`; el hosting estático vigente funciona sin build ni servidor propio.
 
 ## Limitaciones y siguientes prioridades
