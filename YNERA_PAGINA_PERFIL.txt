@@ -71,3 +71,23 @@ Dirección visual seleccionada
 - Personaje en carrera entre hitos; desacelera y se detiene para observar, tomar datos, analizar, proteger y regar.
 - Símbolos narrativos mínimos: signo de pregunta al detectar el problema; signo de admiración al descubrir la solución.
 - Final sin otro signo: árbol florecido, salto del personaje y destello de victoria.
+
+Actualización vigente — estructura de la experiencia
+El HTML/mockup actual queda rechazado como diseño final: no debe existir un storyboard/juego arriba y una landing genérica de “AI SaaS” debajo. Scroll World es la estructura de la página, no una imagen decorativa. La experiencia debe ser un mundo narrativo sticky, continuo y de scroll breve, con progreso suavizado que mueva protagonista, cámara, capas de parallax y transiciones de escena.
+
+La propuesta de valor debe aparecer inmediatamente y el recorrido debe poder saltearse. El balance objetivo es aproximadamente 60% viaje narrativo y 40% información/proof estable: no todo párrafo se anima. Datos aparece al medir y recolectar; Inteligencia Artificial en el laboratorio separado; Seguridad al desplegar el perímetro; Sistemas/implementación al aplicar la solución y restaurar el árbol. Tras el florecimiento, el mismo mundo transiciona hacia Aira, CDI y ReservaYá, y a una CTA breve, sin un corte duro a tarjetas ajenas.
+
+Continuidad aprobada
+Árbol claramente en forma de Y y marchito -> signo de pregunta -> recolección de datos -> carrera hacia la derecha a un laboratorio separado -> análisis sin árbol presente -> signo de admiración -> regreso desde la derecha -> instalación de protección -> riego/aplicación -> árbol florece -> salto de victoria y destello contenidos -> CTA.
+
+Dirección de arte y producción
+- El storyboard vigente es un blueprint, no arte de producción final.
+- Crear ilustración propia, por capas, 2.5D, luminosa, futurista y liviana; evitar laboratorio blanco/azul genérico, anime/JRPG, cyberpunk oscuro y estética infantil.
+- Sustituir la cerca doméstica blanca por un perímetro tecnológico refinado y desplegable.
+- Dar al protagonista una silueta/vestuario distintivo de Ynera; mantener la Y del árbol legible pero orgánica.
+- Eliminar de la imagen final etiquetas genéricas “Data & AI” y exceso de gráficos/dashboards; mantener la victoria sobria.
+- El resultado debe sentirse premium, inteligente y creativo, propio de un desarrollo a medida de alta gama.
+- Conservar HTML semántico, accesibilidad y contenido legible. Incluir alternativa mobile-first y prefers-reduced-motion.
+
+Estado
+Este perfil reemplaza cualquier lectura de la preview local como dirección final. No autoriza publicar la preview ni material exploratorio; el único visual vigente en el repositorio es el storyboard actual indicado en el README.

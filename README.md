@@ -1,7 +1,7 @@
 # Ynera 5
 
-Design direction for the next Ynera landing page.
+Fuente de verdad para la próxima experiencia web de Ynera. Incluye dirección y handoff aprobados; no contiene implementación ni reutiliza Ynera4.
 
-This repository contains approved design material only. It has no page implementation and does not reuse the earlier Ynera4 site.
-
-Start with [YNERA_PAGINA_PERFIL.txt](YNERA_PAGINA_PERFIL.txt), the source-of-truth profile, then read the concise [current-state handoff](docs/design/YNERA5_DECISION_LOG_AND_STORYBOARD.md). The latest [non-final storyboard concept](docs/design/concepts/storyboard-latest-return-direction.png) accompanies those documents.
+- [Perfil de página](YNERA_PAGINA_PERFIL.txt)
+- [Handoff actual](HANDOFF.md)
+- [Storyboard actual — concepto no final](docs/current-storyboard.png)
