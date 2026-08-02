@@ -2,6 +2,7 @@ const story=document.querySelector('.story');
 const stage=document.querySelector('.stage');
 const world=document.querySelector('.world-image');
 const explorer=document.querySelector('.explorer');
+const explorerLayers=[...document.querySelectorAll('.explorer-frame')];
 const beats=[...document.querySelectorAll('.beat')];
 const progressBar=document.querySelector('.progress i');
 const intro=document.querySelector('.intro');
@@ -17,9 +18,10 @@ const computer=document.querySelector('.analysis-computer');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const runFrames=Array.from({length:6},(_,i)=>`assets/run-frame-${i}.webp`);
 const actionFrames=Array.from({length:6},(_,i)=>`assets/action-frame-${i}.webp`);
-[...runFrames,...actionFrames].forEach(src=>{const image=new Image();image.src=src});
+[...runFrames,...actionFrames].forEach(src=>{const image=new Image();image.decoding='async';image.src=src;image.decode().catch(()=>{})});
 let target=0,current=0,raf=0;
 let lastTime=0,lastPhase=-1,lastFrame='';
+let visibleLayer=0;
 
 const clamp=(n,min=0,max=1)=>Math.min(max,Math.max(min,n));
 const range=(n,a,b)=>clamp((n-a)/(b-a));
@@ -53,7 +55,14 @@ function draw(time=0){
   trees.forEach(tree=>tree.style.transform=`translate3d(${worldX}vw,0,0)`);
   computer.style.transform=`translate3d(${worldX}vw,0,0)`;
   const characterFrame=running?runFrames[frame]:actionFrames[action];
-  if(characterFrame!==lastFrame){explorer.src=characterFrame;lastFrame=characterFrame}
+  if(characterFrame!==lastFrame){
+    const nextLayer=1-visibleLayer;
+    explorerLayers[nextLayer].src=characterFrame;
+    explorerLayers[nextLayer].classList.add('is-visible');
+    explorerLayers[visibleLayer].classList.remove('is-visible');
+    visibleLayer=nextLayer;
+    lastFrame=characterFrame;
+  }
   explorer.style.transform=`translate3d(${(outward-returning)*18}vw,${bob}px,0) scaleX(${facing})`;
   explorer.style.opacity='1';
   progressBar.style.transform=`scaleX(${current})`;

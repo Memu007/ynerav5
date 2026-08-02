@@ -97,7 +97,8 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Tarjetas de proyectos compactas, sin altura forzada y con imágenes 16:9.
 - Ejes horizontales del encabezado y las secciones unificados a 6 vw; anclas compensadas para el header fijo.
 - En móvil, problemas, capacidades, proyectos y método usan carruseles nativos con `scroll-snap`; el recorrido baja a 240 vh y se compactan tipografía, espacios y cierre.
-- Caché invalidada mediante `styles.css?v=23` y `app.js?v=23`.
+- El personaje usa dos capas de sprites con precarga/decodificación y crossfade de 75 ms para evitar cortes al cambiar de cuadro en Brave y Chromium.
+- Caché invalidada mediante `styles.css?v=24` y `app.js?v=24`.
 - Preparación Railway documentada en `RAILWAY.md`; el hosting estático vigente funciona sin build ni servidor propio.
 
 ## Limitaciones y siguientes prioridades
