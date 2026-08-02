@@ -54,7 +54,7 @@ Cada hito integra tres capas en la misma escena: acción narrativa, capacidad co
 
 ## Estructura comercial posterior
 
-Después del recorrido se explican los problemas que Ynera puede resolver, sus cuatro capacidades y un método de tres pasos. No se muestran clientes, proyectos ni métricas porque todavía no existe evidencia autorizada para publicarlos.
+Después del recorrido se explican los problemas que Ynera puede resolver, sus cuatro capacidades, tres productos desarrollados y un método de tres pasos. Aira, CDI y ReservaYá se presentan como productos de Ynera, no como clientes. CDI y ReservaYá enlazan sus despliegues documentados; Aira permanece sin enlace ni captura hasta contar con ambos.
 
 ## Base de posicionamiento y Google
 
@@ -94,12 +94,13 @@ No se incluyen láminas fuente, cromas ni variantes descartadas.
 - Piso visual elevado a 16 vh para alinear árbol, personaje y laboratorio por encima del panel narrativo.
 - El sprite usa altura automática para que sus pies, y no una caja transparente de 512 px, queden anclados al piso.
 - El carril del personaje comienza a 53 vw para que el panel narrativo no tape su cuerpo al apoyarlo en el piso.
-- Caché invalidada mediante `styles.css?v=19` y `app.js?v=19`.
+- Caché invalidada mediante `styles.css?v=21` y `app.js?v=21`.
+- Preparación Railway documentada en `RAILWAY.md`; el hosting estático vigente funciona sin build ni servidor propio.
 
 ## Limitaciones y siguientes prioridades
 
 1. Diseñar una versión móvil nativa más corta; la actual es sólo una adaptación básica.
-2. Crear casos únicamente cuando existan trabajos y resultados publicables.
+2. Agregar enlace y captura de Aira cuando estén confirmados.
 3. Incorporar una agenda real cuando esté definida.
 4. Optimizar las imágenes a WebP/AVIF y medir carga en dispositivos reales.
 5. Revisar accesibilidad de contraste, teclado y reduced motion antes de producción.

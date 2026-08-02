@@ -19,6 +19,7 @@ Abrir `http://127.0.0.1:4175/`.
 - `app.js`: sincronización de scroll, cámara, personaje, objetos y estados.
 - `assets/`: únicamente los recursos utilizados por la web.
 - `robots.txt` y `sitemap.xml`: base de rastreo para Google.
+- `RAILWAY.md`: publicación estática desde GitHub, sin servidor ni dependencias.
 - `HANDOFF.md`: estado funcional, decisiones y próximos pasos.
 - `YNERA_PAGINA_PERFIL.txt`: perfil breve de producto y marca.
 - `docs/current-storyboard.png`: referencia conceptual anterior; no es el arte final.
@@ -26,3 +27,5 @@ Abrir `http://127.0.0.1:4175/`.
 ## Estado
 
 Versión de escritorio funcional y navegable. Mobile tiene una adaptación básica; requiere una fase posterior específica antes de considerarse producción.
+
+La web está lista para el hosting estático sin configuración de Railway.
