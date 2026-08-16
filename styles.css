@@ -1468,3 +1468,495 @@ a.work:hover .work__visual img{transform:scale(1.05);filter:saturate(1.06) contr
   .flora__node,.closing.is-flora .flora__node{opacity:1;animation:none}
   .closing.is-flora .flora{animation:none}
 }
+
+/* === GAMEFEEL v120: cámara, polvo, squash === */
+.camera{
+  position:absolute;inset:0;
+  will-change:transform;
+  transform-origin:50% 72%;
+}
+
+/* Polvo de pisadas (vive en coordenadas del mundo) */
+.dust{
+  position:absolute;
+  width:14px;height:8px;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(120,110,90,.55),rgba(120,110,90,0) 70%);
+  pointer-events:none;
+  opacity:0;
+  z-index:7;
+}
+.dust.is-live{
+  animation:dust-puff .5s ease-out forwards;
+}
+@keyframes dust-puff{
+  0%{opacity:.8;transform:translate3d(0,0,0) scale(.5)}
+  100%{opacity:0;transform:translate3d(var(--dx,-14px),-10px,0) scale(1.6)}
+}
+
+/* Aterrizaje: squash & stretch sobre el frame activo */
+.explorer.is-land .explorer-frame.is-on{
+  animation:land-squash .38s cubic-bezier(.34,1.5,.4,1);
+}
+@keyframes land-squash{
+  0%{transform:translate3d(0,calc(var(--foot,0) * 0.12px),0) scale(1.04,.9)}
+  55%{transform:translate3d(0,calc(var(--foot,0) * 0.12px),0) scale(.97,1.05)}
+  100%{transform:translate3d(0,calc(var(--foot,0) * 0.12px),0) scale(1,1)}
+}
+/* Arranque: estiramiento breve */
+.explorer.is-dash .explorer-frame.is-on{
+  animation:dash-stretch .3s cubic-bezier(.4,0,.2,1);
+}
+@keyframes dash-stretch{
+  0%{transform:translate3d(0,calc(var(--foot,0) * 0.12px),0) scale(.94,1.07)}
+  100%{transform:translate3d(0,calc(var(--foot,0) * 0.12px),0) scale(1,1)}
+}
+@media(prefers-reduced-motion:reduce){
+  .camera{transform:none!important}
+  .dust{display:none}
+  .explorer.is-land .explorer-frame.is-on,
+  .explorer.is-dash .explorer-frame.is-on{animation:none}
+}
+
+/* === CINE v130: grade, vida ambiente, juice premium === */
+
+/* Grade cinematográfico: viñeta + luz cálida superior */
+.stage::after{
+  content:"";
+  position:absolute;inset:0;
+  pointer-events:none;
+  z-index:30;
+  background:
+    radial-gradient(ellipse 120% 90% at 50% 40%, transparent 58%, rgba(8,30,28,.16) 100%),
+    linear-gradient(180deg, rgba(255,236,190,.07), transparent 22%);
+}
+
+/* Entrada del título al cargar: en escena, no de golpe */
+@keyframes intro-rise{
+  from{opacity:0;transform:translateY(26px);filter:blur(6px)}
+  to{opacity:1;transform:translateY(0);filter:none}
+}
+.intro .eyebrow{animation:intro-rise .8s cubic-bezier(.16,1,.3,1) .15s backwards}
+.intro h1{animation:intro-rise .9s cubic-bezier(.16,1,.3,1) .3s backwards}
+.intro .lede{animation:intro-rise .9s cubic-bezier(.16,1,.3,1) .48s backwards}
+.intro .hero-actions{animation:intro-rise .9s cubic-bezier(.16,1,.3,1) .64s backwards}
+
+/* Motas de luz ambiente (polen/luciérnagas) */
+.mote{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:6;
+  background:radial-gradient(circle,rgba(255,238,190,.9),rgba(255,238,190,0) 70%);
+  animation:mote-float var(--mdur,9s) ease-in-out var(--mdel,0s) infinite;
+  opacity:0;
+}
+.mote--teal{background:radial-gradient(circle,rgba(151,240,228,.85),rgba(151,240,228,0) 70%)}
+@keyframes mote-float{
+  0%,100%{opacity:0;transform:translate3d(0,0,0) scale(.7)}
+  20%,80%{opacity:var(--mop,.5)}
+  50%{transform:translate3d(var(--mx,14px),var(--my,-22px),0) scale(1)}
+}
+
+/* Barra de progreso premium: fases marcadas + cabeza luminosa */
+.progress{
+  height:3px!important;
+  background:rgba(10,60,58,.18)!important;
+  border-radius:3px;
+  overflow:visible!important;
+}
+.progress::before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle 2px at 11% 50%, rgba(9,50,48,.5) 45%, transparent 55%),
+    radial-gradient(circle 2px at 28% 50%, rgba(9,50,48,.5) 45%, transparent 55%),
+    radial-gradient(circle 2px at 52% 50%, rgba(9,50,48,.5) 45%, transparent 55%),
+    radial-gradient(circle 2px at 74% 50%, rgba(9,50,48,.5) 45%, transparent 55%);
+}
+.progress i{
+  border-radius:3px;
+  background:linear-gradient(90deg,#0a6f69,#7fe8df)!important;
+}
+.progress i::after{
+  content:"";
+  position:absolute;right:-3px;top:50%;
+  width:9px;height:9px;margin-top:-4.5px;
+  border-radius:50%;
+  background:#7fe8df;
+  box-shadow:0 0 10px rgba(127,232,223,.9),0 0 22px rgba(127,232,223,.4);
+}
+
+/* Beat activo: entrada editorial con barra que crece */
+.beat{position:relative}
+.beat.is-active{animation:beat-in .55s cubic-bezier(.16,1,.3,1)}
+.beat::after{
+  content:"";
+  position:absolute;left:-2px;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,#7fe8df,rgba(127,232,223,0));
+  transform:scaleY(0);transform-origin:top;
+}
+.beat.is-active::after{animation:beat-line .7s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes beat-in{
+  from{opacity:0;transform:translateX(-14px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes beat-line{to{transform:scaleY(1)}}
+
+/* Escudo: onda expansiva única al activarse */
+.shield-ring{position:relative}
+.shield-ring.is-shock::after{
+  content:"";
+  position:absolute;inset:-6%;
+  border-radius:inherit;
+  border:2px solid rgba(127,232,223,.8);
+  animation:shockwave .7s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes shockwave{
+  from{opacity:.9;transform:scale(.8)}
+  to{opacity:0;transform:scale(1.9)}
+}
+
+/* Festejo: chispas doradas desde el árbol */
+.spark{
+  position:absolute;
+  width:7px;height:7px;
+  border-radius:50%;
+  background:radial-gradient(circle,#ffe28e,#e8c36f 60%,rgba(232,195,111,0));
+  box-shadow:0 0 8px rgba(255,226,142,.8);
+  pointer-events:none;
+  opacity:0;
+  z-index:9;
+}
+.spark.is-live{animation:spark-fly .9s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes spark-fly{
+  0%{opacity:1;transform:translate3d(0,0,0) scale(1)}
+  100%{opacity:0;transform:translate3d(var(--sx,0px),var(--sy,-90px),0) scale(.4)}
+}
+
+/* Scroll cue elegante */
+.scroll-cue{
+  font-size:11px!important;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  opacity:.7;
+}
+.scroll-cue span{
+  display:inline-block;
+  animation:cue-drop 1.8s cubic-bezier(.4,0,.2,1) infinite;
+}
+@keyframes cue-drop{
+  0%,100%{transform:translateY(0);opacity:.5}
+  50%{transform:translateY(5px);opacity:1}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .intro .eyebrow,.intro h1,.intro .lede,.intro .hero-actions{animation:none}
+  .mote,.spark{display:none}
+  .beat.is-active,.beat.is-active::after{animation:none}
+  .beat::after{transform:scaleY(1)}
+  .shield-ring.is-shock::after{animation:none;opacity:0}
+  .scroll-cue span{animation:none}
+}
+
+/* === BIODIGITAL v140: la naturaleza procesa datos === */
+
+/* Pulsos de datos viajando por las lianas */
+.vine__pulse{
+  fill:#7fe8df;
+  opacity:0;
+  offset-rotate:0deg;
+  animation-name:pulse-travel;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  filter:drop-shadow(0 0 5px rgba(127,232,223,.9));
+}
+@keyframes pulse-travel{
+  0%{offset-distance:0%;opacity:0}
+  4%{opacity:1}
+  92%{opacity:1}
+  100%{offset-distance:100%;opacity:0}
+}
+
+/* Trazas de circuito (PCB) que brotan del tallo */
+.vine__circuit{
+  opacity:0;
+  transition:opacity .5s ease .1s;
+}
+.vine__circuit.is-on{opacity:1}
+.vine__trace{
+  fill:none;
+  stroke:#12a39a;
+  stroke-width:1.4;
+  stroke-linecap:square;
+}
+.vine__pad{
+  fill:none;
+  stroke:#7fe8df;
+  stroke-width:1.4;
+}
+.vine__chip{
+  fill:rgba(127,232,223,.14);
+  stroke:#12a39a;
+  stroke-width:1.2;
+}
+
+/* Espora "bit": cuadrada, digital */
+.spore--bit{
+  border-radius:2px;
+  background:rgba(127,232,223,.85);
+  box-shadow:0 0 6px rgba(127,232,223,.7);
+}
+
+/* Continuum como pipeline de datos: conectores + pulso */
+.continuum__track{position:relative}
+.continuum__step{position:relative}
+.continuum__step::after{
+  content:"";
+  position:absolute;
+  right:-8px;top:50%;
+  width:8px;height:1px;
+  background:repeating-linear-gradient(90deg,#0a6f69 0 2px,transparent 2px 4px);
+}
+.continuum__step:last-child::after{display:none}
+.continuum__step.is-hot span{
+  text-shadow:0 0 12px rgba(127,232,223,.8);
+}
+.continuum__bar i{position:relative;overflow:visible}
+.continuum__bar i::after{
+  content:"";
+  position:absolute;right:-2px;top:50%;
+  width:7px;height:7px;margin-top:-3.5px;
+  border-radius:50%;
+  background:#7fe8df;
+  box-shadow:0 0 8px rgba(127,232,223,.9);
+}
+
+/* Bandas claras: retícula de datos sutil sobre lo botánico */
+.band--garden::after,
+.band--moss::after{
+  content:"";
+  position:absolute;inset:0;
+  pointer-events:none;
+  opacity:.05;
+  background-image:
+    linear-gradient(rgba(10,111,105,.7) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(10,111,105,.7) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 90% 80% at 50% 40%,black 30%,transparent 80%);
+}
+
+/* Lenguaje de dato: etiquetas en mono */
+.signal__tag,
+.problem-card__tag,
+.eyebrow,
+.kicker,
+.cap-tile__num,
+.signal__index,
+.continuum__label,
+.work__status,
+.timeline__card b{
+  font-family:"SF Mono",ui-monospace,Menlo,monospace;
+  font-weight:600;
+}
+.signal__index::before,
+.cap-tile__num::before{content:"[ "}
+.signal__index::after,
+.cap-tile__num::after{content:" ]"}
+.signal__index,.cap-tile__num{
+  font-size:clamp(15px,1.4vw,19px)!important;
+  letter-spacing:.06em;
+}
+
+/* Señales: al hover, la marca "escanea" */
+.signal__mark{position:relative;overflow:hidden}
+.signal__mark::after{
+  content:"";
+  position:absolute;left:0;right:0;top:-100%;
+  height:40%;
+  background:linear-gradient(180deg,transparent,rgba(127,232,223,.35),transparent);
+}
+.signal:hover .signal__mark::after{
+  animation:scan-sweep .7s ease;
+}
+@keyframes scan-sweep{
+  from{top:-40%}
+  to{top:120%}
+}
+
+/* Flora del CTA: nodos conectados entre sí (red neuronal botánica) */
+.closing.is-flora .flora__node{
+  filter:drop-shadow(0 0 6px rgba(127,232,223,.8));
+}
+
+@media(prefers-reduced-motion:reduce){
+  .vine__pulse{display:none}
+  .signal:hover .signal__mark::after{animation:none}
+  .continuum__bar i::after{display:none}
+}
+
+/* === NEURAL v150: columna de datos, capa trasera hex === */
+
+/* Capa trasera: sin blur ni follaje, malla tech tenue */
+.vine-back{
+  filter:none!important;
+  opacity:.55!important;
+}
+.back__hex{
+  fill:none;
+  stroke:rgba(18,163,154,.3);
+  stroke-width:1.2;
+}
+.back__hex--dim{stroke:rgba(18,163,154,.16)}
+.back__link{
+  stroke:rgba(18,163,154,.22);
+  stroke-width:1;
+  stroke-dasharray:3 4;
+}
+.back__ring{
+  fill:none;
+  stroke:rgba(127,232,223,.18);
+  stroke-width:1;
+}
+
+/* Columna frontal más precisa */
+.vine__stem{stroke-width:4!important}
+.vine__glow{stroke-width:14!important;stroke:rgba(127,232,223,.1)!important}
+.vine__stem--thin{stroke-width:1.6!important;opacity:.5!important}
+
+/* Neuronas */
+.vine__neural{
+  opacity:0;
+  transform:scale(.6);
+  transform-origin:center;
+  transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.34,1.4,.4,1);
+}
+.vine__neural.is-on{opacity:1;transform:scale(1)}
+.vine__neuron{
+  fill:#0b2f2d;
+  stroke:#7fe8df;
+  stroke-width:1.6;
+}
+.vine__neural--bright .vine__neuron{
+  fill:#7fe8df;
+  filter:drop-shadow(0 0 6px rgba(127,232,223,.8));
+}
+.vine__sat{fill:#12a39a}
+.vine__syn{
+  stroke:rgba(18,163,154,.55);
+  stroke-width:1.1;
+}
+.vine__syn--far{
+  stroke:rgba(127,232,223,.3);
+  stroke-dasharray:2 3;
+}
+
+/* Chips y trazas: mismo idioma que antes */
+.vine__chipblock{
+  opacity:0;
+  transition:opacity .5s ease .05s;
+}
+.vine__chipblock.is-on{opacity:1}
+
+/* Brotes verdes (acento escaso) más chicos */
+.vine__cluster ellipse{fill:#5da583}
+.vine__cluster .leaf-hi{fill:#8fcb9d}
+
+@media(prefers-reduced-motion:reduce){
+  .vine__neural,.vine__neural.is-on{opacity:1;transform:none;transition:none}
+  .vine__chipblock{opacity:1;transition:none}
+}
+
+/* Sinapsis en la flora del CTA */
+.flora__syn{
+  stroke:rgba(127,232,223,.35);
+  stroke-width:1.2;
+  stroke-dasharray:3 4;
+  opacity:0;
+}
+.closing.is-flora .flora__syn{
+  animation:node-pop .6s ease 1.7s forwards;
+}
+
+/* === RESTRAINT v160: pase de dirección de arte === */
+
+/* 1) FIX CRÍTICO: columnas solo en el gutter real, nunca sobre el texto */
+.vine{
+  width:clamp(48px, calc((100vw - 1260px) / 2 + 40px), 220px)!important;
+}
+.vine-back{
+  width:clamp(60px, calc((100vw - 1260px) / 2 + 70px), 300px)!important;
+}
+@media(max-width:1360px){
+  .vine{width:56px!important}
+  .vine-back{display:none}
+  .vines{opacity:.6}
+}
+@media(max-width:960px){
+  .vines,.spores{display:none}
+}
+
+/* 2) Menos ruido: fuera grids sobre bandas, malla trasera más tenue */
+.band--garden::after,
+.band--moss::after{display:none}
+.vine-back{opacity:.35!important}
+.back__hex--dim,.back__ring{display:none}
+
+/* 3) Continuum: índice editorial silencioso, no falsos tabs */
+.continuum{padding:36px 0 16px}
+.continuum__step,
+.continuum__step.is-hot{
+  background:none;
+  border:0;
+  box-shadow:none;
+  transform:none;
+  padding:8px 4px;
+  transition:none;
+}
+.continuum__step span{
+  font-family:"SF Mono",ui-monospace,Menlo,monospace;
+  font-size:12px;
+  color:#0a6f69;
+  opacity:.45;
+  transition:opacity .4s ease;
+}
+.continuum__step strong{
+  color:#3f5855;
+  font-weight:500;
+  transition:color .4s ease;
+}
+.continuum__step.is-hot span{opacity:1;text-shadow:none}
+.continuum__step.is-hot strong{color:#142f2e;font-weight:600}
+
+/* 4) Tipografía: mono solo donde aporta (índices y estados) */
+.eyebrow,.kicker,.continuum__label{
+  font-family:"DM Sans",Inter,system-ui,sans-serif!important;
+}
+.cap-tile__num::before,
+.cap-tile__num::after{content:none!important}
+.cap-tile__num{
+  font-family:"Instrument Serif",Georgia,serif!important;
+  font-size:40px!important;
+  letter-spacing:-.05em!important;
+}
+
+/* 5) Hover sin layout shift */
+.signal{transition:background .35s ease,border-radius .35s ease}
+.signal:hover{
+  padding-left:8px;
+  padding-right:8px;
+  border-radius:14px;
+}
+
+/* 6) Sistema de radios: 24 cards, 14 chips */
+.cap-tile,
+.timeline__card,
+.work{border-radius:24px!important}
+.signal:hover{border-radius:14px}
+.cap-tile__icon{border-radius:14px!important}
+
+/* 7) Respiración: el lab es el momento clave, dale aire */
+.band--lab{padding:clamp(110px,15vh,168px) 0!important}
+
+/* 8) Esporas más discretas */
+.spore{opacity:0}

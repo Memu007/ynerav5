@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/world-master-v2.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="preload" href="assets/dying-y-tree.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="ynera.css?v=100">
+  <link rel="stylesheet" href="ynera.css?v=160">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,6 +74,7 @@
         <button class="skip" type="button">Saltar recorrido ↓</button>
         <div class="progress" aria-hidden="true"><i></i></div>
 
+        <div class="camera" data-camera>
         <div class="world" aria-hidden="true">
           <div class="world-track">
             <div class="world-image"><div class="tree-decay"><i></i><i></i><i></i><i></i></div></div>
@@ -97,6 +98,7 @@
           <img class="explorer-frame" data-kind="action" data-i="3" src="assets/action-frame-3.webp" width="512" height="512" alt="" decoding="async" style="--foot:68">
           <img class="explorer-frame" data-kind="action" data-i="4" src="assets/action-frame-4.webp" width="512" height="512" alt="" decoding="async" style="--foot:70">
           <img class="explorer-frame" data-kind="action" data-i="5" src="assets/action-frame-5.webp" width="512" height="512" alt="" decoding="async" style="--foot:90">
+        </div>
         </div>
 
         <div class="beats">
@@ -407,6 +409,7 @@
               <g class="flora__leaf" style="--fd:.35s"><ellipse cx="105" cy="360" rx="22" ry="9" transform="rotate(24 105 360)"/></g>
               <g class="flora__leaf" style="--fd:.5s"><ellipse cx="140" cy="165" rx="24" ry="9" transform="rotate(-30 140 165)"/></g>
               <g class="flora__leaf" style="--fd:.65s"><ellipse cx="175" cy="215" rx="20" ry="8" transform="rotate(18 175 215)"/></g>
+              <polyline class="flora__syn" points="70,290 150,140 190,190" fill="none"/>
               <circle class="flora__node" style="--fd:.4s" cx="70" cy="290" r="5"/>
               <circle class="flora__node" style="--fd:.7s" cx="150" cy="140" r="4"/>
               <circle class="flora__node" style="--fd:.9s" cx="190" cy="190" r="3.4"/>
@@ -418,6 +421,7 @@
               <g class="flora__leaf" style="--fd:.4s"><ellipse cx="795" cy="360" rx="22" ry="9" transform="rotate(-24 795 360)"/></g>
               <g class="flora__leaf" style="--fd:.55s"><ellipse cx="760" cy="165" rx="24" ry="9" transform="rotate(30 760 165)"/></g>
               <g class="flora__leaf" style="--fd:.7s"><ellipse cx="725" cy="215" rx="20" ry="8" transform="rotate(-18 725 215)"/></g>
+              <polyline class="flora__syn" points="830,290 750,140 710,190" fill="none"/>
               <circle class="flora__node" style="--fd:.45s" cx="830" cy="290" r="5"/>
               <circle class="flora__node" style="--fd:.75s" cx="750" cy="140" r="4"/>
               <circle class="flora__node" style="--fd:.95s" cx="710" cy="190" r="3.4"/>
@@ -449,6 +453,6 @@
       <p class="site-footer__legal">© <span data-year></span> Ynera</p>
     </div>
   </footer>
-  <script src="app.js?v=100"></script>
+  <script src="app.js?v=160"></script>
 </body>
 </html>
