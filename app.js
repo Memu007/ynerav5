@@ -39,6 +39,7 @@ let pcBaseX = null; // ancla PC con mundo en 0 (se mide una vez)
 let treeBaseX = null; // ancla árbol con mundo en 0
 let prevLeft = null;
 let runDist = 0;
+let runSegment = 0;
 let stepAcc = 0;
 let faceCur = -1;
 let leanCur = 0;
@@ -71,6 +72,8 @@ const T = {
   celebrateStart: 0.86,
 };
 
+const MAX_GAP = 0.28; // catch-up máximo del damping (evita sprints infinitos)
+const FLIP_MIN = 0.35; // ancho mínimo visible durante el giro (nunca colapsa a 0)
 const CAM_LOOKAHEAD = 90; // px que la cámara adelanta en la dirección de carrera
 const CAM_ZOOM = 0.035; // zoom máximo por velocidad
 const CAM_MS = 260; // suavidad de la cámara (más lenta que el personaje)
@@ -209,10 +212,15 @@ function spawnDust(feetScreenX, worldXpx, dir) {
   const xInTrack = feetScreenX - stageLeft - worldXpx;
   d.style.left = xInTrack + 'px';
   d.style.bottom = '16.5vh';
-  d.style.setProperty('--dx', -dir * (12 + Math.random() * 10) + 'px');
-  d.classList.remove('is-live');
-  void d.offsetWidth; // reinicia la animación
-  d.classList.add('is-live');
+  // WAAPI: reinicia sin forzar reflow (antes: void offsetWidth por pisada)
+  const drift = -dir * (12 + Math.random() * 10);
+  d.animate(
+    [
+      { opacity: 0.8, transform: 'translate3d(0,0,0) scale(.5)' },
+      { opacity: 0, transform: 'translate3d(' + drift + 'px,-10px,0) scale(1.6)' },
+    ],
+    { duration: 500, easing: 'ease-out', fill: 'forwards' }
+  );
 }
 
 function squash(cls) {
@@ -284,6 +292,11 @@ function draw(time) {
   lastTime = time;
 
   const damping = 1 - Math.exp(-delta / DAMP_MS);
+  // Catch-up acotado: si el scroll saltó lejos, acercamos el punto de partida
+  if (!reduce) {
+    const gap = target - current;
+    if (Math.abs(gap) > MAX_GAP) current = target - Math.sign(gap) * MAX_GAP;
+  }
   current = reduce ? target : lerp(current, target, damping);
   if (Math.abs(target - current) < 0.0004) current = target;
 
@@ -340,24 +353,27 @@ function draw(time) {
     if (!lastRunning) {
       lastRunning = true;
       stepAcc = 0;
+      runSegment = 0;
       showRun(runIndex);
-      squash('is-dash'); // arranque con estiramiento
+      if (speedNorm < 0.9) squash('is-dash'); // sin spam en catch-up violento
     }
-    // Zancada ligada a distancia recorrida: sin patinaje
+    // Zancada ligada a distancia: salto directo de N frames en un solo toggle
     stepAcc += Math.abs(dLeft);
-    while (stepAcc >= RUN_STEP_PX) {
-      stepAcc -= RUN_STEP_PX;
-      runIndex = (runIndex + 1) % Math.max(runImgs.length, 1);
+    const steps = Math.floor(stepAcc / RUN_STEP_PX);
+    if (steps > 0) {
+      stepAcc -= steps * RUN_STEP_PX;
+      runIndex = (runIndex + steps) % Math.max(runImgs.length, 1);
       showRun(runIndex);
-      // pisada: polvo en el suelo, en coordenadas del mundo
+      // máximo 1 nube por frame (antes: una por pisada → 20 reflows en fast scroll)
       if (speedNorm > 0.25) spawnDust(feetScreenX, worldXpx, facing);
     }
     runDist += Math.abs(dLeft);
+    runSegment += Math.abs(dLeft);
   } else {
-    if (lastRunning) {
-      // llegó a destino: squash + golpe de cámara
+    if (lastRunning && runSegment > 60) {
+      // llegó a destino tras una corrida real: squash + golpe de cámara
       squash('is-land');
-      shakeT = 1;
+      shakeT = Math.max(shakeT, 0.8);
     }
     lastRunning = false;
     const a = actionFor(p);
@@ -370,11 +386,13 @@ function draw(time) {
   leanCur = lerp(leanCur, leanTarget, damping);
   const faceDamp = 1 - Math.exp(-delta / FACE_MS);
   faceCur = lerp(faceCur, facing, reduce ? 1 : faceDamp);
+  // El giro nunca colapsa el sprite: ancho mínimo garantizado durante el flip
+  const faceVis = (faceCur < 0 ? -1 : 1) * Math.max(Math.abs(faceCur), FLIP_MIN);
 
   if (explorer) {
     const dx = desiredLeft - baseLeftPx;
     explorer.style.transform =
-      'translate3d(' + dx + 'px,' + bob + 'px,0) rotate(' + leanCur + 'deg) scaleX(' + faceCur + ')';
+      'translate3d(' + dx + 'px,' + bob + 'px,0) rotate(' + leanCur + 'deg) scaleX(' + faceVis + ')';
     explorer.classList.toggle('at-lab', atLab);
     explorer.classList.toggle('at-tree', atTree);
   }
