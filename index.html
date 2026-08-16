@@ -16,9 +16,12 @@
   <meta property="og:image" content="https://ynera.com/assets/world-master-v2.webp">
   <meta name="twitter:card" content="summary_large_image">
   <title>Sistemas de datos e inteligencia artificial | Ynera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/world-master-v2.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="preload" href="assets/dying-y-tree.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="ynera.css?v=100">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,12 +48,12 @@
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Ynera, inicio"><span>Y</span>nera</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Ynera, inicio"><span class="brand__mark">Y</span><span class="brand__name">nera</span></a>
     <nav aria-label="Principal">
       <a href="#servicios">Qué hacemos</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="#metodo">Cómo trabajamos</a>
+      <a href="#metodo">Método</a>
       <a class="nav-cta" href="#contacto">Hablemos</a>
     </nav>
   </header>
@@ -60,11 +63,11 @@
       <div class="stage">
         <div class="intro">
           <p class="eyebrow">Datos · Inteligencia Artificial · Sistemas</p>
-          <h1 id="titulo-principal">Sistemas de datos e IA para resolver problemas reales.</h1>
-          <p class="lede">Ordenamos información, automatizamos operaciones y construimos herramientas que las empresas pueden usar de verdad.</p>
+          <h1 id="titulo-principal">Convertimos problemas reales en sistemas que funcionan.</h1>
+          <p class="lede">Ordenamos información, aplicamos IA con criterio y construimos herramientas que la operación puede usar de verdad.</p>
           <div class="hero-actions">
             <a class="hero-cta" href="#contacto">Contanos tu problema</a>
-            <span>Deslizá para ver cómo trabajamos ↓</span>
+            <span class="hero-hint">Deslizá para ver el método <i aria-hidden="true"></i></span>
           </div>
         </div>
 
@@ -72,16 +75,28 @@
         <div class="progress" aria-hidden="true"><i></i></div>
 
         <div class="world" aria-hidden="true">
-          <div class="world-image"><div class="tree-decay"><i></i><i></i><i></i><i></i></div></div>
-          <img class="story-tree tree-unhealthy" src="assets/dying-y-tree.webp" width="768" height="1024" alt="">
-          <img class="story-tree tree-healthy" src="assets/healthy-y-tree.webp" width="1085" height="1449" alt="">
-          <img class="analysis-computer" src="assets/analysis-computer.webp" width="768" height="1024" alt="">
+          <div class="world-track">
+            <div class="world-image"><div class="tree-decay"><i></i><i></i><i></i><i></i></div></div>
+            <img class="story-tree tree-unhealthy" src="assets/dying-y-tree.webp" width="768" height="1024" alt="">
+            <img class="story-tree tree-healthy" src="assets/healthy-y-tree.webp" width="1085" height="1449" alt="">
+            <img class="analysis-computer" src="assets/analysis-computer.webp" width="768" height="1024" alt="">
+          </div>
           <div class="data-trail"></div><div class="tree-signal">?</div><div class="solution-signal">!</div><div class="shield-ring"></div><div class="bloom"></div>
         </div>
 
         <div class="explorer" aria-hidden="true">
-          <img class="explorer-frame is-visible" src="assets/run-frame-0.webp" width="512" height="512" alt="">
-          <img class="explorer-frame" src="assets/run-frame-1.webp" width="512" height="512" alt="">
+          <img class="explorer-frame" data-kind="run" data-i="0" src="assets/run-frame-0.webp" width="512" height="512" alt="" decoding="async" style="--foot:13">
+          <img class="explorer-frame" data-kind="run" data-i="1" src="assets/run-frame-1.webp" width="512" height="512" alt="" decoding="async" style="--foot:14">
+          <img class="explorer-frame" data-kind="run" data-i="2" src="assets/run-frame-2.webp" width="512" height="512" alt="" decoding="async" style="--foot:15">
+          <img class="explorer-frame" data-kind="run" data-i="3" src="assets/run-frame-3.webp" width="512" height="512" alt="" decoding="async" style="--foot:37">
+          <img class="explorer-frame" data-kind="run" data-i="4" src="assets/run-frame-4.webp" width="512" height="512" alt="" decoding="async" style="--foot:41">
+          <img class="explorer-frame" data-kind="run" data-i="5" src="assets/run-frame-5.webp" width="512" height="512" alt="" decoding="async" style="--foot:52">
+          <img class="explorer-frame" data-kind="action" data-i="0" src="assets/action-frame-0.webp" width="512" height="512" alt="" decoding="async" style="--foot:52">
+          <img class="explorer-frame" data-kind="action" data-i="1" src="assets/action-frame-1.webp" width="512" height="512" alt="" decoding="async" style="--foot:57">
+          <img class="explorer-frame" data-kind="action" data-i="2" src="assets/action-frame-2.webp" width="512" height="512" alt="" decoding="async" style="--foot:0">
+          <img class="explorer-frame" data-kind="action" data-i="3" src="assets/action-frame-3.webp" width="512" height="512" alt="" decoding="async" style="--foot:68">
+          <img class="explorer-frame" data-kind="action" data-i="4" src="assets/action-frame-4.webp" width="512" height="512" alt="" decoding="async" style="--foot:70">
+          <img class="explorer-frame" data-kind="action" data-i="5" src="assets/action-frame-5.webp" width="512" height="512" alt="" decoding="async" style="--foot:90">
         </div>
 
         <div class="beats">
@@ -98,76 +113,342 @@
       </ol>
     </section>
 
-    <section class="problems" aria-labelledby="problemas-title">
-      <div class="section-heading">
-        <p class="eyebrow">Cuándo podemos ayudar</p>
-        <h2 id="problemas-title">Cuando la información existe, pero la respuesta todavía no.</h2>
+    <div class="afterworld" id="despues-del-recorrido">
+      <!-- Jungla lateral: capas con profundidad, crece con el scroll -->
+      <div class="vines" aria-hidden="true" data-vines>
+        <svg class="vine-back vine-back--left" preserveAspectRatio="none" data-parallax="0.06"></svg>
+        <svg class="vine-back vine-back--right" preserveAspectRatio="none" data-parallax="0.06"></svg>
+        <svg class="vine vine--left" preserveAspectRatio="none" data-parallax="0.12"></svg>
+        <svg class="vine vine--right" preserveAspectRatio="none" data-parallax="0.12"></svg>
       </div>
-      <div class="problem-grid">
-        <article><span>01</span><h3>La operación depende de planillas, tareas manuales o sistemas desconectados.</h3></article>
-        <article><span>02</span><h3>Hay muchos datos, pero cuesta convertirlos en decisiones confiables.</h3></article>
-        <article><span>03</span><h3>Existe una oportunidad para automatizar o crear un producto con IA.</h3></article>
-        <article><span>04</span><h3>Una aplicación o infraestructura necesita comprobar su seguridad.</h3></article>
+      <div class="spores" aria-hidden="true" data-spores></div>
+      <!-- Puente vivo: el recorrido continúa -->
+      <div class="story-bridge" aria-hidden="true">
+        <div class="story-bridge__glow"></div>
+        <div class="story-bridge__pulse"></div>
+        <svg class="story-bridge__path" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,50 C200,50 280,20 400,28 C560,40 620,70 780,55 C920,42 1000,18 1200,22" fill="none" stroke="url(#bridgeGrad)" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="bridgeGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#0c2526"/>
+              <stop offset="40%" stop-color="#7fe8df"/>
+              <stop offset="70%" stop-color="#e8c36f"/>
+              <stop offset="100%" stop-color="#dfe9e0"/>
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
-    </section>
 
-    <section class="capabilities" id="servicios" tabindex="-1" aria-labelledby="servicios-title">
-      <div class="section-heading">
-        <p class="eyebrow">Capacidades conectadas</p>
-        <h2 id="servicios-title">Del dato disperso a una solución en funcionamiento.</h2>
-      </div>
-      <div class="capability-path">
-        <article><span>01</span><p class="kicker">Datos y analítica</p><h3>Una base clara para decidir</h3><p>Integramos fuentes, ordenamos información y construimos indicadores que muestran qué está pasando.</p></article>
-        <article><span>02</span><p class="kicker">Inteligencia artificial</p><h3>IA aplicada a una tarea concreta</h3><p>Creamos asistentes, automatizaciones y modelos que reducen trabajo o mejoran decisiones.</p></article>
-        <article><span>03</span><p class="kicker">Desarrollo de sistemas</p><h3>Herramientas que llegan a producción</h3><p>Diseñamos plataformas y aplicaciones integradas con la forma real de trabajar de cada organización.</p></article>
-        <article><span>04</span><p class="kicker">Ciberseguridad</p><h3>Riesgos comprobados antes de crecer</h3><p>Evaluamos aplicaciones e infraestructura mediante pruebas controladas y recomendaciones accionables.</p></article>
-      </div>
-    </section>
+      <!-- Continuum: eco del hero en 5 beats -->
+      <section class="continuum" aria-label="Resumen del recorrido">
+        <div class="continuum__inner">
+          <p class="continuum__label">El mismo viaje, en una línea</p>
+          <ol class="continuum__track">
+            <li class="continuum__step" data-step="1"><span>01</span><strong>Diagnosticar</strong></li>
+            <li class="continuum__step" data-step="2"><span>02</span><strong>Ordenar</strong></li>
+            <li class="continuum__step" data-step="3"><span>03</span><strong>Descubrir</strong></li>
+            <li class="continuum__step" data-step="4"><span>04</span><strong>Construir</strong></li>
+            <li class="continuum__step" data-step="5"><span>05</span><strong>Operar</strong></li>
+          </ol>
+          <div class="continuum__bar" aria-hidden="true"><i></i></div>
+        </div>
+      </section>
 
-    <section class="projects" id="proyectos" aria-labelledby="proyectos-title">
-      <div class="section-heading">
-        <p class="eyebrow">Productos desarrollados</p>
-        <h2 id="proyectos-title">No es teoría. Ya construimos productos que funcionan.</h2>
-        <p class="section-intro">Tres productos desarrollados por Ynera para resolver operaciones concretas en salud, comercio exterior y hotelería.</p>
-      </div>
-      <div class="project-grid">
-        <article class="project-card project-aira">
-          <div class="project-visual" aria-hidden="true"><span>aira</span></div>
-          <div class="project-copy"><p class="kicker">Salud · gestión clínica</p><h3>Aira</h3><p>Agenda, historias clínicas y facturación para profesionales de salud mental.</p><small>Producto desarrollado · enlace pendiente</small></div>
-        </article>
-        <a class="project-card" href="https://cdi-production.up.railway.app" target="_blank" rel="noopener" aria-label="Abrir CDI en producción">
-          <img class="project-visual" src="assets/cdi-preview.webp" width="480" height="300" loading="lazy" alt="Vista del sistema CDI">
-          <div class="project-copy"><p class="kicker">Comercio exterior · aduanas</p><h3>CDI</h3><p>Documentos digitalizados y vencimientos bajo control en una misma operación.</p><small>Ver en producción ↗</small></div>
-        </a>
-        <a class="project-card" href="https://reservasya-ynera-production.up.railway.app" target="_blank" rel="noopener" aria-label="Abrir ReservaYá en producción">
-          <img class="project-visual" src="assets/reservaya-preview.webp" width="480" height="300" loading="lazy" alt="Vista de la plataforma ReservaYá">
-          <div class="project-copy"><p class="kicker">Hotelería · reservas</p><h3>ReservaYá</h3><p>Reservas online, check-in digital y ocupación en una experiencia integrada.</p><small>Ver en producción ↗</small></div>
-        </a>
-      </div>
-    </section>
+      <!-- Problemas: layout editorial, no grilla de cards -->
+      <section class="problems band band--garden" aria-labelledby="problemas-title">
+        <div class="band__deco band__deco--leaves" aria-hidden="true"></div>
+        <div class="band__inner">
+          <header class="section-heading section-heading--split reveal">
+            <div>
+              <p class="eyebrow">Señales de alerta</p>
+              <h2 id="problemas-title">Cuando la información existe, pero la respuesta <em>todavía no</em>.</h2>
+            </div>
+            <p class="section-lede">Como el árbol del recorrido: el problema ya está a la vista. Falta diagnosticarlo y convertirlo en un sistema que funcione.</p>
+          </header>
 
-    <section class="method" id="metodo" aria-labelledby="metodo-title">
-      <div class="section-heading">
-        <p class="eyebrow">Sin promesas infladas</p>
-        <h2 id="metodo-title">Primero comprobamos. Después construimos.</h2>
-        <p class="section-intro">Cada trabajo empieza acotando el problema y definiendo cómo sabremos si la solución funciona.</p>
-      </div>
-      <div class="method-steps">
-        <article><b>01</b><h3>Enmarcar</h3><p>Entendemos el contexto, el riesgo y la decisión que hay que mejorar.</p></article>
-        <article><b>02</b><h3>Probar</h3><p>Validamos la idea con datos y un alcance pequeño antes de invertir de más.</p></article>
-        <article><b>03</b><h3>Implementar</h3><p>Construimos, integramos y medimos la solución dentro de la operación.</p></article>
-      </div>
-    </section>
+          <div class="signal-list">
+            <article class="signal reveal" style="--i:0">
+              <div class="signal__index">01</div>
+              <div class="signal__body">
+                <p class="signal__tag">Operación</p>
+                <h3>Planillas, tareas manuales o sistemas desconectados frenan el día a día.</h3>
+                <p>La operación vive en fragmentos. Cada decisión cuesta más de lo que debería.</p>
+              </div>
+              <div class="signal__mark" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none"><path d="M12 44h40M18 44V28l14-12 14 12v16" stroke="currentColor" stroke-width="1.6"/><circle cx="32" cy="34" r="3" fill="currentColor"/></svg>
+              </div>
+            </article>
+            <article class="signal reveal" style="--i:1">
+              <div class="signal__index">02</div>
+              <div class="signal__body">
+                <p class="signal__tag">Datos</p>
+                <h3>Hay muchos datos, pero cuesta convertirlos en decisiones confiables.</h3>
+                <p>Las señales existen. Falta ordenarlas para que alguien pueda actuar con certeza.</p>
+              </div>
+              <div class="signal__mark" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none"><path d="M10 48 24 28l10 10 20-26" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="54" cy="12" r="3" fill="currentColor"/></svg>
+              </div>
+            </article>
+            <article class="signal reveal" style="--i:2">
+              <div class="signal__index">03</div>
+              <div class="signal__body">
+                <p class="signal__tag">Inteligencia artificial</p>
+                <h3>Existe una oportunidad real para automatizar o crear un producto con IA.</h3>
+                <p>No se trata de sumar tecnología: se trata de destrabar un resultado concreto.</p>
+              </div>
+              <div class="signal__mark" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8M14 14l6 6M44 44l6 6M14 50l6-6M44 20l6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </div>
+            </article>
+            <article class="signal reveal" style="--i:3">
+              <div class="signal__index">04</div>
+              <div class="signal__body">
+                <p class="signal__tag">Seguridad</p>
+                <h3>Una aplicación o infraestructura necesita comprobar su seguridad.</h3>
+                <p>Antes de crecer, hay que saber qué riesgos existen y cómo contenerlos.</p>
+              </div>
+              <div class="signal__mark" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none"><path d="M32 8 12 18v14c0 14 8.5 22 20 26 11.5-4 20-12 20-26V18L32 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m24 33 6 6 12-14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="closing" id="contacto">
-      <div class="mini-tree" aria-hidden="true"><i></i><i></i><i></i></div>
-      <p class="eyebrow">Una conversación concreta</p>
-      <h2>Contanos qué necesitás resolver.</h2>
-      <p>Te respondemos para entender el problema y evaluar si Ynera puede ayudarte.</p>
-      <a class="primary-cta" href="mailto:hola@ynera.com?subject=Quiero%20contarles%20un%20problema">Escribir a Ynera <span>↗</span></a>
-      <small>hola@ynera.com</small>
-    </section>
+      <!-- Capacidades: laboratorio vivo -->
+      <section class="capabilities band band--lab" id="servicios" tabindex="-1" aria-labelledby="servicios-title">
+        <svg class="band-edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 L1440,0 L1440,18 C1360,42 1290,20 1210,34 C1110,52 1030,24 940,38 C830,56 760,22 660,36 C550,52 470,26 380,40 C280,55 190,28 100,44 C60,51 30,40 0,48 Z" fill="#dfe9e0"/>
+          <path d="M240,30 q14,-16 30,-6 q-16,12 -30,6Z" fill="#dfe9e0" opacity=".85"/>
+          <path d="M820,34 q16,-14 32,-4 q-18,12 -32,4Z" fill="#dfe9e0" opacity=".85"/>
+          <path d="M1180,26 q12,-15 28,-7 q-14,13 -28,7Z" fill="#dfe9e0" opacity=".85"/>
+        </svg>
+        <div class="lab-ambient" aria-hidden="true">
+          <span class="lab-orb lab-orb--a"></span>
+          <span class="lab-orb lab-orb--b"></span>
+          <span class="lab-grid"></span>
+        </div>
+        <div class="band__inner">
+          <header class="section-heading section-heading--split reveal">
+            <div>
+              <p class="eyebrow">Capacidades conectadas</p>
+              <h2 id="servicios-title">Del dato disperso a una solución en <em>funcionamiento</em>.</h2>
+            </div>
+            <p class="section-lede">Cuatro capacidades que se encadenan como el recorrido del hero: del diagnóstico a la operación.</p>
+          </header>
+
+          <div class="cap-path reveal">
+            <div class="cap-path__line" aria-hidden="true"><i></i></div>
+            <article class="cap-tile" style="--i:0">
+              <div class="cap-tile__top">
+                <span class="cap-tile__num">01</span>
+                <span class="cap-tile__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none"><path d="M8 34h32M12 34V22l12-10 12 10v12" stroke="currentColor" stroke-width="1.5"/><path d="M20 34v-6h8v6" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+              </div>
+              <p class="kicker">Datos y analítica</p>
+              <h3>Una base clara para decidir</h3>
+              <p>Integramos fuentes, ordenamos información y construimos indicadores que muestran qué está pasando.</p>
+              <span class="cap-tile__link">En el recorrido: <em>ordenar señales</em></span>
+            </article>
+            <article class="cap-tile" style="--i:1">
+              <div class="cap-tile__top">
+                <span class="cap-tile__num">02</span>
+                <span class="cap-tile__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <p class="kicker">Inteligencia artificial</p>
+              <h3>IA aplicada a una tarea concreta</h3>
+              <p>Creamos asistentes, automatizaciones y modelos que reducen trabajo o mejoran decisiones.</p>
+              <span class="cap-tile__link">En el recorrido: <em>descubrir en el lab</em></span>
+            </article>
+            <article class="cap-tile" style="--i:2">
+              <div class="cap-tile__top">
+                <span class="cap-tile__num">03</span>
+                <span class="cap-tile__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M14 18h20M14 24h14M14 30h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <p class="kicker">Desarrollo de sistemas</p>
+              <h3>Herramientas que llegan a producción</h3>
+              <p>Diseñamos plataformas y aplicaciones integradas con la forma real de trabajar de cada organización.</p>
+              <span class="cap-tile__link">En el recorrido: <em>construir y proteger</em></span>
+            </article>
+            <article class="cap-tile" style="--i:3">
+              <div class="cap-tile__top">
+                <span class="cap-tile__num">04</span>
+                <span class="cap-tile__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 8 14v12c0 12 7 19 16 22 9-3 16-10 16-22V14L24 6Z" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+              </div>
+              <p class="kicker">Ciberseguridad</p>
+              <h3>Riesgos comprobados antes de crecer</h3>
+              <p>Evaluamos aplicaciones e infraestructura mediante pruebas controladas y recomendaciones accionables.</p>
+              <span class="cap-tile__link">En el recorrido: <em>perímetro y cuidado</em></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section class="projects band band--paper" id="proyectos" aria-labelledby="proyectos-title">
+        <div class="band__inner">
+          <header class="section-heading section-heading--split reveal">
+            <div>
+              <p class="eyebrow">En el mundo real</p>
+              <h2 id="proyectos-title">No es teoría. Ya construimos productos que <em>funcionan</em>.</h2>
+            </div>
+            <p class="section-lede">Tres sistemas propios. Misma exigencia que pedimos a cada cliente.</p>
+          </header>
+
+          <div class="work-stage">
+            <article class="work work--hero reveal" style="--i:0">
+              <div class="work__visual work__visual--aira" aria-hidden="true">
+                <span class="work__mark">aira</span>
+                <span class="work__ring"></span>
+                <span class="work__ring work__ring--2"></span>
+              </div>
+              <div class="work__copy">
+                <p class="kicker">Salud · gestión clínica</p>
+                <h3>Aira</h3>
+                <p>Agenda, historias clínicas y facturación para profesionales de salud mental. Un sistema que ordena la práctica diaria sin fricción.</p>
+                <span class="work__status">Producto propio · acceso privado</span>
+              </div>
+            </article>
+
+            <div class="work-pair">
+              <a class="work reveal" style="--i:1" href="https://cdi-production.up.railway.app" target="_blank" rel="noopener">
+                <div class="work__visual">
+                  <img src="assets/cdi-preview.webp" width="640" height="400" loading="lazy" alt="Vista del sistema CDI">
+                  <span class="work__veil"></span>
+                </div>
+                <div class="work__copy">
+                  <p class="kicker">Comercio exterior · aduanas</p>
+                  <h3>CDI</h3>
+                  <p>Documentos digitalizados y vencimientos bajo control en una misma operación.</p>
+                  <span class="work__status">Ver en producción ↗</span>
+                </div>
+              </a>
+              <a class="work reveal" style="--i:2" href="https://reservasya-ynera-production.up.railway.app" target="_blank" rel="noopener">
+                <div class="work__visual">
+                  <img src="assets/reservaya-preview.webp" width="640" height="400" loading="lazy" alt="Vista de ReservaYá">
+                  <span class="work__veil"></span>
+                </div>
+                <div class="work__copy">
+                  <p class="kicker">Hotelería · reservas</p>
+                  <h3>ReservaYá</h3>
+                  <p>Reservas online, check-in digital y ocupación en una experiencia integrada.</p>
+                  <span class="work__status">Ver en producción ↗</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Método: timeline viva -->
+      <section class="method band band--moss" id="metodo" aria-labelledby="metodo-title">
+        <div class="band__inner">
+          <header class="section-heading section-heading--center reveal">
+            <p class="eyebrow">Método</p>
+            <h2 id="metodo-title">Primero comprobamos.<br><em>Después</em> construimos.</h2>
+            <p class="section-lede">Cada encargo empieza acotando el problema y definiendo cómo sabremos si la solución funciona.</p>
+          </header>
+
+          <ol class="timeline reveal">
+            <li class="timeline__item" style="--i:0">
+              <div class="timeline__node" aria-hidden="true"><i></i></div>
+              <div class="timeline__card">
+                <b>01 · Enmarcar</b>
+                <h3>Entender antes de prometer</h3>
+                <p>Contexto, riesgo y la decisión que hay que mejorar. Sin ese marco, no hay sistema.</p>
+              </div>
+            </li>
+            <li class="timeline__item" style="--i:1">
+              <div class="timeline__node" aria-hidden="true"><i></i></div>
+              <div class="timeline__card">
+                <b>02 · Probar</b>
+                <h3>Validar con alcance chico</h3>
+                <p>Datos y un experimento controlado antes de invertir de más. La evidencia manda.</p>
+              </div>
+            </li>
+            <li class="timeline__item" style="--i:2">
+              <div class="timeline__node" aria-hidden="true"><i></i></div>
+              <div class="timeline__card">
+                <b>03 · Implementar</b>
+                <h3>Llevarlo a la operación</h3>
+                <p>Construimos, integramos y medimos la solución dentro del trabajo real.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Cierre -->
+      <section class="closing" id="contacto">
+        <svg class="band-edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 L1440,0 L1440,20 C1340,44 1250,22 1150,36 C1040,52 960,26 860,40 C750,56 670,24 560,38 C450,52 370,28 270,42 C180,54 90,32 0,46 Z" fill="#d5e4d9"/>
+          <path d="M420,32 q14,-16 30,-6 q-16,12 -30,6Z" fill="#d5e4d9" opacity=".85"/>
+          <path d="M1020,30 q16,-14 32,-4 q-18,12 -32,4Z" fill="#d5e4d9" opacity=".85"/>
+        </svg>
+        <div class="closing__atmosphere" aria-hidden="true">
+          <div class="closing__bloom"></div>
+          <div class="closing__grain"></div>
+          <div class="closing__orbit"></div>
+          <div class="mini-tree"><i></i><i></i><i></i></div>
+        </div>
+        <div class="closing__flora" aria-hidden="true">
+          <svg viewBox="0 0 900 560" preserveAspectRatio="xMidYMax meet">
+            <g class="flora flora--left">
+              <path class="flora__stem" d="M60,560 C40,440 90,380 70,290 C55,220 110,170 150,140" fill="none"/>
+              <path class="flora__stem flora__stem--thin" d="M60,560 C90,470 60,400 110,330 C150,275 140,220 190,190" fill="none"/>
+              <g class="flora__leaf" style="--fd:.2s"><ellipse cx="72" cy="300" rx="26" ry="10" transform="rotate(-38 72 300)"/></g>
+              <g class="flora__leaf" style="--fd:.35s"><ellipse cx="105" cy="360" rx="22" ry="9" transform="rotate(24 105 360)"/></g>
+              <g class="flora__leaf" style="--fd:.5s"><ellipse cx="140" cy="165" rx="24" ry="9" transform="rotate(-30 140 165)"/></g>
+              <g class="flora__leaf" style="--fd:.65s"><ellipse cx="175" cy="215" rx="20" ry="8" transform="rotate(18 175 215)"/></g>
+              <circle class="flora__node" style="--fd:.4s" cx="70" cy="290" r="5"/>
+              <circle class="flora__node" style="--fd:.7s" cx="150" cy="140" r="4"/>
+              <circle class="flora__node" style="--fd:.9s" cx="190" cy="190" r="3.4"/>
+            </g>
+            <g class="flora flora--right">
+              <path class="flora__stem" d="M840,560 C860,440 810,380 830,290 C845,220 790,170 750,140" fill="none"/>
+              <path class="flora__stem flora__stem--thin" d="M840,560 C810,470 840,400 790,330 C750,275 760,220 710,190" fill="none"/>
+              <g class="flora__leaf" style="--fd:.25s"><ellipse cx="828" cy="300" rx="26" ry="10" transform="rotate(38 828 300)"/></g>
+              <g class="flora__leaf" style="--fd:.4s"><ellipse cx="795" cy="360" rx="22" ry="9" transform="rotate(-24 795 360)"/></g>
+              <g class="flora__leaf" style="--fd:.55s"><ellipse cx="760" cy="165" rx="24" ry="9" transform="rotate(30 760 165)"/></g>
+              <g class="flora__leaf" style="--fd:.7s"><ellipse cx="725" cy="215" rx="20" ry="8" transform="rotate(-18 725 215)"/></g>
+              <circle class="flora__node" style="--fd:.45s" cx="830" cy="290" r="5"/>
+              <circle class="flora__node" style="--fd:.75s" cx="750" cy="140" r="4"/>
+              <circle class="flora__node" style="--fd:.95s" cx="710" cy="190" r="3.4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="closing__content reveal">
+          <p class="eyebrow">Siguiente paso</p>
+          <h2>Contanos qué necesitás <em>resolver</em>.</h2>
+          <p>Respondemos para entender el problema y evaluar —con honestidad— si Ynera es el equipo correcto.</p>
+          <a class="primary-cta" href="mailto:hola@ynera.com?subject=Quiero%20contarles%20un%20problema">Escribir a Ynera <span aria-hidden="true">↗</span></a>
+          <a class="closing__mail" href="mailto:hola@ynera.com">hola@ynera.com</a>
+        </div>
+      </section>
+    </div>
+
   </main>
-  <script src="app.js?v=24"></script>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a class="brand brand--footer" href="#inicio" aria-label="Ynera, inicio"><span class="brand__mark">Y</span><span class="brand__name">nera</span></a>
+      <p class="site-footer__tag">Sistemas de datos, IA y software con criterio.</p>
+      <nav class="site-footer__nav" aria-label="Pie">
+        <a href="#servicios">Capacidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#metodo">Método</a>
+        <a href="mailto:hola@ynera.com">Contacto</a>
+      </nav>
+      <p class="site-footer__legal">© <span data-year></span> Ynera</p>
+    </div>
+  </footer>
+  <script src="app.js?v=100"></script>
 </body>
 </html>
