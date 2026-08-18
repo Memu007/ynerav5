@@ -1960,3 +1960,63 @@ a.work:hover .work__visual img{transform:scale(1.05);filter:saturate(1.06) contr
 
 /* 8) Esporas más discretas */
 .spore{opacity:0}
+
+/* === HEALTREE v180: el árbol sano es el clímax === */
+
+/* Aura dorada-menta que respira detrás del árbol */
+.tree-aura{
+  position:absolute;
+  z-index:6;
+  left:0;
+  bottom:4vh;
+  width:46vw;
+  height:74vh;
+  pointer-events:none;
+  opacity:0;
+  transform:scale(.7);
+  transform-origin:44% 72%;
+  background:radial-gradient(ellipse 46% 52% at 44% 64%,
+    rgba(255,232,150,.6),
+    rgba(151,240,196,.32) 44%,
+    transparent 72%);
+  mix-blend-mode:screen;
+  will-change:opacity,transform;
+}
+
+/* Spotlight: el resto del escenario baja medio paso */
+.stage-dim{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+  opacity:0;
+  background:radial-gradient(ellipse 36vw 62vh at 19vw 60%,
+    transparent 32%,
+    rgba(16,44,39,.22) 68%,
+    rgba(16,44,39,.4) 100%);
+  will-change:opacity;
+}
+
+/* Rim light + saturación cuando termina de crecer */
+.tree-healthy{
+  transform-origin:50% 100%;
+  transition:filter .7s ease;
+}
+.tree-healthy.is-alive{
+  filter:drop-shadow(0 20px 22px rgba(4,30,25,.3))
+         drop-shadow(0 0 24px rgba(255,232,150,.5))
+         drop-shadow(0 0 60px rgba(151,240,196,.28))
+         saturate(1.16) contrast(1.05);
+  animation:tree-pop .6s cubic-bezier(.34,1.55,.4,1);
+}
+@keyframes tree-pop{
+  0%{transform:scale(1)}
+  38%{transform:scale(1.04)}
+  100%{transform:scale(1)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .tree-aura{opacity:.75!important;transform:none!important}
+  .stage-dim{opacity:1!important}
+  .tree-healthy.is-alive{animation:none}
+}

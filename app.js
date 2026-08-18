@@ -18,6 +18,8 @@ const shield = document.querySelector('.shield-ring');
 const bloom = document.querySelector('.bloom');
 const decay = document.querySelector('.tree-decay');
 const healthyTree = document.querySelector('.tree-healthy');
+const treeAura = document.querySelector('.tree-aura');
+const stageDim = document.querySelector('.stage-dim');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 let target = 0;
@@ -38,6 +40,7 @@ let explorerW = 1;
 let pcBaseX = null; // ancla PC con mundo en 0 (se mide una vez)
 let treeBaseX = null; // ancla árbol con mundo en 0
 let prevLeft = null;
+let prevWorldPx = null;
 let runDist = 0;
 let runSegment = 0;
 let stepAcc = 0;
@@ -54,22 +57,25 @@ let prevP = 0;
 let sparkPool = [];
 let shockDone = false;
 let burstDone = false;
+let treeAlive = false;
+let blendActive = false;
+let lastBlur = -1;
 
-// Timeline
+// Timeline: actos secuenciales, sin solapamientos, corridas de igual duración
 const T = {
-  introEnd: 0.05,
-  diagnoseEnd: 0.11,
-  runOutStart: 0.11,
-  runOutEnd: 0.28,
-  labStart: 0.28,
-  labEnd: 0.52,
-  runBackStart: 0.52,
-  runBackEnd: 0.66,
-  protectStart: 0.64,
-  protectEnd: 0.74,
-  growStart: 0.72,
-  growEnd: 0.88,
-  celebrateStart: 0.86,
+  introEnd: 0.06,
+  diagnoseEnd: 0.10,
+  runOutStart: 0.10,
+  runOutEnd: 0.30,
+  labStart: 0.30,
+  labEnd: 0.50,
+  runBackStart: 0.50,
+  runBackEnd: 0.70,
+  protectStart: 0.72,
+  protectEnd: 0.80,
+  growStart: 0.80,
+  growEnd: 0.92,
+  celebrateStart: 0.92,
 };
 
 const MAX_GAP = 0.28; // catch-up máximo del damping (evita sprints infinitos)
@@ -77,9 +83,9 @@ const FLIP_MIN = 0.35; // ancho mínimo visible durante el giro (nunca colapsa a
 const CAM_LOOKAHEAD = 90; // px que la cámara adelanta en la dirección de carrera
 const CAM_ZOOM = 0.035; // zoom máximo por velocidad
 const CAM_MS = 260; // suavidad de la cámara (más lenta que el personaje)
-const RUN_STEP_PX = 26; // px recorridos por frame de zancada (piernas pegadas al suelo)
+const RUN_STEP_PX = 34; // px sobre el PISO por frame de zancada
 const BOB_PX = 2.4;
-const STRIDE_PX = 15; // longitud de onda del bob
+const STRIDE_PX = 40; // longitud de onda del bob (sobre el piso)
 const DAMP_MS = 130; // inercia del scroll: sedosa, sin lag molesto
 const FACE_MS = 90; // giro suave al cambiar de dirección
 const LEAN_MAX = 5; // grados de inclinación al correr
@@ -341,11 +347,21 @@ function draw(time) {
     desiredLeft = treeX != null ? targetLeftForAnchor(treeX, ART_CENTER_TREE) : home - window.innerWidth * 0.15;
   }
 
-  // Velocidad real del personaje (px/ms): piernas y cuerpo responden a ella
+  // Failsafe: nunca fuera de pantalla ni con valores inválidos
+  if (!isFinite(desiredLeft)) desiredLeft = home;
+  desiredLeft = Math.min(
+    Math.max(desiredLeft, -stageLeft + 8),
+    window.innerWidth - stageLeft - explorerW - 8
+  );
+
+  // Velocidad PERCIBIDA: personaje relativo al piso (el mundo también se mueve)
   const dLeft = prevLeft == null ? 0 : desiredLeft - prevLeft;
   prevLeft = desiredLeft;
-  const vel = dLeft / Math.max(delta, 1);
-  const speedNorm = clamp(Math.abs(vel) / 0.5);
+  const dWorld = prevWorldPx == null ? 0 : worldXpx - prevWorldPx;
+  prevWorldPx = worldXpx;
+  const dGround = dLeft - dWorld; // avance real sobre el terreno
+  const vel = dGround / Math.max(delta, 1);
+  const speedNorm = clamp(Math.abs(vel) / 1.1);
 
   const feetScreenX = stageLeft + desiredLeft + explorerW * 0.45;
 
@@ -357,19 +373,35 @@ function draw(time) {
       showRun(runIndex);
       if (speedNorm < 0.9) squash('is-dash'); // sin spam en catch-up violento
     }
-    // Zancada ligada a distancia: salto directo de N frames en un solo toggle
-    stepAcc += Math.abs(dLeft);
+    // Zancada ligada a distancia sobre el PISO: sin patinar aunque el mundo se mueva
+    stepAcc += Math.abs(dGround);
     const steps = Math.floor(stepAcc / RUN_STEP_PX);
     if (steps > 0) {
       stepAcc -= steps * RUN_STEP_PX;
       runIndex = (runIndex + steps) % Math.max(runImgs.length, 1);
       showRun(runIndex);
-      // máximo 1 nube por frame (antes: una por pisada → 20 reflows en fast scroll)
       if (speedNorm > 0.25) spawnDust(feetScreenX, worldXpx, facing);
     }
-    runDist += Math.abs(dLeft);
-    runSegment += Math.abs(dLeft);
+    runDist += Math.abs(dGround);
+    runSegment += Math.abs(dGround);
+
+    // Frame blending: el frame siguiente entra en fade según la fase de zancada.
+    // 6 sprites se leen como 12+ (inbetweens ópticos)
+    if (!reduce) {
+      const f = clamp(stepAcc / RUN_STEP_PX);
+      const nextImg = runImgs[(runIndex + 1) % runImgs.length];
+      runImgs.forEach((img) => {
+        if (img !== activeFrame && img !== nextImg) img.style.opacity = '';
+      });
+      if (activeFrame) activeFrame.style.opacity = '1';
+      if (nextImg && nextImg !== activeFrame) nextImg.style.opacity = String(smooth(f) * 0.85);
+      blendActive = true;
+    }
   } else {
+    if (blendActive) {
+      runImgs.forEach((img) => { img.style.opacity = ''; });
+      blendActive = false;
+    }
     if (lastRunning && runSegment > 60) {
       // llegó a destino tras una corrida real: squash + golpe de cámara
       squash('is-land');
@@ -380,9 +412,14 @@ function draw(time) {
     if (lastKey !== 'a' + a) showAction(a);
   }
 
+  // Garantía: siempre hay un frame visible
+  if (!activeFrame) showAction(actionFor(p));
+
   // Bob por distancia (no por tiempo) + lean según velocidad, ambos suaves
   const bob = Math.sin(runDist / STRIDE_PX) * BOB_PX * (running ? speedNorm : 0);
-  const leanTarget = running ? clamp(vel * 10, -LEAN_MAX, LEAN_MAX) : 0;
+  // Oscilación de peso: micro-rotación sincronizada con la zancada
+  const wobble = running ? Math.sin(runDist / (STRIDE_PX * 0.5)) * 1.1 * speedNorm : 0;
+  const leanTarget = running ? clamp(vel * 6, -LEAN_MAX, LEAN_MAX) : 0;
   leanCur = lerp(leanCur, leanTarget, damping);
   const faceDamp = 1 - Math.exp(-delta / FACE_MS);
   faceCur = lerp(faceCur, facing, reduce ? 1 : faceDamp);
@@ -392,9 +429,19 @@ function draw(time) {
   if (explorer) {
     const dx = desiredLeft - baseLeftPx;
     explorer.style.transform =
-      'translate3d(' + dx + 'px,' + bob + 'px,0) rotate(' + leanCur + 'deg) scaleX(' + faceVis + ')';
+      'translate3d(' + dx + 'px,' + bob + 'px,0) rotate(' + (leanCur + wobble) + 'deg) scaleX(' + faceVis + ')';
     explorer.classList.toggle('at-lab', atLab);
     explorer.classList.toggle('at-tree', atTree);
+    // Motion blur sutil solo a alta velocidad (cuantizado para no repintar de más)
+    if (!reduce) {
+      const blur = Math.round(Math.max(0, speedNorm - 0.55) * 4) / 2; // 0, .5, 1, 1.5
+      if (blur !== lastBlur) {
+        lastBlur = blur;
+        explorer.style.filter = blur > 0
+          ? 'drop-shadow(0 14px 14px rgba(5,31,32,.2)) blur(' + blur + 'px)'
+          : '';
+      }
+    }
   }
 
   // --- Cámara: lookahead + zoom por velocidad + shake de impacto ---
@@ -460,10 +507,24 @@ function draw(time) {
   }
 
   if (decay) decay.style.opacity = String(1 - range(p, T.growStart, T.growEnd));
+  const grow = range(p, T.growStart, T.growEnd);
   if (healthyTree) {
-    const grow = range(p, T.growStart, T.growEnd);
     healthyTree.style.clipPath = 'inset(' + (100 - grow * 100) + '% 0 0)';
+    // Rim light + pop una vez que terminó de crecer
+    if (grow >= 1 && !treeAlive) {
+      treeAlive = true;
+      healthyTree.classList.add('is-alive');
+    } else if (grow < 0.9 && treeAlive) {
+      treeAlive = false;
+      healthyTree.classList.remove('is-alive');
+    }
   }
+  // Aura que crece con el árbol; spotlight que baja el resto del escenario
+  if (treeAura) {
+    treeAura.style.opacity = String(grow * 0.9);
+    treeAura.style.transform = 'scale(' + lerp(0.7, 1, smooth(grow)) + ')';
+  }
+  if (stageDim) stageDim.style.opacity = String(smooth(grow));
 
   const bloomT = range(p, T.celebrateStart, 0.97);
   if (bloom) {
@@ -519,6 +580,26 @@ if (document.readyState === 'loading') {
   boot();
 }
 
+// Recalibrar anclas cuando el layout puede haber cambiado sin resize:
+// carga completa (imágenes) y fuentes web listas
+function recalibrate() {
+  if (!ready) return;
+  cacheMetrics();
+  prevLeft = null; // evita un dLeft espúreo tras remedir
+  prevWorldPx = null;
+  readScroll();
+}
+window.addEventListener('load', recalibrate, { once: true });
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(recalibrate);
+}
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    lastTime = 0; // sin delta gigante al volver a la pestaña
+    recalibrate();
+  }
+});
+
 const skip = document.querySelector('.skip');
 if (skip) {
   skip.addEventListener('click', () => {
@@ -532,6 +613,7 @@ if (skip) {
 window.addEventListener('scroll', readScroll, { passive: true });
 window.addEventListener('resize', () => {
   cacheMetrics();
+  prevLeft = null;
   readScroll();
 });
 
