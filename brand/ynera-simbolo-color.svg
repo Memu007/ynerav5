@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Ynera">
+  <!-- Ynera · símbolo color. Degradé vertical en el orden del árbol: raíz ámbar (base) → corteza violeta (bifurcación) → copa azul (puntas). -->
+  <defs>
+    <linearGradient id="yn-g" gradientUnits="userSpaceOnUse" x1="48" y1="87.32" x2="48" y2="8.68">
+      <stop offset="0" stop-color="#FF9A1F"/>
+      <stop offset=".46" stop-color="#B25BFF"/>
+      <stop offset="1" stop-color="#3F7BFF"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#yn-g)" d="M42.00 87.32H54.00V45.32H42.00ZM52.60 41.46L26.88 10.82A6.0 6.0 0 0 0 17.69 18.54L43.40 49.18ZM52.60 49.18L78.31 18.54A6.0 6.0 0 0 0 69.12 10.82L43.40 41.46Z"/>
+</svg>

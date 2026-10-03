@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="32" height="32">
+  <!-- Ynera · favicon (<=32px). Mismo dibujo con trazo reforzado w=16 y brazos más cortos para que no se empaste. Fondo noche redondeado para pestañas claras. -->
+  <defs><linearGradient id="yf" gradientUnits="userSpaceOnUse" x1="48" y1="86.79" x2="48" y2="9.21"><stop offset="0" stop-color="#FF9A1F"/><stop offset=".46" stop-color="#B25BFF"/><stop offset="1" stop-color="#3F7BFF"/></linearGradient></defs>
+  <rect width="96" height="96" rx="20" fill="#06070C"/>
+  <path fill="url(#yf)" d="M40.00 86.79H56.00V44.79H40.00ZM54.13 39.65L30.99 12.07A8.0 8.0 0 0 0 18.73 22.35L41.87 49.93ZM54.13 49.93L77.27 22.35A8.0 8.0 0 0 0 65.01 12.07L41.87 39.65Z"/>
+</svg>

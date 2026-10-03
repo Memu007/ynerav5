@@ -1,45 +1,11 @@
-YNERA 5 — PERFIL VIGENTE
+YNERA — PERFIL VIGENTE
 
-Objetivo
-Crear una web premium para personas no técnicas que muestre cómo Ynera convierte problemas reales en sistemas que funcionan. Datos e Inteligencia Artificial son el motor; Sistemas lleva la solución a producción y Ciberseguridad la protege.
+Datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas y profesionales. Socios en Argentina y España, trabajo remoto en español e inglés.
 
-Audiencia
-Dueños, responsables y equipos de negocio que necesitan analizar información, crear una solución digital, automatizar una operación o evaluar riesgos, sin exigirles conocimientos técnicos.
+Promesa: Tu operación, bajo control. Conectar datos, reducir riesgos y automatizar con revisión humana.
 
-Concepto
-Un Scroll World lateral continuo. El cliente-personaje detecta un árbol Y marchito, toma datos, viaja a un laboratorio, analiza con IA, vuelve, protege, implementa y consigue que el árbol florezca. El scroll controla cámara y avance; las microanimaciones completan cada acción.
+Árbol bifurcado: raíces como datos, corteza como seguridad, copa como IA. Titulares con Ynera Sistema, dirección C elegida.
 
-Mensaje principal
-“Convertimos problemas reales en sistemas que funcionan.”
+CDI: producto propio funcional. Agroboeda: marketplace del agro por encargo de cliente, en desarrollo. Capturas pendientes.
 
-Capacidades integradas al recorrido
-1. Diagnóstico: entender el problema.
-2. Datos: capturar y ordenar señales.
-3. Ingeniería: conectar fuentes y sistemas.
-4. IA aplicada: encontrar patrones y respuestas.
-5. Producto: traducir el hallazgo a una solución usable.
-6. Ciberseguridad: probar y reducir riesgos.
-7. Sistemas: integrar, automatizar y poner en producción.
-8. Impacto: medir y mejorar resultados.
-
-Dirección visual
-- Arquitectura 2.5D futurista, lateral, luminosa y premium.
-- Pixelado sutil, nunca 8-bit tosco.
-- Marfil, verdes botánicos, teal y oro suave como paleta provisional.
-- Personaje neutral con traje de exploración.
-- Árbol con Y de marca claramente legible.
-- Evitar anime, cyberpunk oscuro, estilo infantil y estética genérica de AI SaaS.
-
-Estructura
-1. Promesa y recorrido narrativo breve, saltable.
-2. Puente: “Lo que viste es cómo trabajamos”.
-3. Servicios como explicación estable.
-4. Productos propios: Aira, CDI y ReservaYá, sin presentarlos como clientes ni atribuir métricas.
-5. Método de trabajo verificable.
-6. CTA: “Escribir a Ynera”.
-
-Estado
-Existe una versión de escritorio funcional en HTML, CSS y JavaScript nativos. El recorrido ocupa aproximadamente 2,4 pantallas efectivas y presenta cinco hitos comerciales. La web muestra productos desarrollados, pero no afirma tener clientes ni resultados cuantitativos. Mobile y una agenda definitiva quedan pendientes antes de producción.
-
-Fuente de detalle
-Consultar HANDOFF.md. El storyboard de docs/current-storyboard.png es referencia conceptual histórica y no arte final.
+Consulta inicial mediante la agenda existente, directamente con ambos socios. Detalle vigente en HANDOFF.md.

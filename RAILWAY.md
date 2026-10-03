@@ -1,11 +1,9 @@
-# Publicar en Railway
+# Alojamiento
 
-La web es estática y no necesita compilación, servidor propio ni variables de entorno. Railway ofrece despliegue estático automático desde GitHub.
+El sitio es estático, está en la raíz del repositorio y no necesita compilación.
 
-1. En Railway, elegir **New Project → Deploy from GitHub repo**.
-2. Seleccionar `Memu007/ynerav5` y la rama `main`.
-3. Railway detectará y publicará los archivos estáticos sin configuración adicional.
-4. Generar un dominio desde **Settings → Networking** o conectar el dominio definitivo.
-5. Antes de conectar otro dominio, reemplazar `https://ynera.com/` en `index.html`, `robots.txt` y `sitemap.xml` si no será la URL pública real.
+Si existe un servicio de Railway conectado, revisar su rama, directorio raíz y mecanismo de publicación en su panel. La URL del repositorio es la fuente, no una ruta de directorio.
 
-No agregar un servidor Node, Python o Docker mientras Railway mantenga el hosting estático: sumaría dependencias y consumo sin aportar funcionalidad.
+Este repositorio no confirma un dominio ni un despliegue activo. Comprobar la publicación desde la URL real del servicio después de actualizar la rama. También puede usarse otro alojamiento estático.
+
+Con el dominio confirmado, completar las URLs públicas de metadatos y sitemap.
