@@ -33,5 +33,9 @@ for name, lang, other in [('index.html', 'es', 'en.html'), ('en.html', 'en', 'in
     assert 'id="diagnostico"' not in text and '#diagnostico' not in page.refs, name + ': removed diagnostic'
     assert "getElementById('sp-'" not in text, name + ': removed tree update'
     assert text.count('<canvas id="tree"') == 1, name + ': main tree preserved'
+    story = re.search(r'<section[^>]*id="story".*?</section>', text, re.S)[0]
+    assert story.count('class="story-commitment"') == 3, name + ': three commitments in existing tree chapters'
+    process = re.search(r'<section[^>]*id="proceso".*?</section>', text, re.S)[0]
+    assert process.count('class="step"') == 4 and 'pledges' not in process, name + ': process ends at fourth stage'
     assert visible == [(q['name'], q['acceptedAnswer']['text']) for q in faq['mainEntity']], name + ': FAQ mismatch'
     print(name + ': language, local links, contact, spaces and FAQ OK')

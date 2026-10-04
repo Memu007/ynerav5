@@ -273,9 +273,6 @@ html.js .steps:not(.done) .step:not(.on) .node{background:var(--papel)}
 .step-n{font:600 17px/1 var(--f);font-variant-numeric:lining-nums;color:var(--gris)}
 .step h3{font-size:clamp(26px,2.1vw,34px);hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
 .step p{color:var(--gris);font-size:17px}
-.pledges{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(64px,8vw,112px)}
-.pledges .pledge{margin:0}
-.pledge blockquote{margin:0;font:400 clamp(21px,1.8vw,26px)/1.3 var(--f);text-wrap:balance}
 
 /* X · FAQ: aquí sí hay filete, separa objetos que se abren */
 .faq{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px);align-items:start}
@@ -369,7 +366,6 @@ footer{position:relative;background:var(--tinta);color:var(--luz);padding-block:
   .grow{clip-path:inset(0 -2px calc((1 - var(--k,1)) * 100%) -2px)}
   .step{padding-top:0}
   .node{left:-34px;top:.2em}
-  .pledges{grid-template-columns:1fr}
   .offer{grid-template-columns:1fr;gap:28px 0}
   .offer-hd,.offer-ft{margin:0}
   .foot{grid-template-columns:1fr 1fr}
@@ -430,8 +426,6 @@ html.motion.carousel .step>h3,html.motion.carousel .step>p{opacity:var(--vis,1)}
 html.motion.carousel .step h3{font-size:clamp(44px,4.4vw,64px);hyphens:manual;-webkit-hyphens:manual;overflow-wrap:normal}
 html.motion.carousel .step p{font-size:clamp(19px,1.45vw,21px);max-width:26em}
 html.motion.carousel .grow{clip-path:none;transform:scaleX(0);transform-origin:0 50%}
-html.motion.carousel .pledges{grid-template-columns:1fr;gap:26px;margin-top:0;width:min(46vw,640px);flex:none}
-html.motion.carousel .pledge blockquote{font-size:clamp(21px,1.7vw,26px)}
 .car-ind{display:none}
 html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-top:clamp(28px,5vh,56px);color:var(--gris);font-size:16px}
 .car-ind b{font-weight:600;color:var(--tinta);font-variant-numeric:lining-nums}
@@ -460,7 +454,7 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
-<link rel="stylesheet" href="typography.css?v=team-align1">
+<link rel="stylesheet" href="typography.css?v=story-commitments1">
 
 
 </head>
@@ -518,41 +512,44 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
         <dl class="did" style="--c:var(--root)">
           <dt data-copy="33">A possible first deliverable</dt><dd data-copy="34">A dashboard for one specific report, with connected sources and agreed update rules.</dd>
         </dl>
-        <a class="ctx" href="#contacto" style="--c:var(--root)" data-copy="35">Numbers do not add up? Let’s talk</a>
+        <p class="story-commitment" data-copy="35">A first deliverable with agreed scope and cost.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--root)" data-copy="36">Numbers do not add up? Let’s talk</a>
       </div>
     </article>
 
-    <article class="chap" id="corteza" data-plate="Bark: security" data-copy="36">
+    <article class="chap" id="corteza" data-plate="Bark: security" data-copy="37">
       <div class="chap-card">
-        <h2 data-copy="37">Protect your business operations</h2>
-        <p class="lede" data-copy="38">We start with a defined system or process: who has access, what information it handles and how it can be recovered if something fails.</p>
+        <h2 data-copy="38">Protect your business operations</h2>
+        <p class="lede" data-copy="39">We start with a defined system or process: who has access, what information it handles and how it can be recovered if something fails.</p>
         <dl class="did" style="--c:var(--bark)">
-          <dt data-copy="39">A possible first deliverable</dt><dd data-copy="40">An access and backup review for one system, with findings and prioritized fixes.</dd>
+          <dt data-copy="40">A possible first deliverable</dt><dd data-copy="41">An access and backup review for one system, with findings and prioritized fixes.</dd>
         </dl>
-        <a class="ctx" href="#contacto" style="--c:var(--bark)" data-copy="41">Want to review your business security? Let’s talk</a>
+        <p class="story-commitment" data-copy="42">You work directly with the partners.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--bark)" data-copy="43">Want to review your business security? Let’s talk</a>
       </div>
     </article>
 
-    <article class="chap" id="copa" data-plate="Canopy: applied AI" data-copy="42">
+    <article class="chap" id="copa" data-plate="Canopy: applied AI" data-copy="44">
       <div class="chap-card">
-        <h2 data-copy="43">Applied AI with human review</h2>
-        <p class="lede" data-copy="44">We choose a specific task, such as answering questions from your documents. We define what the assistant can do and when a person takes over.</p>
+        <h2 data-copy="45">Applied AI with human review</h2>
+        <p class="lede" data-copy="46">We choose a specific task, such as answering questions from your documents. We define what the assistant can do and when a person takes over.</p>
         <dl class="did" style="--c:var(--leaf)">
-          <dt data-copy="45">A possible first deliverable</dt><dd data-copy="46">An assistant for a defined set of documents and questions, with testing criteria and human review.</dd>
+          <dt data-copy="47">A possible first deliverable</dt><dd data-copy="48">An assistant for a defined set of documents and questions, with testing criteria and human review.</dd>
         </dl>
-        <a class="ctx" href="#contacto" style="--c:var(--leaf)" data-copy="47">Which tasks could you automate? Let’s talk</a>
+        <p class="story-commitment" data-copy="49">If the project is not worthwhile, we tell you.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--leaf)" data-copy="50">Which tasks could you automate? Let’s talk</a>
       </div>
     </article>
 
-    <article class="chap" id="bosque" data-plate="Forest: Ynera projects" data-copy="48">
+    <article class="chap" id="bosque" data-plate="Forest: Ynera projects" data-copy="51">
       <div class="chap-card">
-        <h2 data-copy="49">Projects we<br>are building.</h2>
-        <p class="lede poem" data-copy="50">Our own product and a client project.</p>
+        <h2 data-copy="52">Projects we<br>are building.</h2>
+        <p class="lede poem" data-copy="53">Our own product and a client project.</p>
         <div class="forest">
-<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for a CDI product screenshot" data-copy="51"><span>CDI</span><small data-copy="52">Product preview</small></div><h3>CDI</h3><span class="sector" data-copy="53">International trade</span><span class="case-status" data-copy="54">Our own product · Working product</span><p class="res" data-copy="55">The problem: documents and deadlines spread across files and conversations.</p><p class="desc" data-copy="56">CDI brings customs brokers’ documents, conversations and deadlines together in one place.</p></article>
-<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for an Agroboeda project screenshot" data-copy="57"><span>Agroboeda</span><small data-copy="58">Project preview</small></div><h3>Agroboeda</h3><span class="sector" data-copy="59">Agriculture</span><span class="case-status" data-copy="60">Client project · In development</span><p class="res" data-copy="61">The project: connect agricultural buyers and sellers.</p><p class="desc" data-copy="62">We are building a buying and selling platform for a client. Development is ongoing; there are no usage results to report yet.</p></article>
+<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for a CDI product screenshot" data-copy="54"><span>CDI</span><small data-copy="55">Product preview</small></div><h3>CDI</h3><span class="sector" data-copy="56">International trade</span><span class="case-status" data-copy="57">Our own product · Working product</span><p class="res" data-copy="58">The problem: documents and deadlines spread across files and conversations.</p><p class="desc" data-copy="59">CDI brings customs brokers’ documents, conversations and deadlines together in one place.</p></article>
+<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for an Agroboeda project screenshot" data-copy="60"><span>Agroboeda</span><small data-copy="61">Project preview</small></div><h3>Agroboeda</h3><span class="sector" data-copy="62">Agriculture</span><span class="case-status" data-copy="63">Client project · In development</span><p class="res" data-copy="64">The project: connect agricultural buyers and sellers.</p><p class="desc" data-copy="65">We are building a buying and selling platform for a client. Development is ongoing; there are no usage results to report yet.</p></article>
         </div>
-        <a class="ctx" href="#contacto" data-copy="63">Facing a similar problem? Let us talk about your business</a>
+        <a class="ctx" href="#contacto" data-copy="66">Facing a similar problem? Let us talk about your business</a>
       </div>
     </article>
   </div>
@@ -562,8 +559,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <section class="sec" id="para-quien" aria-labelledby="pq">
   <div class="wrap">
     <div class="fork">
-      <h2 class="h2s" id="pq" data-copy="64">For businesses that need their operations in order</h2>
-      <p class="lede poem" data-copy="65">Where we work best.</p>
+      <h2 class="h2s" id="pq" data-copy="67">For businesses that need their operations in order</h2>
+      <p class="lede poem" data-copy="68">Where we work best.</p>
       <svg class="fork-y draw" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="fkYes" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17131F" stop-opacity=".45"/><stop offset="1" stop-color="#1E4D3A"/></linearGradient>
@@ -574,19 +571,19 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       </svg>
       <div class="fork-cols">
         <div class="fork-col">
-          <span class="fork-hd" data-copy="66">We can help if</span>
+          <span class="fork-hd" data-copy="69">We can help if</span>
           <ul>
-            <li data-copy="67">Your business relies on spreadsheets and manual tasks.</li>
-            <li data-copy="68">You handle sensitive customer or patient information.</li>
-            <li data-copy="69">Your team needs automation without losing control.</li>
+            <li data-copy="70">Your business relies on spreadsheets and manual tasks.</li>
+            <li data-copy="71">You handle sensitive customer or patient information.</li>
+            <li data-copy="72">Your team needs automation without losing control.</li>
           </ul>
         </div>
         <div class="fork-col no">
-          <span class="fork-hd" data-copy="70">We are not a fit if</span>
+          <span class="fork-hd" data-copy="73">We are not a fit if</span>
           <ul>
-            <li data-copy="71">You want a tool without examining the problem it needs to solve.</li>
-            <li data-copy="72">Your business is online gambling or products that harm people.</li>
-            <li data-copy="73">You want AI to make decisions without human oversight.</li>
+            <li data-copy="74">You want a tool without examining the problem it needs to solve.</li>
+            <li data-copy="75">Your business is online gambling or products that harm people.</li>
+            <li data-copy="76">You want AI to make decisions without human oversight.</li>
           </ul>
         </div>
       </div>
@@ -597,9 +594,9 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <!-- ===== DUPLA ===== -->
 <section class="sec slide" id="dupla" aria-labelledby="duh">
   <div class="wrap">
-    <h2 class="h2s" id="duh" data-copy="74">Two partners. One team in Argentina and Spain.</h2>
-    <p class="lede poem" data-copy="75">Two branches. One trunk.</p>
-    <p class="lede" data-copy="76">We are Emiliano and Mariano. We bring together security, software development and data science. One of us works from Argentina, the other from Spain. The people you speak to are the people who design and build your solution.</p>
+    <h2 class="h2s" id="duh" data-copy="77">Two partners. One team in Argentina and Spain.</h2>
+    <p class="lede poem" data-copy="78">Two branches. One trunk.</p>
+    <p class="lede" data-copy="79">We are Emiliano and Mariano. We bring together security, software development and data science. One of us works from Argentina, the other from Spain. The people you speak to are the people who design and build your solution.</p>
     <!--
       FOTOS: mientras no haya fotos reales, la Y lineal (.duo-y) hace de retrato de la dupla.
       Cuando lleguen (ver Código de marca 6.2: misma luz, misma lente, cuadradas, sin radio),
@@ -610,8 +607,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
     <div class="duo">
       <article class="person l" style="--c:var(--bark)">
         <h3>Emiliano</h3>
-        <p class="role" data-copy="77">Cybersecurity, software and AI</p>
-        <p data-copy="78">Designs and builds systems with security integrated from architecture through deployment.</p>
+        <p class="role" data-copy="80">Cybersecurity, software and AI</p>
+        <p data-copy="81">Designs and builds systems with security integrated from architecture through deployment.</p>
         <!-- TODO: link real de LinkedIn -->
       </article>
       <div class="duo-y" aria-hidden="true">
@@ -627,8 +624,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       </div>
       <article class="person r" style="--c:var(--root)">
         <h3>Mariano</h3>
-        <p class="role" data-copy="79">Data science and business</p>
-        <p data-copy="80">Turns business conversations into problems that can be measured and solved. Connects data and context with the decisions your team needs to make.</p>
+        <p class="role" data-copy="82">Data science and business</p>
+        <p data-copy="83">Turns business conversations into problems that can be measured and solved. Connects data and context with the decisions your team needs to make.</p>
         <!-- TODO: link real de LinkedIn -->
       </article>
     </div>
@@ -638,24 +635,19 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <!-- ===== PROCESO ===== -->
 <section class="sec" id="proceso" aria-labelledby="ph">
   <div class="wrap">
-    <h2 class="h2s" id="ph" data-copy="81">How we work</h2>
-    <p class="lede remote-intro" data-copy="82">Start with a video call. Meetings around your time zone and delivery in stages, wherever you are.</p>
+    <h2 class="h2s" id="ph" data-copy="84">How we work</h2>
+    <p class="lede remote-intro" data-copy="85">Start with a video call. Meetings around your time zone and delivery in stages, wherever you are.</p>
     <ol class="steps" id="steps">
       <li class="grow" aria-hidden="true"></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="83">Step 1</span><h3 data-copy="84">We listen</h3><p data-copy="85">Tell us what is holding your team back. We start with a video call and a specific problem.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="86">Step 2</span><h3 data-copy="87">We assess</h3><p data-copy="88">We review impact, data and risks. Together, we agree on priorities and how to measure progress.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="89">Step 3</span><h3 data-copy="90">We build</h3><p data-copy="91">We work in stages, with deliverables you can review, documented decisions and human review.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="92">Step 4</span><h3 data-copy="93">We operate</h3><p data-copy="94">We put the solution to work and agree on maintenance, documentation and support for your team.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="86">Step 1</span><h3 data-copy="87">We listen</h3><p data-copy="88">Tell us what is holding your team back. We start with a video call and a specific problem.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="89">Step 2</span><h3 data-copy="90">We assess</h3><p data-copy="91">We review impact, data and risks. Together, we agree on priorities and how to measure progress.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="92">Step 3</span><h3 data-copy="93">We build</h3><p data-copy="94">We work in stages, with deliverables you can review, documented decisions and human review.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="95">Step 4</span><h3 data-copy="96">We operate</h3><p data-copy="97">We put the solution to work and agree on maintenance, documentation and support for your team.</p></li>
     </ol>
-    <nav class="car-controls" aria-label="How we work navigation" data-copy="95">
-      <button type="button" class="car-arrow" data-direction="-1" aria-label="Previous step" data-copy="96"><span aria-hidden="true">←</span></button>
-      <button type="button" class="car-arrow" data-direction="1" aria-label="Next step" data-copy="97"><span aria-hidden="true">→</span></button>
+    <nav class="car-controls" aria-label="How we work navigation" data-copy="98">
+      <button type="button" class="car-arrow" data-direction="-1" aria-label="Previous step" data-copy="99"><span aria-hidden="true">←</span></button>
+      <button type="button" class="car-arrow" data-direction="1" aria-label="Next step" data-copy="100"><span aria-hidden="true">→</span></button>
     </nav>
-    <div class="pledges" aria-label="Our commitments" data-copy="98">
-      <figure class="pledge"><blockquote data-copy="99">If the project is not worthwhile, we tell you before charging.</blockquote></figure>
-      <figure class="pledge"><blockquote data-copy="100">You work directly with the partners, without intermediaries.</blockquote></figure>
-      <figure class="pledge"><blockquote data-copy="101">We work in stages, with scope and cost agreed before each one begins.</blockquote></figure>
-    </div>
   </div>
 </section>
 
@@ -664,16 +656,16 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   <div class="wrap">
     <div class="faq">
       <div class="faq-side">
-        <h2 class="h2s" id="fh" data-copy="102">Questions about data, cybersecurity and AI</h2>
-        <p class="lede poem" data-copy="103">What people ask before we start.</p>
-        <a class="ctx" href="#contacto" data-copy="104">Another question? Book a conversation</a>
+        <h2 class="h2s" id="fh" data-copy="101">Questions about data, cybersecurity and AI</h2>
+        <p class="lede poem" data-copy="102">What people ask before we start.</p>
+        <a class="ctx" href="#contacto" data-copy="103">Another question? Book a conversation</a>
       </div>
       <div class="faq-list">
-        <details><summary data-copy="105">How do you decide whether a project is worthwhile?</summary><p data-copy="106">During the first conversation, we discuss the problem, its impact and the information available. We offer preliminary guidance and agree on what to review before deciding whether to proceed. Technical assessments and their deliverables are scoped and priced separately.</p></details>
-        <details><summary data-copy="107">What happens to my data?</summary><p data-copy="108">We use minimum necessary access and document who can access what before working with your data. Nothing leaves your control without your knowledge, and we do not request data we do not need.</p></details>
-        <details><summary data-copy="109">How much does it cost, and how long does it take?</summary><p data-copy="110">Cost and timing depend on scope. We first understand the problem and gather the information needed, then propose deliverables, cost and timing. Each stage is agreed before work begins.</p></details>
-        <details><summary data-copy="111">How do we work together across countries?</summary><p data-copy="112">Our team is in Argentina and Spain. We work remotely, in English and Spanish, with meetings arranged around your time zone. Before starting, we agree on scope, deliverables, communication channels and access to your systems.</p></details>
-        <details><summary data-copy="113">What happens after delivery?</summary><p data-copy="114">We can keep operating and improving what we build, as we do with our own products, under a separately agreed maintenance plan. If your team prefers to manage it independently, we provide documentation so it can run without relying on us. That has been our approach from the start.</p></details>
+        <details><summary data-copy="104">How do you decide whether a project is worthwhile?</summary><p data-copy="105">During the first conversation, we discuss the problem, its impact and the information available. We offer preliminary guidance and agree on what to review before deciding whether to proceed. Technical assessments and their deliverables are scoped and priced separately.</p></details>
+        <details><summary data-copy="106">What happens to my data?</summary><p data-copy="107">We use minimum necessary access and document who can access what before working with your data. Nothing leaves your control without your knowledge, and we do not request data we do not need.</p></details>
+        <details><summary data-copy="108">How much does it cost, and how long does it take?</summary><p data-copy="109">Cost and timing depend on scope. We first understand the problem and gather the information needed, then propose deliverables, cost and timing. Each stage is agreed before work begins.</p></details>
+        <details><summary data-copy="110">How do we work together across countries?</summary><p data-copy="111">Our team is in Argentina and Spain. We work remotely, in English and Spanish, with meetings arranged around your time zone. Before starting, we agree on scope, deliverables, communication channels and access to your systems.</p></details>
+        <details><summary data-copy="112">What happens after delivery?</summary><p data-copy="113">We can keep operating and improving what we build, as we do with our own products, under a separately agreed maintenance plan. If your team prefers to manage it independently, we provide documentation so it can run without relying on us. That has been our approach from the start.</p></details>
       </div>
     </div>
   </div>
@@ -683,19 +675,19 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <section class="sec close slide" id="contacto" aria-labelledby="ch">
   <div class="wrap">
     <div class="close-hd">
-      <h2 class="big" id="ch" data-copy="115">Let us discuss<br>one specific problem.</h2>
-      <p class="lede poem" data-copy="116">A free first conversation.</p>
-      <p class="lede" data-copy="117">Tell us which process is holding your team back. We discuss whether we can help and what we need to know to propose a first deliverable.</p>
+      <h2 class="big" id="ch" data-copy="114">Let us discuss<br>one specific problem.</h2>
+      <p class="lede poem" data-copy="115">A free first conversation.</p>
+      <p class="lede" data-copy="116">Tell us which process is holding your team back. We discuss whether we can help and what we need to know to propose a first deliverable.</p>
     </div>
-    <p class="contact-pending" data-copy="118">Contact channel awaiting confirmation.</p>
+    <p class="contact-pending" data-copy="117">Contact channel awaiting confirmation.</p>
   </div>
 </section>
 
 </main>
 
-<div class="mbar" id="mbar" aria-label="Quick contact" data-copy="119">
-  <a class="btn btn-fill" id="mbarMain" href="#contacto" data-copy="120">Free consultation</a>
-  <a class="btn btn-line" href="#contacto" aria-label="Book a conversation" data-copy="121">Book a call</a>
+<div class="mbar" id="mbar" aria-label="Quick contact" data-copy="118">
+  <a class="btn btn-fill" id="mbarMain" href="#contacto" data-copy="119">Free consultation</a>
+  <a class="btn btn-line" href="#contacto" aria-label="Book a conversation" data-copy="120">Book a call</a>
 </div>
 
 <footer>
@@ -703,11 +695,11 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
     <div class="foot-sig">
       <svg class="foot-sym" viewBox="0 0 96 96" role="img" aria-label="Ynera"><path fill="currentColor" d="M42.00 87.32H54.00V45.32H42.00ZM52.60 41.46L26.88 10.82A6.0 6.0 0 0 0 17.69 18.54L43.40 49.18ZM52.60 49.18L78.31 18.54A6.0 6.0 0 0 0 69.12 10.82L43.40 41.46Z"/></svg>
       <p class="specimen">Ynera bifurcata</p>
-      <p data-copy="122">Data, cybersecurity and applied AI for small and medium-sized businesses and independent professionals. Argentina and Spain · Working remotely in English and Spanish.</p>
+      <p data-copy="121">Data, cybersecurity and applied AI for small and medium-sized businesses and independent professionals. Argentina and Spain · Working remotely in English and Spanish.</p>
     </div>
-    <nav class="foot-links" aria-label="Footer" data-copy="123"><a href="#raices" data-copy="124">Data</a><a href="#corteza" data-copy="125">Security</a><a href="#copa" data-copy="126">AI</a><a href="#bosque" data-copy="127">Our work</a><a href="#dupla" data-copy="128">About us</a></nav>
+    <nav class="foot-links" aria-label="Footer" data-copy="122"><a href="#raices" data-copy="123">Data</a><a href="#corteza" data-copy="124">Security</a><a href="#copa" data-copy="125">AI</a><a href="#bosque" data-copy="126">Our work</a><a href="#dupla" data-copy="127">About us</a></nav>
     <div class="foot-meta">
-      <a href="#top" data-copy="129">Back to top</a>
+      <a href="#top" data-copy="128">Back to top</a>
       <span id="today">© 2026 Ynera</span>
     </div>
   </div></div>
@@ -715,13 +707,13 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 
 
 <script src="tree.js?v=entry3" defer></script>
-<script src="lower-motion.js?v=camera1" defer></script>
-<script src="motion.js?v=camera1" defer></script>
-<script src="language-data.js?v=no-test1" defer></script>
-<script src="language.js?v=1" defer></script>
+<script src="lower-motion.js?v=story-commitments1" defer></script>
+<script src="motion.js?v=story-commitments1" defer></script>
+<script src="language-data.js?v=story-commitments1" defer></script>
+<script src="language.js?v=story-commitments1" defer></script>
 <script>
-window.YneraUI={"es":{"booking":"Consulta inicial sin costo","commitments":"Compromisos","step":"Paso","of":"de"},"en":{"booking":"Free initial consultation","commitments":"Our commitments","step":"Step","of":"of"}};
-window.YneraStepLabel=(n,commitments=false)=>{const c=window.YneraUI[document.documentElement.lang];return commitments?c.commitments:c.step+" <b>"+n+"</b> "+c.of+" 4";};
+window.YneraUI={"es":{"booking":"Consulta inicial sin costo","step":"Paso","of":"de"},"en":{"booking":"Free initial consultation","step":"Step","of":"of"}};
+window.YneraStepLabel=n=>{const c=window.YneraUI[document.documentElement.lang];return c.step+" <b>"+n+"</b> "+c.of+" 4";};
 (() => {
   const root = document.documentElement; root.classList.add('js');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

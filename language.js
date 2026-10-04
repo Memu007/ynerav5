@@ -28,7 +28,7 @@
     });
     document.querySelectorAll('.ci-t').forEach(label => {
       const n = label.querySelector('b');
-      label.innerHTML = window.YneraStepLabel(n ? Number(n.textContent) : 1, !n);
+      label.innerHTML = window.YneraStepLabel(n ? Number(n.textContent) : 1);
     });
   }
   function apply(lang, navigate) {

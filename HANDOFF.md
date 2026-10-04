@@ -64,3 +64,9 @@ Emi pidió retirar completa la sección «Por dónde empezar». Eliminados el te
 Emi aprobó igualar las tarjetas y alinear ambos perfiles a izquierda. La grilla estira las tarjetas a igual altura en escritorio y reparte filas iguales en móvil; conserva el símbolo central cuando hay espacio. El título del equipo recibe 32 px de aire adicionales bajo la altura real del menú. Sin cambio de copy, hero ni carrusel.
 
 Verificación visual: 997 px ES con tarjetas de 312 px y título separado 34 px del menú; 390 px EN con tarjetas de 239 px, sin desborde. Verificación de enlaces, idiomas y FAQ aprobada.
+
+
+## Compromisos dentro del árbol · 4 de octubre de 2026
+Emi aprobó trasladar parte del contenido inferior a la animación del árbol. Se distribuyeron tres frases breves en los capítulos de datos, seguridad e IA: primera entrega con alcance/costo acordados, trabajo directo con socios y aviso si el proyecto no conviene. Se mantienen cinco capítulos, sin agregar pantallas ni modificar `tree.js`. Socios, proceso, FAQ y contacto quedan abajo.
+
+Eliminado el panel final de compromisos del carrusel y sus estilos. El recorrido y las flechas ahora usan cuatro etapas y tres transiciones; el paso 4 queda como límite final. Etiquetas/traducciones regeneradas en ES/EN. Verificados 997 px ES/EN y 390 px ES: frases legibles, sin desborde, un canvas; avanzar desde Paso 4 conserva Paso 4 y su pose frontal. Consola sin errores. Checks de controles/cámara, contenido, traducciones y sintaxis aprobados. Sin benchmark de rendimiento ni medición de conversión. Contacto real pendiente.

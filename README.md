@@ -14,7 +14,7 @@ Abrir `http://127.0.0.1:8765/`. `index.html` es español; `en.html`, inglés. El
 
 ## Archivos
 
-- `index.html`, `en.html`: contenido de la web, sin test de orientación.
+- `index.html`, `en.html`: contenido de la web, sin test de orientación. Los compromisos acompañan las escenas de servicios del árbol; el carrusel inferior termina en la cuarta etapa.
 - `typography.css`, `fonts/`: Instrument Sans y las fuentes originales Ynera.
 - `tree.js`: escena Three.js; `motion.js`: movimiento y scroll; `lower-motion.js`: controles, poses de cámara del carrusel y entradas de las secciones inferiores. Se carga antes de `motion.js`, que reutiliza su recorrido de scroll para mover las etapas. Sus bibliotecas conservan avisos de licencia.
 - `ambience.js`: luz según hora local, sin geolocalización.

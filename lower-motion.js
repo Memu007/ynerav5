@@ -17,7 +17,7 @@ window.YneraCameraPose = delta => {
       const top = process.getBoundingClientRect().top + scrollY;
       const distance = parseFloat(getComputedStyle(process).getPropertyValue('--cdist'));
       if (!distance) return;
-      const count = steps.querySelectorAll('.step').length;
+      const count = steps.querySelectorAll('.step').length - 1;
       const current = Math.round(Math.max(0, Math.min(1, (scrollY - top) / distance)) * count);
       const target = top + Math.max(0, Math.min(count, current + direction)) / count * distance;
       if (window.__lenis) window.__lenis.scrollTo(target, {duration: .85});

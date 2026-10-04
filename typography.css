@@ -151,7 +151,6 @@ h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Sistema
 .duo{margin-top:32px;gap:28px}
 #proceso .h2s{margin-bottom:24px}
 .remote-intro{margin-bottom:24px}
-.pledges{margin-top:32px}
 .faq-side{gap:16px}
 .close .big{font-size:clamp(40px,5.8vw,78px)}
 .close .contact-pending{margin-top:28px;color:var(--gris);font-size:15px}
@@ -185,7 +184,6 @@ h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Sistema
 #proceso .grow,#proceso .car-ind i::after{background:#d9be85}
 #proceso .steps::before,#proceso .step::after,#proceso .car-ind i{background:rgb(241 240 233/.22)}
 html.js #proceso .steps:not(.done) .step:not(.on) .node{background:#263b32}
-#proceso .pledge blockquote{color:#f1f0e9}
 .car-controls{display:none;gap:12px;margin-top:20px}
 html.motion .car-controls{display:flex}
 .car-arrow{width:46px;height:46px;border:1px solid rgb(241 240 233/.45);background:transparent;color:#f1f0e9;font:400 24px/1 var(--f);cursor:pointer;transition:background .2s,transform .2s}
@@ -204,15 +202,20 @@ html.motion .sec.slide .sec-edge::before,#para-quien .sec-edge::before{height:28
  html.motion.carousel #proceso .steps::before{display:block;left:5px;right:0;top:5px;bottom:auto;width:auto;height:1.5px}
  html.motion.carousel #proceso .grow{display:block;left:5px;right:0;top:5px;bottom:auto;width:auto;height:1.5px}
  html.motion.carousel #proceso .step::after{display:none}
- html.motion.carousel #proceso .pledges{width:72vw}
 }
 @media(prefers-reduced-motion:reduce){.volume-reveal{opacity:1;transform:none;transition:none}.car-arrow:hover{transform:none}}
 
 /* Travel through shallow scenes; stop square to the reader at every stage. */
 html.motion.carousel #proceso .car-view{perspective:1100px;perspective-origin:25% 45%;mask-image:none;-webkit-mask-image:none;overflow:clip;padding-block:24px 28px;margin-block:-24px -28px}
 html.motion.carousel #proceso .car-track,html.motion.carousel #proceso .steps{transform-style:preserve-3d}
-html.motion.carousel #proceso .step,html.motion.carousel #proceso .pledges{transform-style:preserve-3d;transform-origin:15% 50%;backface-visibility:hidden}
+html.motion.carousel #proceso .step{transform-style:preserve-3d;transform-origin:15% 50%;backface-visibility:hidden}
 html.motion.carousel #proceso .step>h3{transform:translateZ(24px);text-shadow:0 5px 18px rgb(0 0 0/.16)}
 html.motion.carousel #proceso .step>p{transform:translateZ(12px)}
 html.motion.carousel #proceso .step>.step-n{transform:translateZ(4px)}
-@media(prefers-reduced-motion:reduce){#proceso .step,#proceso .pledges,#proceso .step>h3,#proceso .step>p,#proceso .step>.step-n{transform:none!important;opacity:1!important}}
+@media(prefers-reduced-motion:reduce){#proceso .step,#proceso .step>h3,#proceso .step>p,#proceso .step>.step-n{transform:none!important;opacity:1!important}}
+
+/* Commercial commitments travel with the existing service chapters. */
+.story-commitment{border-left:2px solid var(--leaf);padding-left:14px;margin-block:20px 4px;max-width:32em;color:var(--luz);font-size:16px;font-weight:550;line-height:1.45}
+#raices .story-commitment{border-color:var(--root)}
+#corteza .story-commitment{border-color:var(--bark)}
+@media(max-width:980px){.story-commitment{margin-block:4px;font-size:15px}}

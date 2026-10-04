@@ -13,14 +13,14 @@ const context = {
     querySelectorAll: () => [-1, 1].map(direction => ({dataset: {direction}, addEventListener: (_, fn) => {clicks[direction] = fn;}}))
   },
   matchMedia: () => ({matches: false}),
-  getComputedStyle: () => ({getPropertyValue: () => '800'}),
+  getComputedStyle: () => ({getPropertyValue: () => '600'}),
   window: {__lenis: {scrollTo: y => {target = y;}}},
   get scrollY() {return position;}
 };
 vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname, '../lower-motion.js'), 'utf8'), context);
 clicks[1](); assert.equal(target, 300, 'next advances one panel');
 clicks[-1](); assert.equal(target, 100, 'previous clamps at the first panel');
-position = 900; clicks[1](); assert.equal(target, 900, 'next clamps at the final panel');
+position = 700; clicks[1](); assert.equal(target, 700, 'next clamps at the fourth and final stage');
 position = 500; clicks[-1](); assert.equal(target, 300, 'previous moves back one panel');
 carousel = false; clicks[1](); assert.equal(shift, 300, 'mobile advances the snap strip');
 clicks[-1](); assert.equal(shift, -300, 'mobile can move back');
