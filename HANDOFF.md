@@ -54,3 +54,7 @@ A pedido de Emi, el carrusel simula una cámara entre etapas mediante perspectiv
 Verificados en navegador: 633 y 1280 px con perspectiva y parada frontal legible; 390 px sin transformaciones residuales ni desborde, flecha avanzando a la segunda etapa, controles y barra de contacto traducidos. Consola sin errores. Pruebas de poses (reposo, transición, límites y simetría), controles y contenido ES/EN aprobadas. Movimiento reducido revisado en código, sin emulación específica en navegador. No hay benchmark GPU/FPS ni medición de conversión.
 
 Criterio adversarial: el recorte durante la transición es parte del desplazamiento; no aumentar el giro o la duración, porque compite con la lectura. El canal real de contacto sigue pendiente y tiene mayor impacto comercial que esta animación.
+
+
+## Retiro de la orientación · 4 de octubre de 2026
+Emi pidió retirar completa la sección «Por dónde empezar». Eliminados el test, resultados, cálculo, estilos y enlaces de navegación en ES/EN. Los enlaces contextuales de servicios ahora invitan a conversar y apuntan a #contacto. La barra móvil queda dedicada a la consulta. Traducciones regeneradas. El carrusel y el árbol principal se conservan. Canal real de contacto pendiente.

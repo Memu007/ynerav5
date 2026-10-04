@@ -10,11 +10,11 @@ No requiere paquetes ni compilación.
 python3 -m http.server 8765
 ```
 
-Abrir `http://127.0.0.1:8765/`. `index.html` es español; `en.html`, inglés. El selector cambia textos sin recargar el árbol, conservando scroll, respuestas del test y preguntas abiertas. Ambas páginas sirven como entradas directas.
+Abrir `http://127.0.0.1:8765/`. `index.html` es español; `en.html`, inglés. El selector cambia textos sin recargar el árbol, conservando scroll y preguntas abiertas. Ambas páginas sirven como entradas directas.
 
 ## Archivos
 
-- `index.html`, `en.html`: contenido y test opcional desplegable, sin árbol en el resultado.
+- `index.html`, `en.html`: contenido de la web, sin test de orientación.
 - `typography.css`, `fonts/`: Instrument Sans y las fuentes originales Ynera.
 - `tree.js`: escena Three.js; `motion.js`: movimiento y scroll; `lower-motion.js`: controles, poses de cámara del carrusel y entradas de las secciones inferiores. Se carga antes de `motion.js`, que reutiliza su recorrido de scroll para mover las etapas. Sus bibliotecas conservan avisos de licencia.
 - `ambience.js`: luz según hora local, sin geolocalización.

@@ -149,14 +149,6 @@ h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Sistema
 .fork-y{height:64px;margin-top:20px}
 .fork-col ul{gap:10px}
 .duo{margin-top:32px;gap:28px}
-.meters{gap:12px}
-#diagnostico{padding-block:36px}
-#diagnostico .diagnostic-fold{border-block:1px solid var(--linea)}
-#diagnostico .diagnostic-fold>summary{padding-block:24px}
-#diagnostico .diagnostic-fold>summary h2{font-size:clamp(23px,2.4vw,34px);max-width:24em}
-#diagnostico .diagnostic-content{padding-bottom:24px}
-#diagnostico .check-grid{margin-top:28px}
-#diagnostico .reading{gap:16px}
 #proceso .h2s{margin-bottom:24px}
 .remote-intro{margin-bottom:24px}
 .pledges{margin-top:32px}

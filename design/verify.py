@@ -30,8 +30,7 @@ for name, lang, other in [('index.html', 'es', 'en.html'), ('en.html', 'en', 'in
     faq_section = re.search(r'<section[^>]*id="faq".*?</section>', text, re.S)[0]
     visible = [(clean(q), clean(a)) for q,a in re.findall(r'<details[^>]*><summary[^>]*>(.*?)</summary><p[^>]*>(.*?)</p></details>', faq_section, re.S)]
     assert len(visible) == 5, name + ': five buying questions'
-    diagnostic = re.search(r'<section[^>]*id="diagnostico".*?</section>', text, re.S)[0]
-    assert 'diagnostic-fold' in diagnostic and '<svg' not in diagnostic, name + ': optional test without tree'
+    assert 'id="diagnostico"' not in text and '#diagnostico' not in page.refs, name + ': removed diagnostic'
     assert "getElementById('sp-'" not in text, name + ': removed tree update'
     assert text.count('<canvas id="tree"') == 1, name + ': main tree preserved'
     assert visible == [(q['name'], q['acceptedAnswer']['text']) for q in faq['mainEntity']], name + ': FAQ mismatch'
