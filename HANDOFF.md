@@ -74,3 +74,9 @@ Eliminado el panel final de compromisos del carrusel y sus estilos. El recorrido
 
 ## Marca única · 4 de octubre de 2026
 Emi confirmó que la marca es Ynera. Retirado el nombre botánico adicional de la firma junto al árbol y del pie en ES/EN. Ambas firmas usan ahora la letra de marca, sin cursiva botánica. Mantener Ynera como único nombre visible; los nombres internos de las fuentes no representan una submarca.
+
+
+## Paleta del carrusel · 4 de octubre de 2026
+Emi aprobó acercar el plano verde al hero. Fondo del proceso cambiado a verde carbón (#252e2a → #18211e), con sombra violeta tenue y luz móvil menos saturada. Texto secundario neutralizado; línea/nodos ámbar y texto principal claro conservados. Sólo CSS: sin cambios de geometría, cámara ni animación del árbol.
+
+Revisado visualmente en el carrusel a 997 px: fondo carbón con transición violeta tenue, texto claro y acento ámbar. Verificación de contenido/enlaces ES/EN y diff sin errores.
