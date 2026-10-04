@@ -166,7 +166,7 @@ html.on-paper .nav{background:var(--papel);color:var(--tinta);box-shadow:0 1px 0
 .plate-in{position:absolute;inset:0}
 #tree{position:absolute;inset:0;width:100%;height:100%;display:block}
 .plate::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgb(23 19 31/.88) 0,rgb(23 19 31/.5) 30%,rgb(23 19 31/0) 56%),linear-gradient(0deg,rgb(23 19 31/.55),rgb(23 19 31/0) 22%)}
-/* pie de figura de la escena: nombre de la especie y la parte del árbol que se ve (con su área) */
+/* pie de figura de la escena: marca y parte del árbol que se ve (con su área) */
 .fig{position:absolute;right:var(--g);bottom:24px;z-index:2;display:grid;justify-items:end;gap:4px;pointer-events:none;text-align:right}
 .fig i{font:italic 400 20px/1.2 var(--f)}
 .fig span{font:400 16px/1.3 var(--f);color:var(--luz-2)}
@@ -454,7 +454,7 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
-<link rel="stylesheet" href="typography.css?v=story-commitments1">
+<link rel="stylesheet" href="typography.css?v=ynera-brand1">
 
 
 </head>
@@ -480,8 +480,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
     <div class="plate-in">
       <canvas id="tree"></canvas>
       <div id="labels"></div>
-      <!-- pie de figura: la especie y la parte del árbol que se ve (tree.js escribe #plateNo desde data-plate) -->
-      <div class="fig"><i>Ynera bifurcata</i><span id="plateNo" data-copy="16">La semilla</span></div>
+      <!-- pie de figura: la marca y la parte del árbol que se ve (tree.js escribe #plateNo desde data-plate) -->
+      <div class="fig"><i>Ynera</i><span id="plateNo" data-copy="16">La semilla</span></div>
     </div>
   </div>
 
@@ -694,7 +694,7 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   <div class="wrap"><div class="foot">
     <div class="foot-sig">
       <svg class="foot-sym" viewBox="0 0 96 96" role="img" aria-label="Ynera"><path fill="currentColor" d="M42.00 87.32H54.00V45.32H42.00ZM52.60 41.46L26.88 10.82A6.0 6.0 0 0 0 17.69 18.54L43.40 49.18ZM52.60 49.18L78.31 18.54A6.0 6.0 0 0 0 69.12 10.82L43.40 41.46Z"/></svg>
-      <p class="specimen">Ynera bifurcata</p>
+      <p class="specimen">Ynera</p>
       <p data-copy="121">Datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas y profesionales. Argentina y España · Trabajamos de forma remota, en español e inglés.</p>
     </div>
     <nav class="foot-links" aria-label="Pie" data-copy="122"><a href="#raices" data-copy="123">Datos</a><a href="#corteza" data-copy="124">Seguridad</a><a href="#copa" data-copy="125">IA</a><a href="#bosque" data-copy="126">Casos</a><a href="#dupla" data-copy="127">Nosotros</a></nav>

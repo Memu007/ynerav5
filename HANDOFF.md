@@ -70,3 +70,7 @@ Verificación visual: 997 px ES con tarjetas de 312 px y título separado 34 px 
 Emi aprobó trasladar parte del contenido inferior a la animación del árbol. Se distribuyeron tres frases breves en los capítulos de datos, seguridad e IA: primera entrega con alcance/costo acordados, trabajo directo con socios y aviso si el proyecto no conviene. Se mantienen cinco capítulos, sin agregar pantallas ni modificar `tree.js`. Socios, proceso, FAQ y contacto quedan abajo.
 
 Eliminado el panel final de compromisos del carrusel y sus estilos. El recorrido y las flechas ahora usan cuatro etapas y tres transiciones; el paso 4 queda como límite final. Etiquetas/traducciones regeneradas en ES/EN. Verificados 997 px ES/EN y 390 px ES: frases legibles, sin desborde, un canvas; avanzar desde Paso 4 conserva Paso 4 y su pose frontal. Consola sin errores. Checks de controles/cámara, contenido, traducciones y sintaxis aprobados. Sin benchmark de rendimiento ni medición de conversión. Contacto real pendiente.
+
+
+## Marca única · 4 de octubre de 2026
+Emi confirmó que la marca es Ynera. Retirado el nombre botánico adicional de la firma junto al árbol y del pie en ES/EN. Ambas firmas usan ahora la letra de marca, sin cursiva botánica. Mantener Ynera como único nombre visible; los nombres internos de las fuentes no representan una submarca.

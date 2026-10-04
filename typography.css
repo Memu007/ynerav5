@@ -25,7 +25,7 @@ h3{font-family:var(--f);font-weight:600;letter-spacing:-.035em}
 .motto{font:400 clamp(30px,3vw,46px)/1.15 var(--display)}
 summary{font-size:19px;font-weight:450;letter-spacing:-.025em}
 .offer-hd strong{font-family:var(--display);font-size:34px;font-weight:400}
-.fig i,.foot-sig .specimen{font-family:"Piazzolla",Georgia,serif}
+.fig i,.foot-sig .specimen{font-family:var(--display);font-style:normal}
 .fig span{font-size:12px;letter-spacing:.04em}
 .foot-links a,.foot-meta a{font-size:14px}
 @media(max-width:980px){

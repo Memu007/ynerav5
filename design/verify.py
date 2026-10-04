@@ -16,6 +16,7 @@ class Page(HTMLParser):
 for name, lang, other in [('index.html', 'es', 'en.html'), ('en.html', 'en', 'index.html')]:
     text = (root/name).read_text(); page = Page(text)
     assert page.lang == lang, (name, page.lang)
+    assert 'bifurcata' not in text.lower(), name + ': Ynera is the only brand name'
     assert len(page.ids) == len(set(page.ids)), name + ': duplicate IDs'
     assert other in page.refs, name + ': missing language switch'
     assert '5491100000000' not in text and 'wa.me/' not in text, name + ': fictitious contact'
