@@ -141,3 +141,39 @@ h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Sistema
 #bosque .case{padding-top:20px;border-top:1px solid rgb(234 232 238/.24)}
 .consult-scope{grid-column:1/-1;font-size:14px;color:var(--gris);margin-top:24px;max-width:60em}
 @media(max-width:640px){.project-brief{grid-template-columns:1fr;gap:10px}.chap.hero .chap-card{gap:18px}}
+
+/* Shorter buying journey; the original hero scene keeps its visual detail. */
+.chap:not(.hero){min-height:75svh;padding-block:88px 48px}
+.sec{padding-block:64px 48px}
+#bosque{padding-block:88px 56px}
+.fork-y{height:64px;margin-top:20px}
+.fork-col ul{gap:10px}
+.duo{margin-top:32px;gap:28px}
+.meters{gap:12px}
+#diagnostico{padding-block:36px}
+#diagnostico .diagnostic-fold{border-block:1px solid var(--linea)}
+#diagnostico .diagnostic-fold>summary{padding-block:24px}
+#diagnostico .diagnostic-fold>summary h2{font-size:clamp(23px,2.4vw,34px);max-width:24em}
+#diagnostico .diagnostic-content{padding-bottom:24px}
+#diagnostico .check-grid{margin-top:28px}
+#diagnostico .reading{gap:16px}
+#proceso .h2s{margin-bottom:24px}
+.remote-intro{margin-bottom:24px}
+.pledges{margin-top:32px}
+.faq-side{gap:16px}
+.close .big{font-size:clamp(40px,5.8vw,78px)}
+.close .contact-pending{margin-top:28px;color:var(--gris);font-size:15px}
+@media(max-width:980px){
+ .chap:not(.hero){padding-block:18svh 32px;min-height:70svh}
+ #bosque{padding-block:18svh 40px}
+ .chap:not(.hero) .chap-card{padding-top:28px;gap:16px}
+ .chap:not(.hero)::before{background:linear-gradient(180deg,rgb(23 19 31/0),rgb(23 19 31/.6) 25%,rgb(23 19 31/.8) 100%)}
+ .fork-y{height:40px;margin-top:16px}
+ .duo{grid-template-columns:1fr 1fr;gap:24px}
+ .duo-y{display:none}
+ .person{padding-top:0}
+ .duo .person.r{padding-top:0}
+ .person h3{font-size:30px}
+ .person .role{font-size:16px}
+}
+@media(max-width:480px){.duo{grid-template-columns:1fr;gap:24px}.sec{padding-block:48px 40px}}

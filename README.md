@@ -14,7 +14,7 @@ Abrir `http://127.0.0.1:8765/`. `index.html` es español; `en.html`, inglés. El
 
 ## Archivos
 
-- `index.html`, `en.html`: contenido y test.
+- `index.html`, `en.html`: contenido y test opcional desplegable, sin árbol en el resultado.
 - `typography.css`, `fonts/`: Instrument Sans y las fuentes originales Ynera.
 - `tree.js`: escena Three.js; `motion.js`: movimiento y scroll. Sus bibliotecas conservan avisos de licencia.
 - `ambience.js`: luz según hora local, sin geolocalización.

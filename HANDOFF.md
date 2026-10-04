@@ -28,3 +28,9 @@ Capturas reales; confirmar alojamiento y dominio; medir rendimiento en dispositi
 
 ## Actualización comercial
 Oferta y primeras entregas concretas en ES/EN, resumen CDI/Agroboeda junto al hero, espacios de capturas conservados ocultos, consulta inicial sin promesas de evaluación técnica gratuita. Agenda cal.com anterior devuelve 404: enlaces dirigidos a #contacto hasta recibir email/WhatsApp/agenda real. Pendientes apellidos y perfiles públicos de socios. No publicar como canal de captación completo hasta conectar contacto real.
+
+
+## Recorrido compacto · 4 de octubre de 2026
+Se eliminó el árbol SVG que crecía con las respuestas y su código/estilos. El test conserva selección, orientación, cambio de idioma y resultado textual; empieza cerrado y los enlaces Test lo abren. No usa la superposición de láminas para evitar tapar las preguntas cuando está abierto. Servicios y cierre sin párrafos repetidos; cinco FAQ sincronizadas con datos estructurados. Márgenes y tramos de scroll compactados. Árbol principal, materiales, geometría, resolución, iluminación y fuentes sin cambios.
+
+Medición comparable en 633 × 928, ES con test cerrado: altura de 12.990 a 7.650 px, reducción aproximada del 41%. El porcentaje depende del ancho y del estado del test. Revisados 390 px (EN) y 1280 px (ES), sin desbordes; selección conservada al traducir, enlaces Test abren el desplegable. Verificación de contenido/FAQ y paletas aprobada. No se hicieron mediciones de FPS. Sigue pendiente un canal de contacto real.
