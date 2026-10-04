@@ -1,3 +1,9 @@
+/* A restrained camera pose: text is frontal and fully opaque at each stop. */
+window.YneraCameraPose = delta => {
+  const d = Math.max(-1.2, Math.min(1.2, delta));
+  return {y: d * 20, z: -220 * Math.min(1, d * d), turn: -10 * d,
+    opacity: 1 - .7 * Math.pow(Math.min(1, Math.abs(d)), 1.4)};
+};
 /* Controls and quiet depth for the lower half; the main tree is untouched. */
 (() => {
   const root = document.documentElement;

@@ -25,3 +25,13 @@ position = 500; clicks[-1](); assert.equal(target, 300, 'previous moves back one
 carousel = false; clicks[1](); assert.equal(shift, 300, 'mobile advances the snap strip');
 clicks[-1](); assert.equal(shift, -300, 'mobile can move back');
 console.log('Carousel controls: advance, reverse, bounds and mobile strip OK');
+
+const front = context.window.YneraCameraPose(0);
+assert.equal(front.y, 0); assert(front.z === 0); assert(front.turn === 0); assert.equal(front.opacity, 1);
+const halfway = context.window.YneraCameraPose(.5);
+assert(halfway.z < 0 && halfway.z > -220, 'transition recedes gently');
+assert(halfway.opacity > .7, 'mid-transition remains readable');
+const far = context.window.YneraCameraPose(8);
+assert.equal(far.z, -220); assert.equal(far.turn, -12, 'rotation is bounded');
+assert.equal(context.window.YneraCameraPose(-8).turn, 12, 'reverse travel is symmetric');
+console.log('Camera: frontal reading stop, readable transition and bounded depth/rotation OK');

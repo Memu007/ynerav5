@@ -1,6 +1,6 @@
 # Ynera — estado vigente
 
-Actualizado el 3 de octubre de 2026.
+Actualizado el 4 de octubre de 2026.
 
 La versión del árbol bifurcado reemplaza el recorrido lateral con sprites. La anterior permanece en el historial de Git. Se retiraron sus imágenes, estilos, script y storyboard de la rama actual.
 
@@ -44,3 +44,13 @@ La parte inferior alterna papel, superficies con sombra y un plano verde profund
 Verificados: 633 px con carrusel activo, 390 px sin desborde y flecha que avanza a Paso 2; etiquetas de controles en inglés; consola sin errores. Check runnable de avance/retroceso/límites y móvil en design/check-lower-motion.cjs; contenido/FAQ y sintaxis aprobados. Altura ES, test cerrado, 633 × 928: 8.986 px frente a 12.990 de la versión larga (aproximadamente 31% menos); el carrusel recupera parte del recorrido para mostrar las etapas. No hay benchmark GPU/FPS. Contacto real pendiente.
 
 Durante la revisión se corrigió una etiqueta fija en la entrada EN: la barra móvil vuelve a usar YneraUI según el idioma activo, igual que la entrada ES.
+
+
+## Cámara del proceso · 4 de octubre de 2026
+A pedido de Emi, el carrusel simula una cámara entre etapas mediante perspectiva CSS. Reutiliza el scroll y las pausas existentes: cada etapa queda frontal y completamente opaca al detenerse; las vecinas retroceden hasta 220 px y giran como máximo 12°. La luz de fondo acompaña discretamente el avance. Sin nuevas bibliotecas, segundo motor 3D ni bucle de animación. Árbol principal intacto.
+
+`lower-motion.js` expone la pose, y debe cargarse antes de `motion.js`. En anchos menores de 600 px se mantiene el deslizamiento con flechas, sin poses 3D. Movimiento reducido conserva lectura y controles sin transformaciones.
+
+Verificados en navegador: 633 y 1280 px con perspectiva y parada frontal legible; 390 px sin transformaciones residuales ni desborde, flecha avanzando a la segunda etapa, controles y barra de contacto traducidos. Consola sin errores. Pruebas de poses (reposo, transición, límites y simetría), controles y contenido ES/EN aprobadas. Movimiento reducido revisado en código, sin emulación específica en navegador. No hay benchmark GPU/FPS ni medición de conversión.
+
+Criterio adversarial: el recorte durante la transición es parte del desplazamiento; no aumentar el giro o la duración, porque compite con la lectura. El canal real de contacto sigue pendiente y tiene mayor impacto comercial que esta animación.
