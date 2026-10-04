@@ -58,3 +58,9 @@ Criterio adversarial: el recorte durante la transición es parte del desplazamie
 
 ## Retiro de la orientación · 4 de octubre de 2026
 Emi pidió retirar completa la sección «Por dónde empezar». Eliminados el test, resultados, cálculo, estilos y enlaces de navegación en ES/EN. Los enlaces contextuales de servicios ahora invitan a conversar y apuntan a #contacto. La barra móvil queda dedicada a la consulta. Traducciones regeneradas. El carrusel y el árbol principal se conservan. Canal real de contacto pendiente.
+
+
+## Equilibrio del equipo · 4 de octubre de 2026
+Emi aprobó igualar las tarjetas y alinear ambos perfiles a izquierda. La grilla estira las tarjetas a igual altura en escritorio y reparte filas iguales en móvil; conserva el símbolo central cuando hay espacio. El título del equipo recibe 32 px de aire adicionales bajo la altura real del menú. Sin cambio de copy, hero ni carrusel.
+
+Verificación visual: 997 px ES con tarjetas de 312 px y título separado 34 px del menú; 390 px EN con tarjetas de 239 px, sin desborde. Verificación de enlaces, idiomas y FAQ aprobada.
