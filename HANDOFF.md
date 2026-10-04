@@ -34,3 +34,13 @@ Oferta y primeras entregas concretas en ES/EN, resumen CDI/Agroboeda junto al he
 Se eliminó el árbol SVG que crecía con las respuestas y su código/estilos. El test conserva selección, orientación, cambio de idioma y resultado textual; empieza cerrado y los enlaces Test lo abren. No usa la superposición de láminas para evitar tapar las preguntas cuando está abierto. Servicios y cierre sin párrafos repetidos; cinco FAQ sincronizadas con datos estructurados. Márgenes y tramos de scroll compactados. Árbol principal, materiales, geometría, resolución, iluminación y fuentes sin cambios.
 
 Medición comparable en 633 × 928, ES con test cerrado: altura de 12.990 a 7.650 px, reducción aproximada del 41%. El porcentaje depende del ancho y del estado del test. Revisados 390 px (EN) y 1280 px (ES), sin desbordes; selección conservada al traducir, enlaces Test abren el desplegable. Verificación de contenido/FAQ y paletas aprobada. No se hicieron mediciones de FPS. Sigue pendiente un canal de contacto real.
+
+
+## Profundidad y carrusel · 4 de octubre de 2026
+Tras la revisión visual de Emi, el carrusel con scroll se activa desde 600 px (antes 981 px): el panel de 633 px ya permite recorrer las etapas sin tener que adivinar el gesto lateral. En móvil más angosto conserva scroll-snap y agrega flechas accesibles para avanzar/retroceder. Las flechas también funcionan en el modo con scroll. Controles traducidos sin recargar.
+
+La parte inferior alterna papel, superficies con sombra y un plano verde profundo; entradas breves con IntersectionObserver para socios, FAQ y cierre. Respeta movimiento reducido y no agrega bibliotecas. El test sigue opcional y sin árbol. La escena principal no cambia.
+
+Verificados: 633 px con carrusel activo, 390 px sin desborde y flecha que avanza a Paso 2; etiquetas de controles en inglés; consola sin errores. Check runnable de avance/retroceso/límites y móvil en design/check-lower-motion.cjs; contenido/FAQ y sintaxis aprobados. Altura ES, test cerrado, 633 × 928: 8.986 px frente a 12.990 de la versión larga (aproximadamente 31% menos); el carrusel recupera parte del recorrido para mostrar las etapas. No hay benchmark GPU/FPS. Contacto real pendiente.
+
+Durante la revisión se corrigió una etiqueta fija en la entrada EN: la barra móvil vuelve a usar YneraUI según el idioma activo, igual que la entrada ES.

@@ -16,7 +16,7 @@ Abrir `http://127.0.0.1:8765/`. `index.html` es español; `en.html`, inglés. El
 
 - `index.html`, `en.html`: contenido y test opcional desplegable, sin árbol en el resultado.
 - `typography.css`, `fonts/`: Instrument Sans y las fuentes originales Ynera.
-- `tree.js`: escena Three.js; `motion.js`: movimiento y scroll. Sus bibliotecas conservan avisos de licencia.
+- `tree.js`: escena Three.js; `motion.js`: movimiento y scroll; `lower-motion.js`: controles del carrusel y entradas de las secciones inferiores. Sus bibliotecas conservan avisos de licencia.
 - `ambience.js`: luz según hora local, sin geolocalización.
 - `language.js`, `language-data.js`: traducción dentro de la página.
 - `brand/`, `assets/`, `stars.png`: recursos utilizados.
@@ -30,6 +30,7 @@ Modificar los textos de ambas páginas y regenerar las traducciones:
 python3 design/build-translations.py
 python3 design/verify.py
 node design/check-ambience.cjs
+node design/check-lower-motion.cjs
 ```
 
 Los mensajes interactivos están en `window.YneraUI`, compartidos por ambas páginas. Para reconstruir las fuentes, instalar FontTools y Brotli y ejecutar `design/build-sistema.py` o `design/build-bifurca.py`. Esto es opcional para publicar.
