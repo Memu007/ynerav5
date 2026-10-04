@@ -24,3 +24,7 @@ Escritorio y móvil a 390 px, sin desborde. Test seleccionado y traducido sin pe
 Capturas reales; confirmar alojamiento y dominio; medir rendimiento en dispositivos reales. El idioma inicial automático según navegador todavía no está implementado.
 
 `README.md` explica ejecución y edición; `design/DIRECCION.md` conserva las decisiones.
+
+
+## Actualización comercial
+Oferta y primeras entregas concretas en ES/EN, resumen CDI/Agroboeda junto al hero, espacios de capturas conservados ocultos, consulta inicial sin promesas de evaluación técnica gratuita. Agenda cal.com anterior devuelve 404: enlaces dirigidos a #contacto hasta recibir email/WhatsApp/agenda real. Pendientes apellidos y perfiles públicos de socios. No publicar como canal de captación completo hasta conectar contacto real.
