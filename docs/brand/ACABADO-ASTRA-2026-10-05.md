@@ -20,3 +20,15 @@ Priorizar la alineación de CTA apilados: está sustentada en captura real y es 
 La unificación de superficies inferiores queda como hipótesis: Astra la evaluó por código, sin captura de esas secciones. El volumen y la paleta verde/dorado fueron decisiones anteriores explícitas. No eliminarlos ni sustituirlos por violeta sin comparar la sección renderizada; simplificar sólo donde exista ruido perceptible.
 
 Conservar logo, Cauce, árbol, estructura y movimiento actual. No añadir efectos para justificar la etiqueta premium.
+
+
+## Aplicación aprobada
+
+Emi aprobó el acabado con «dale». Se aplicó lo acotado después de revisar las secciones inferiores en navegador:
+
+- CTA del hero apilados con igual ancho hasta 480 px, usando el ancho del contenido mayor y respetando el espacio disponible. Verificados en ES a 390 px (217,75 px cada uno) y EN a 320 px (179,52 px cada uno), sin desborde horizontal.
+- Sombras de tarjetas de socios más suaves; sombras de separadores reducidas de 28 a 16 px.
+- FAQ con el mismo papel base. Se conserva el volumen de las tarjetas, los fondos del equipo/contacto y la paleta verde/dorado del carrusel; no se cambió su animación.
+- Cache del CSS actualizado a finish-d12 en ambas páginas. `design/verify.py` pasó.
+
+[Evidencia móvil](evidencia-2026-10-05/acabado-movil.png). Ningún cambio de copy, logo, fuente o árbol. Railway sigue sin verificación desde su URL pública.
