@@ -46,7 +46,7 @@ Límites: capturas de escritorio y móvil de 390 px, lectura de SVG/CSS. No se v
 
 ![Móvil actual evaluado](evidencia-2026-10-04/movil-390.png)
 
-## Mejora aplicada por pedido de Emi
+## Prueba D8 aplicada y posteriormente retirada en tipografía
 
 Texto de condiciones de consulta, presencia territorial y resúmenes de CDI/Agroboeda a 14 px, interlínea 1,55 y tinta #EAE8EE en escritorio y móvil. Se mantienen fuentes y jerarquía.
 
@@ -59,3 +59,7 @@ Validación visual de ES/EN a 390/320 px y escritorio: texto legible durante el 
 Muestreo de fondo efectivo junto a las líneas de texto, usando el color declarado #EAE8EE: mínimos de 11,67:1 en día, 11,79:1 en atardecer, 8,28:1 en noche (escritorio) y 7,92:1 en móvil de 390 px durante el desplazamiento. Cada captura aporta unas 1.900 muestras de fondo; detalles en `evidencia-2026-10-04/contraste-aplicacion.json`. No se usaron píxeles de las letras suavizadas para calcular luminancia. Este muestreo de capturas no certifica toda la web ni todos los fotogramas de la escena.
 
 ![Texto comercial aplicado en móvil](evidencia-2026-10-04/movil-mejora-aplicada.png)
+
+## Estado actual D9
+
+Por pedido posterior de Emi, se restauraron tamaño, interlínea y colores anteriores de los textos comerciales secundarios. La familia seguía siendo Instrument Sans en D8 y se mantiene. Logo y titulares no cambiaron. Continúan el texto del hero móvil sin desvanecimiento prematuro y el plano de lectura nocturno. La captura y el muestreo D8 se conservan como registro de esa prueba; no representan el resultado tipográfico actual D9.

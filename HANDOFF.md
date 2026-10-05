@@ -100,3 +100,7 @@ Emi pidió revisión independiente con Astra y guardar los resultados en GitHub.
 Emi aprobó aplicar la mejora de Astra. Condiciones de consulta, ubicación y resúmenes de proyectos pasan a 14 px y tinta clara. Se evita que el hero desvanezca esos textos antes de leerlos al bajar en móvil. En escritorio, noche usa el mismo plano de lectura de día/atardecer. Logo, fuentes de títulos y calidad del árbol conservados.
 
 Revisados ES/EN a 390/320 px sin desborde; contraste de fondo muestreado entre 7,92:1 y 11,79:1 en vistas de día/atardecer/noche y móvil. No es certificación de toda la escena animada. Resultados y captura en docs/brand/REVISION-ASTRA-2026-10-04.md. Checks existentes aprobados.
+
+## Estilo secundario restaurado · 4 de octubre de 2026
+
+Emi rechazó el aspecto del texto bajo el hero tras la mejora de Astra y pidió volver al anterior. Retiradas las reglas nuevas de 14 px/tinta clara: condiciones, ubicación y resúmenes de proyectos recuperan tamaños, interlínea y colores anteriores. No se había cambiado su familia tipográfica; permanece Instrument Sans. Logo y titulares sin cambios. Se conservan las correcciones de visibilidad durante el desplazamiento móvil y plano de lectura nocturno. Los resultados de contraste del informe describen la prueba D8, no el estilo secundario restaurado D9.
