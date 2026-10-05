@@ -94,3 +94,9 @@ Verificados escritorio, móviles 390/320 px, ES/EN, día/noche y cambio de idiom
 ## Auditoría Astra · 4 de octubre de 2026
 
 Emi pidió revisión independiente con Astra y guardar los resultados en GitHub. Informe y capturas: docs/brand/REVISION-ASTRA-2026-10-04.md. Veredicto: conservar símbolo + Ynera completo y la jerarquía tipográfica; no se observó defecto que justifique rediseño. Único hallazgo P3: texto comercial secundario pequeño/tenue; propuesta de comparar 14 px y medir contraste, todavía no implementada. Memorabilidad y conversión no comprobadas. Ningún cambio en web, fuentes o árbol por esta auditoría.
+
+## Lectura secundaria aplicada · 4 de octubre de 2026
+
+Emi aprobó aplicar la mejora de Astra. Condiciones de consulta, ubicación y resúmenes de proyectos pasan a 14 px y tinta clara. Se evita que el hero desvanezca esos textos antes de leerlos al bajar en móvil. En escritorio, noche usa el mismo plano de lectura de día/atardecer. Logo, fuentes de títulos y calidad del árbol conservados.
+
+Revisados ES/EN a 390/320 px sin desborde; contraste de fondo muestreado entre 7,92:1 y 11,79:1 en vistas de día/atardecer/noche y móvil. No es certificación de toda la escena animada. Resultados y captura en docs/brand/REVISION-ASTRA-2026-10-04.md. Checks existentes aprobados.

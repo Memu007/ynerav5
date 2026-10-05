@@ -36,7 +36,7 @@ Redondear más la fuente, ensanchar el titular o eliminar la segunda Y son prefe
 
 ## Decisión de PM y continuidad
 
-Se adopta el criterio de **no rediseñar por defecto**. La mejora de texto secundario queda propuesta para comparación, todavía sin implementar; este encargo solo solicita auditoría y guardar resultados. No cambia prioridades ni da por aceptada una intervención visual.
+Se adopta el criterio de **no rediseñar por defecto**. La mejora se propuso primero sin modificar la web. Emi pidió luego aplicarla; su implementación y validación se detallan al final. No se rediseñaron el logo ni los titulares.
 
 Límites: capturas de escritorio y móvil de 390 px, lectura de SVG/CSS. No se validaron recuerdo con usuarios, símbolo aislado a 16 px, todo el repertorio de la fuente ni la firma violeta sobre papel. Las pruebas de móvil en viewport no sustituyen un teléfono real.
 
@@ -45,3 +45,17 @@ Límites: capturas de escritorio y móvil de 390 px, lectura de SVG/CSS. No se v
 ![Escritorio evaluado](evidencia-2026-10-04/escritorio.png)
 
 ![Móvil actual evaluado](evidencia-2026-10-04/movil-390.png)
+
+## Mejora aplicada por pedido de Emi
+
+Texto de condiciones de consulta, presencia territorial y resúmenes de CDI/Agroboeda a 14 px, interlínea 1,55 y tinta #EAE8EE en escritorio y móvil. Se mantienen fuentes y jerarquía.
+
+En móvil se retiró el desvanecimiento del contenedor del hero: antes atenuaba también los proyectos cuando el lector bajaba hasta ellos. El texto permanece opaco y no se desplaza artificialmente. Se conserva la animación del árbol.
+
+En escritorio la escena nocturna usa ahora el mismo plano oscuro de lectura que día/atardecer; el fondo móvil conserva su gradiente. Sin cambios en geometría, materiales, resolución o animación del árbol.
+
+Validación visual de ES/EN a 390/320 px y escritorio: texto legible durante el desplazamiento y sin desborde horizontal. Verificación existente de contenido, FAQ y enlaces aprobada; diff limpio.
+
+Muestreo de fondo efectivo junto a las líneas de texto, usando el color declarado #EAE8EE: mínimos de 11,67:1 en día, 11,79:1 en atardecer, 8,28:1 en noche (escritorio) y 7,92:1 en móvil de 390 px durante el desplazamiento. Cada captura aporta unas 1.900 muestras de fondo; detalles en `evidencia-2026-10-04/contraste-aplicacion.json`. No se usaron píxeles de las letras suavizadas para calcular luminancia. Este muestreo de capturas no certifica toda la web ni todos los fotogramas de la escena.
+
+![Texto comercial aplicado en móvil](evidencia-2026-10-04/movil-mejora-aplicada.png)

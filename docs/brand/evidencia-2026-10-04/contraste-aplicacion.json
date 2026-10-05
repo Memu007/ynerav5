@@ -1,0 +1,18 @@
+{
+  "day": {
+    "minimum_sampled_ratio": 11.67,
+    "samples": 1893
+  },
+  "dusk": {
+    "minimum_sampled_ratio": 11.79,
+    "samples": 1893
+  },
+  "night": {
+    "minimum_sampled_ratio": 8.28,
+    "samples": 1893
+  },
+  "mobile": {
+    "minimum_sampled_ratio": 7.92,
+    "samples": 1898
+  }
+}

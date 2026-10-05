@@ -85,7 +85,7 @@ summary{font-size:19px;font-weight:450;letter-spacing:-.025em}
 
 /* The reading plane stays dark in every light condition. */
 .plate,.no-webgl .plate{background:radial-gradient(60% 50% at 70% 45%,var(--scene-fallback,#2a2040),var(--tinta))}
-html[data-scene="day"] .plate::after,html[data-scene="dusk"] .plate::after{background:linear-gradient(90deg,rgb(23 19 31/.94) 0,rgb(23 19 31/.86) 40%,rgb(23 19 31/.24) 65%),linear-gradient(0deg,rgb(23 19 31/.65),rgb(23 19 31/0) 28%)}
+html[data-scene] .plate::after{background:linear-gradient(90deg,rgb(23 19 31/.94) 0,rgb(23 19 31/.86) 40%,rgb(23 19 31/.24) 65%),linear-gradient(0deg,rgb(23 19 31/.65),rgb(23 19 31/0) 28%)}
 @media(max-width:980px){html[data-scene="day"] .plate::after,html[data-scene="dusk"] .plate::after{background:linear-gradient(180deg,rgb(23 19 31/.08) 15%,rgb(23 19 31/.72) 30%,rgb(23 19 31/.95) 65%)}}
 
 /* One quiet entrance for the promise; no persistent motion. */
@@ -239,3 +239,10 @@ html.on-paper .brand{color:#51406A}
 
 /* Keep the full lockup, language selector and consultation visible at 320 px. */
 @media(max-width:360px){.nav-actions{gap:8px}.nav .btn{padding:11px 9px;font-size:11px}.language-switch{gap:6px}}
+
+/* Make consultation terms and project evidence readable without enlarging titles. */
+.chap.hero .micro,.chap.hero .hero-proof>p,.chap.hero .project-brief a{font-size:14px;line-height:1.55;color:var(--luz)}
+.chap.hero .project-brief strong{font-size:14px}
+.chap.hero .project-brief a span{color:inherit}
+/* Mobile readers must reach the evidence before the hero fades away. */
+@media(max-width:980px){.chap.hero .chap-card{opacity:1;transform:none}}
