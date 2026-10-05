@@ -1,0 +1,23 @@
+{
+  "glyph_coverage": 118,
+  "x_height": 530,
+  "cap_height": 700,
+  "measurements_px": {
+    "es-desktop-0": 462.96,
+    "es-desktop-1": 429.2,
+    "en-desktop-0": 490.64,
+    "en-desktop-1": 481.28,
+    "es-390-0": 254.63,
+    "es-390-1": 236.06,
+    "en-390-0": 269.85,
+    "en-390-1": 264.7,
+    "es-320-0": 208.33,
+    "es-320-1": 193.14,
+    "en-320-0": 220.79,
+    "en-320-1": 216.58
+  },
+  "woff2_roundtrip": "pass",
+  "hero_characters": "pass",
+  "mobile_widths": "pass",
+  "left_bearings": "pass"
+}
