@@ -18,3 +18,7 @@ Cauce está aplicada al titular principal del hero, títulos de sección, nombre
 Se verificaron enlaces y contenido bilingüe con `python3 design/verify.py`, cobertura de todos los caracteres de los títulos y referencias al preload. WOFF2: 9.252 bytes. La revisión visual del sitio aplicado quedó pendiente porque Browser Use bloqueó la interacción con la pestaña de error por su política de URL; no se afirma haber comprobado el sitio final en navegador. El specimen aislado sí había sido revisado en la entrega anterior.
 
 Los tres archivos locales pendientes de la entrega anterior quedaron resueltos: la versión de caché ahora es cauce-d11 y se retiraron las cuatro reglas de microcopy de 14 px ajenas a esta aplicación.
+
+## Revisión visual posterior
+
+La auditoría del mismo commit en navegador se completó en escritorio y móvil; ver [auditoría de lanzamiento](AUDITORIA-LANZAMIENTO-2026-10-05.md). La limitación de revisión indicada arriba quedó resuelta.
