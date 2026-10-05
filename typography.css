@@ -114,20 +114,20 @@ h1,h2{font-family:var(--f);font-weight:550;letter-spacing:-.045em;line-height:1.
 .offer-hd strong{font-family:var(--f);font-weight:550;font-size:30px;letter-spacing:-.035em}
 .product-space span{font-family:var(--f);font-size:28px;letter-spacing:-.03em}
 @media(max-width:980px){.hero-title{font-size:clamp(42px,10.4vw,68px);line-height:1.08}.hero-title .ln:nth-child(-n+2){font-size:20px}.hero-title .ln:nth-child(2){margin-bottom:22px}.chap h2,#bosque h2{font-size:38px}}
-@media(max-width:400px){.hero-title{font-size:40px}.chap h2,#bosque h2{font-size:34px}}
+@media(max-width:400px){.hero-title{font-size:40px}.chap h2,#bosque h2{font-size:36px}}
 @media(max-width:350px){.hero-title{font-size:36px}}
 
-/* Ynera Sistema: selected C direction, original display outlines. */
-@font-face{font-family:"Ynera Sistema";src:url("fonts/ynera-sistema.woff2?v=2") format("woff2");font-weight:400;font-display:swap}
-h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Sistema",var(--f);font-weight:400;font-synthesis:none;letter-spacing:-.012em}
-.hero-title{font-family:"Ynera Sistema",var(--f);font-size:clamp(50px,6.6vw,92px);line-height:1.08;letter-spacing:-.015em}
+/* Ynera Cauce: approved headline direction; body copy retains Instrument Sans. */
+@font-face{font-family:"Ynera Cauce";src:url("fonts/ynera-cauce.woff2?v=1") format("woff2");font-weight:400;font-display:swap}
+h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Cauce",var(--f);font-weight:400;font-synthesis:none;letter-spacing:-.012em}
+.hero-title{font-family:"Ynera Cauce",var(--f);font-size:clamp(50px,6.6vw,92px);line-height:1.08;letter-spacing:-.015em}
 .hero-title .ln:nth-child(-n+2){font-family:var(--f);font-weight:400}
 .hero-title .ln:nth-child(n+3)>span{font-weight:400}
 .chap h2,.h2s,#bosque h2{letter-spacing:-.012em;line-height:1.16}
-.case h3,#bosque .case h3{font-size:34px;line-height:1.2}
-.offer-hd strong{font-size:32px}
+.case h3,#bosque .case h3{font-size:36px;line-height:1.2}
+.offer-hd strong{font-size:36px}
 @media(max-width:980px){.hero-title{font-size:clamp(42px,10.4vw,68px);line-height:1.13}.chap h2,#bosque h2{font-size:38px}}
-@media(max-width:400px){.hero-title{font-size:40px}.chap h2,#bosque h2{font-size:34px}}
+@media(max-width:400px){.hero-title{font-size:40px}.chap h2,#bosque h2{font-size:36px}}
 @media(max-width:350px){.hero-title{font-size:36px}}
 
 /* Put real project context beside the first offer. */
