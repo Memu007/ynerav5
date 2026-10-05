@@ -21,7 +21,7 @@ El diseño está en condiciones de salir como primera versión. No conviene segu
 ## Bloqueos para lanzamiento
 
 1. Confirmar un canal comercial real y conectarlo al cierre de contacto en los dos idiomas. Después probar que el clic llega al destino correcto. No inventar datos ni enviar mensajes de prueba sin autorización.
-2. Confirmar alojamiento o dominio y verificar el sitio desde su URL pública. GitHub API devuelve has_pages=false y homepage=null para Memu007/ynerav5 el 5 de octubre; esto descarta Pages configurado en ese repo, pero no descarta un despliegue externo. Los documentos locales tampoco confirman uno.
+2. Emi confirmó que el sitio ya está subido a Railway. Falta recibir la URL pública para verificar ese despliegue y completar el dominio en los metadatos. El estado de GitHub Pages no determina el de Railway.
 
 ## Mejoras posteriores, no bloqueantes
 
@@ -29,4 +29,4 @@ La oferta todavía es amplia y faltan demostraciones visuales reales de los prod
 
 ## Relevo
 
-Se pidió a Emi email/enlace de agenda y URL pública; siguen sin respuesta. No se lanzó un alojamiento ni se afirmó que la web pública esté operativa. Para continuar: obtener esos dos datos, conectar contacto, regenerar traducciones, verificar y publicar; no reiniciar el diseño.
+Emi confirmó Railway como alojamiento ya publicado y enviará email y teléfono más adelante. Falta la URL pública para revisar producción; no se verificó ese despliegue. Para continuar: recibir contacto y enlace, conectar contacto, regenerar traducciones, verificar y actualizar Railway; no reiniciar el diseño.
