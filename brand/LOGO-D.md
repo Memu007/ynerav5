@@ -19,3 +19,7 @@ El gradiente de lectura oscurece debajo del árbol: prácticamente transparente 
 ## Verificación
 
 Revisión visual en escritorio y móvil 390/320 px, ES/EN, día y noche; sin desborde ni choque con controles. Cambiar idioma conserva los ocho trazados del logo y un canvas. Checks existentes de contenido, enlaces, FAQ e idiomas aprobados. Estas pruebas de viewport no sustituyen una comprobación en el teléfono real de Emi.
+
+## Auditoría independiente
+
+[Revisión Astra del 4 de octubre de 2026](../docs/brand/REVISION-ASTRA-2026-10-04.md): conservar identidad; propuesta menor de lectura secundaria pendiente de comparar. Incluye evidencia y límites de la revisión.

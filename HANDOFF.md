@@ -90,3 +90,7 @@ Cabecera de 148 px en escritorio, 126 px en móvil, 100 px hasta 360 px. La fuen
 Para recuperar visibilidad del árbol en móvil, el plano oscuro se desplaza debajo de la zona del árbol; contenido inicial de 28svh a 32svh, audiencia más clara. tree.js y la calidad de animación permanecen iguales.
 
 Verificados escritorio, móviles 390/320 px, ES/EN, día/noche y cambio de idioma en vivo: sin desborde ni superposición, ocho paths de marca y un canvas preservados. Checks de contenido/enlaces/FAQ/idiomas aprobados. Emi pidió subir esta versión al repositorio. Canal real de contacto sigue pendiente; no se configuró ni se publicaron datos ficticios.
+
+## Auditoría Astra · 4 de octubre de 2026
+
+Emi pidió revisión independiente con Astra y guardar los resultados en GitHub. Informe y capturas: docs/brand/REVISION-ASTRA-2026-10-04.md. Veredicto: conservar símbolo + Ynera completo y la jerarquía tipográfica; no se observó defecto que justifique rediseño. Único hallazgo P3: texto comercial secundario pequeño/tenue; propuesta de comparar 14 px y medir contraste, todavía no implementada. Memorabilidad y conversión no comprobadas. Ningún cambio en web, fuentes o árbol por esta auditoría.
