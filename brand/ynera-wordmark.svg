@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="122 0 365 114" role="img" aria-labelledby="title desc">
+  <title id="title">Ynera — firma tipográfica v3</title>
+  <desc id="desc">Nombre Ynera con ritmo óptico revisado, e más abierta y r compacta.</desc>
+  
+  <g id="wordmark" fill="#51406A" fill-rule="evenodd">
+    <path id="letter-Y" d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z" />
+    
+    <path id="letter-n" d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z" />
+    <path id="letter-e" transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z" />
+    <path id="letter-r" transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z" />
+    <path id="letter-a" transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z" />
+  </g>
+</svg>

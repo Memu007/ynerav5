@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="32" height="32">
-  <!-- Ynera · favicon (<=32px). Mismo dibujo con trazo reforzado w=16 y brazos más cortos para que no se empaste. Fondo noche redondeado para pestañas claras. -->
-  <defs><linearGradient id="yf" gradientUnits="userSpaceOnUse" x1="48" y1="86.79" x2="48" y2="9.21"><stop offset="0" stop-color="#FF9A1F"/><stop offset=".46" stop-color="#B25BFF"/><stop offset="1" stop-color="#3F7BFF"/></linearGradient></defs>
-  <rect width="96" height="96" rx="20" fill="#06070C"/>
-  <path fill="url(#yf)" d="M40.00 86.79H56.00V44.79H40.00ZM54.13 39.65L30.99 12.07A8.0 8.0 0 0 0 18.73 22.35L41.87 49.93ZM54.13 49.93L77.27 22.35A8.0 8.0 0 0 0 65.01 12.07L41.87 39.65Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 128 128"><rect x="-10" y="-10" width="128" height="128" rx="26" fill="#F5F1E8"/><g fill="#51406A" transform="translate(0 -4)"><path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/><path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/><path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/></g></svg>

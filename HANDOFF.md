@@ -80,3 +80,13 @@ Emi confirmó que la marca es Ynera. Retirado el nombre botánico adicional de l
 Emi aprobó acercar el plano verde al hero. Fondo del proceso cambiado a verde carbón (#252e2a → #18211e), con sombra violeta tenue y luz móvil menos saturada. Texto secundario neutralizado; línea/nodos ámbar y texto principal claro conservados. Sólo CSS: sin cambios de geometría, cámara ni animación del árbol.
 
 Revisado visualmente en el carrusel a 997 px: fondo carbón con transición violeta tenue, texto claro y acento ámbar. Verificación de contenido/enlaces ES/EN y diff sin errores.
+
+## Identidad D aprobada · 4 de octubre de 2026
+
+Emi eligió el símbolo circular con Y en negativo seguido del nombre completo Ynera, para reforzar reconocimiento. Aplicado a cabecera, firma del árbol y pie en ES/EN; favicon y assets actualizados. Firma principal: brand/ynera-lockup.svg; nombre solo guardado como alternativa. Tinta clara sobre escena y violeta #51406A sobre papel. Detalles: brand/LOGO-D.md.
+
+Cabecera de 148 px en escritorio, 126 px en móvil, 100 px hasta 360 px. La fuente Ynera Sistema anterior sigue en los títulos; la prueba más redonda fue rechazada y revertida. Párrafos y controles conservan Instrument Sans. Eliminados guiones automáticos en móvil.
+
+Para recuperar visibilidad del árbol en móvil, el plano oscuro se desplaza debajo de la zona del árbol; contenido inicial de 28svh a 32svh, audiencia más clara. tree.js y la calidad de animación permanecen iguales.
+
+Verificados escritorio, móviles 390/320 px, ES/EN, día/noche y cambio de idioma en vivo: sin desborde ni superposición, ocho paths de marca y un canvas preservados. Checks de contenido/enlaces/FAQ/idiomas aprobados. Emi pidió subir esta versión al repositorio. Canal real de contacto sigue pendiente; no se configuró ni se publicaron datos ficticios.

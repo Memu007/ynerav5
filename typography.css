@@ -219,3 +219,23 @@ html.motion.carousel #proceso .step>.step-n{transform:translateZ(4px)}
 #raices .story-commitment{border-color:var(--root)}
 #corteza .story-commitment{border-color:var(--bark)}
 @media(max-width:980px){.story-commitment{margin-block:4px;font-size:15px}}
+
+/* Ynera D: symbol and full name in the header; light ink on the scene, violet on paper. */
+.brand{display:inline-flex;align-items:center;flex-shrink:0;color:inherit;line-height:1}
+.brand-wordmark{display:block;width:148px;height:auto}
+html.on-paper .brand{color:#51406A}
+@media(max-width:640px){.brand-wordmark{width:126px}}
+@media(max-width:360px){.brand-wordmark{width:100px}}
+
+/* Complete brand signatures; keep the scene caption smaller than the header. */
+.footer-brand{display:block;width:190px;max-width:100%;height:auto;margin-bottom:12px}
+.scene-wordmark{display:block;width:100px;height:auto}
+/* Reveal the mobile tree above a dedicated reading plane in every time palette. */
+@media(max-width:980px){
+ html[data-scene] .plate::after{background:linear-gradient(180deg,rgb(23 19 31/0) 0%,rgb(23 19 31/.02) 27%,rgb(23 19 31/.84) 39%,rgb(23 19 31/.96) 60%)}
+ .chap.hero{padding-top:32svh}
+ .chap.hero .audience{color:var(--luz)}
+}
+
+/* Keep the full lockup, language selector and consultation visible at 320 px. */
+@media(max-width:360px){.nav-actions{gap:8px}.nav .btn{padding:11px 9px;font-size:11px}.language-switch{gap:6px}}

@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="Ynera | Datos, ciberseguridad e IA para empresas" data-copy="5">
 <meta name="twitter:description" content="Conectamos tus datos, reducimos riesgos y automatizamos tareas con IA y revisión humana. Equipo en Argentina y España." data-copy="6">
 <link rel="preload" href="fonts/ynera-sistema.woff2?v=2" as="font" type="font/woff2" crossorigin>
-<link rel="icon" type="image/svg+xml" href="brand/ynera-favicon.svg">
+<link rel="icon" type="image/svg+xml" href="brand/ynera-favicon.svg?v=d3">
 <!-- Datos estructurados sincronizados con las preguntas frecuentes. -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -271,7 +271,7 @@ html.lenis,html.lenis body{height:auto}
 .node{position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--tinta);transition:background-color .35s}
 html.js .steps:not(.done) .step:not(.on) .node{background:var(--papel)}
 .step-n{font:600 17px/1 var(--f);font-variant-numeric:lining-nums;color:var(--gris)}
-.step h3{font-size:clamp(26px,2.1vw,34px);hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
+.step h3{font-size:clamp(26px,2.1vw,34px);hyphens:none;-webkit-hyphens:none;overflow-wrap:normal}
 .step p{color:var(--gris);font-size:17px}
 
 /* X · FAQ: aquí sí hay filete, separa objetos que se abren */
@@ -375,7 +375,7 @@ footer{position:relative;background:var(--tinta);color:var(--luz);padding-block:
 @media (min-width:981px){ .chap-card{display:contents} .chap.hero .chap-card{display:flex;flex-direction:column;gap:26px} }
 @media (max-width:640px){
   body{font-size:17px}
-  p,dd,li,summary{hyphens:auto;-webkit-hyphens:auto}
+  p,dd,li,summary{hyphens:none;-webkit-hyphens:none}
   .did{grid-template-columns:1fr;gap:4px}
   .did dd+dt{margin-top:10px}
   .fork-cols{grid-template-columns:1fr 1fr;gap:0 16px}
@@ -454,14 +454,14 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
-<link rel="stylesheet" href="typography.css?v=charcoal-green1">
+<link rel="stylesheet" href="typography.css?v=brand-lockup-d7">
 
 
 </head>
 <body>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Ynera, inicio" data-copy="7">Ynera</a>
+    <a class="brand" href="#top" aria-label="Ynera, inicio" data-copy="7"><svg class="brand-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></a>
     <nav class="nav-mid" aria-label="Secciones" data-copy="8">
       <a href="#raices" data-copy="9">Datos</a>
       <a href="#corteza" data-copy="10">Seguridad</a>
@@ -481,7 +481,7 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       <canvas id="tree"></canvas>
       <div id="labels"></div>
       <!-- pie de figura: la marca y la parte del árbol que se ve (tree.js escribe #plateNo desde data-plate) -->
-      <div class="fig"><i>Ynera</i><span id="plateNo" data-copy="16">La semilla</span></div>
+      <div class="fig"><i><svg class="scene-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></i><span id="plateNo" data-copy="16">La semilla</span></div>
     </div>
   </div>
 
@@ -693,8 +693,7 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <footer>
   <div class="wrap"><div class="foot">
     <div class="foot-sig">
-      <svg class="foot-sym" viewBox="0 0 96 96" role="img" aria-label="Ynera"><path fill="currentColor" d="M42.00 87.32H54.00V45.32H42.00ZM52.60 41.46L26.88 10.82A6.0 6.0 0 0 0 17.69 18.54L43.40 49.18ZM52.60 49.18L78.31 18.54A6.0 6.0 0 0 0 69.12 10.82L43.40 41.46Z"/></svg>
-      <p class="specimen">Ynera</p>
+      <svg class="footer-brand" viewBox="-4 -4 491 118" role="img" aria-label="Ynera"><g fill="currentColor" transform="translate(0 -4)"><path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/><path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/><path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/></g><g fill="currentColor" fill-rule="evenodd"><path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/><path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/><path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/><path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/><path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/></g></svg>
       <p data-copy="121">Datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas y profesionales. Argentina y España · Trabajamos de forma remota, en español e inglés.</p>
     </div>
     <nav class="foot-links" aria-label="Pie" data-copy="122"><a href="#raices" data-copy="123">Datos</a><a href="#corteza" data-copy="124">Seguridad</a><a href="#copa" data-copy="125">IA</a><a href="#bosque" data-copy="126">Casos</a><a href="#dupla" data-copy="127">Nosotros</a></nav>
