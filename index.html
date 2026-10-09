@@ -5,18 +5,19 @@
 <link rel="preload" href="tree.js?v=entry3" as="script">
 <script src="ambience.js?v=3"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title data-copy="0">Ynera | Datos, ciberseguridad e IA para empresas</title>
-<meta name="description" content="Datos, ciberseguridad e IA para pequeñas y medianas empresas. Equipo en Argentina y España. Consulta inicial sin costo, en español e inglés." data-copy="1">
+<title data-copy="0">Ynera | Consultora de datos, ciberseguridad e IA para pymes</title>
+<meta name="description" content="Consultora de datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas. Equipo en Argentina y España. Consulta inicial sin costo, en español e inglés." data-copy="1">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#17131F">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES" data-copy="2">
+<meta property="og:locale:alternate" content="en_GB" data-copy="3">
 <meta property="og:site_name" content="Ynera">
-<meta property="og:title" content="Ynera | Datos, ciberseguridad e IA para empresas" data-copy="3">
-<meta property="og:description" content="Conectamos tus datos, reducimos riesgos y automatizamos tareas con IA y revisión humana. Equipo en Argentina y España. Consulta inicial sin costo con los dos socios." data-copy="4">
+<meta property="og:title" content="Ynera | Consultora de datos, ciberseguridad e IA para pymes" data-copy="4">
+<meta property="og:description" content="Conectamos tus datos, reducimos riesgos y automatizamos tareas con IA y revisión humana. Equipo en Argentina y España. Consulta inicial sin costo con los dos socios." data-copy="5">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ynera | Datos, ciberseguridad e IA para empresas" data-copy="5">
-<meta name="twitter:description" content="Conectamos tus datos, reducimos riesgos y automatizamos tareas con IA y revisión humana. Equipo en Argentina y España." data-copy="6">
+<meta name="twitter:title" content="Ynera | Consultora de datos, ciberseguridad e IA para pymes" data-copy="6">
+<meta name="twitter:description" content="Conectamos tus datos, reducimos riesgos y automatizamos tareas con IA y revisión humana. Equipo en Argentina y España." data-copy="7">
 <link rel="preload" href="fonts/ynera-cauce.woff2?v=1" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="brand/ynera-favicon.svg?v=d3">
 <!-- Datos estructurados sincronizados con las preguntas frecuentes. -->
@@ -24,9 +25,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "name": "Ynera",
-      "description": "Equipo de datos, ciberseguridad e IA aplicada en Argentina y España. Trabajo remoto en español e inglés.",
+      "description": "Ynera es una consultora de datos, ciberseguridad e inteligencia artificial aplicada para pequeñas y medianas empresas y profesionales. Dos socios, en Argentina y España; trabajo remoto en español e inglés.",
       "knowsLanguage": [
         "es",
         "en"
@@ -34,11 +38,60 @@
       "founder": [
         {
           "@type": "Person",
-          "name": "Emiliano"
+          "name": "Emiliano",
+          "jobTitle": "Ciberseguridad, desarrollo e IA"
         },
         {
           "@type": "Person",
-          "name": "Mariano"
+          "name": "Mariano",
+          "jobTitle": "Ciencia de datos y negocio"
+        }
+      ],
+      "slogan": "Tu operación, bajo control.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Argentina"
+        },
+        {
+          "@type": "Country",
+          "name": "España"
+        }
+      ],
+      "knowsAbout": [
+        "Análisis de datos",
+        "Paneles e informes automatizados",
+        "Ciberseguridad para pymes",
+        "Revisión de accesos y copias de seguridad",
+        "Inteligencia artificial aplicada",
+        "Asistentes de IA con revisión humana",
+        "Automatización de procesos",
+        "Desarrollo de software a medida"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Datos claros para decidir",
+            "description": "Un panel para un informe concreto, con sus fuentes conectadas y reglas de actualización acordadas."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Ciberseguridad para la operación de la empresa",
+            "description": "Una revisión de accesos y copias de seguridad de un sistema, con hallazgos y correcciones priorizadas."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IA aplicada con revisión humana",
+            "description": "Un asistente para un conjunto definido de documentos y consultas, con criterios de prueba y revisión humana."
+          }
         }
       ]
     },
@@ -183,6 +236,8 @@ html.js.tree-ready #tree{opacity:1}
 .chap .lede{color:var(--luz-2);max-width:30em}
 .chap .lede.poem,.sec .lede.poem{font:320 clamp(21px,1.8vw,26px)/1.28 var(--f);letter-spacing:-.005em;text-wrap:balance}
 .chap .lede.poem{color:var(--luz);margin-top:-10px}
+.kicker{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:0 0 -8px;font:400 17px/1.35 var(--f);color:var(--luz-2)}
+.kicker b{font:620 13px/1.35 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--c,var(--luz))}
 .did{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;margin:0}
 .did dt{font:620 17px/1.45 var(--f);color:var(--c,inherit)}
 .did dd{margin:0;font-size:17px;line-height:1.5;color:var(--luz)}
@@ -461,64 +516,63 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <body>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Ynera, inicio" data-copy="7"><svg class="brand-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></a>
-    <nav class="nav-mid" aria-label="Secciones" data-copy="8">
-      <a href="#raices" data-copy="9">Datos</a>
-      <a href="#corteza" data-copy="10">Seguridad</a>
-      <a href="#copa" data-copy="11">IA</a>
-      <a href="#bosque" data-copy="12">Casos</a>
-      <a href="#dupla" data-copy="13">Nosotros</a>
+    <a class="brand" href="#top" aria-label="Ynera, inicio" data-copy="8"><svg class="brand-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></a>
+    <nav class="nav-mid" aria-label="Secciones" data-copy="9">
+      <a href="#raices" data-copy="10">Datos</a>
+      <a href="#corteza" data-copy="11">Seguridad</a>
+      <a href="#copa" data-copy="12">IA</a>
+      <a href="#bosque" data-copy="13">Casos</a>
+      <a href="#dupla" data-copy="14">Nosotros</a>
     </nav>
-    <div class="nav-actions"><nav class="language-switch" aria-label="Idioma"><span lang="es" aria-current="page">ES</span><a href="en.html" lang="en" hreflang="en" aria-label="Read in English">EN</a></nav><a class="btn btn-fill" href="#contacto" data-copy="14">Consulta sin costo</a></div>
+    <div class="nav-actions"><nav class="language-switch" aria-label="Idioma"><span lang="es" aria-current="page">ES</span><a href="en.html" lang="en" hreflang="en" aria-label="Read in English">EN</a></nav><a class="btn btn-fill" href="#contacto" data-copy="15">Consulta sin costo</a></div>
   </div>
 </header>
 
 <main id="top">
 
-<section class="story" id="story" aria-label="Cómo crece un sistema" data-copy="15">
+<section class="story" id="story" aria-label="Cómo crece un sistema" data-copy="16">
   <div class="plate" aria-hidden="true">
     <div class="plate-in">
       <canvas id="tree"></canvas>
       <div id="labels"></div>
       <!-- pie de figura: la marca y la parte del árbol que se ve (tree.js escribe #plateNo desde data-plate) -->
-      <div class="fig"><i><svg class="scene-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></i><span id="plateNo" data-copy="16">La semilla</span></div>
+      <div class="fig"><i><svg class="scene-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></i><span id="plateNo" data-copy="17">La semilla</span></div>
     </div>
   </div>
 
   <div class="chapters">
-    <article class="chap hero" data-plate="La semilla" data-copy="17">
+    <article class="chap hero" data-plate="La semilla" data-copy="18">
       <div class="chap-card">
-        <p class="audience" data-copy="18">Para pequeñas y medianas empresas y profesionales</p>
+        <p class="audience" data-copy="19">Para pequeñas y medianas empresas y profesionales</p>
         <h1 class="hero-title">
-          <span class="ln"><span data-copy="19">Menos hojas de cálculo.</span></span>
-          <span class="ln"><span data-copy="20">Menos riesgo.</span></span>
-          <span class="ln"><span data-copy="21">Tu operación,</span></span>
-          <span class="ln"><span class="grow-word" data-copy="22">bajo control.</span></span>
+          <span class="ln"><span data-copy="20">Menos hojas de cálculo.</span></span>
+          <span class="ln"><span data-copy="21">Menos riesgo.</span></span>
+          <span class="ln"><span data-copy="22">Tu operación,</span></span>
+          <span class="ln"><span class="grow-word" data-copy="23">bajo control.</span></span>
         </h1>
-        <p class="lede hero-lede hero-in" style="--d:.55s" data-copy="23">Empezamos por un proceso que hoy depende de hojas de cálculo, carga duplicada o tareas manuales. Acordamos una primera entrega concreta, con alcance y costo definidos.</p>
+        <p class="lede hero-lede hero-in" style="--d:.55s" data-copy="24">Empezamos por un proceso que hoy depende de hojas de cálculo o tareas manuales, y acordamos una primera entrega con alcance y costo definidos.</p>
         <div class="cta-row hero-in" style="--d:.7s">
-          <a class="btn btn-fill btn-glow" href="#contacto" data-copy="24">Agenda una consulta sin costo</a>
-          <a class="btn btn-line" href="#bosque" data-copy="25">Ver lo que construimos <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-fill btn-glow" href="#contacto" data-copy="25">Agenda una consulta sin costo</a>
         </div>
-        <p class="micro hero-in" style="--d:.8s" data-copy="26">30 minutos con los dos socios para entender tu problema y acordar próximos pasos. Sin costo.</p>
-        <div class="hero-proof"><p data-copy="27">Argentina y España · Atención en español e inglés.<br>Trabajas directamente con los socios.</p><div class="project-brief"><a href="#bosque"><strong>CDI</strong><span data-copy="28">Producto propio funcional para agentes de aduanas.</span></a><a href="#bosque"><strong>Agroboeda</strong><span data-copy="29">Marketplace del agro, en desarrollo para un cliente.</span></a></div></div>
       </div>
     </article>
 
-    <article class="chap" id="raices" data-plate="Raíces: los datos" data-copy="30">
+    <article class="chap" id="raices" data-plate="Raíces: los datos" data-copy="26">
       <div class="chap-card">
-        <h2 data-copy="31">Datos claros para decidir</h2>
-        <p class="lede" data-copy="32">Si preparar el informe semanal exige copiar cifras entre archivos, empezamos por ese flujo: qué fuentes necesita, cómo se actualiza y quién lo usa.</p>
+        <p class="kicker" style="--c:var(--root)"><b data-copy="27">Raíces</b><span data-copy="28">Todo empieza por los datos.</span></p>
+        <h2 data-copy="29">Datos claros para decidir</h2>
+        <p class="lede" data-copy="30">Si preparar el informe semanal exige copiar cifras entre archivos, empezamos por ese flujo: qué fuentes necesita, cómo se actualiza y quién lo usa.</p>
         <dl class="did" style="--c:var(--root)">
-          <dt data-copy="33">Primera entrega posible</dt><dd data-copy="34">Un panel para un informe concreto, con sus fuentes conectadas y reglas de actualización acordadas.</dd>
+          <dt data-copy="31">Primera entrega posible</dt><dd data-copy="32">Un panel para un informe concreto, con sus fuentes conectadas y reglas de actualización acordadas.</dd>
         </dl>
-        <p class="story-commitment" data-copy="35">Primera entrega con alcance y costo acordados.</p>
-        <a class="ctx" href="#contacto" style="--c:var(--root)" data-copy="36">¿Tus cifras no coinciden? Conversemos</a>
+        <p class="story-commitment" data-copy="33">Primera entrega con alcance y costo acordados.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--root)" data-copy="34">¿Tus cifras no coinciden? Conversemos</a>
       </div>
     </article>
 
-    <article class="chap" id="corteza" data-plate="Corteza: la seguridad" data-copy="37">
+    <article class="chap" id="corteza" data-plate="Corteza: la seguridad" data-copy="35">
       <div class="chap-card">
+        <p class="kicker" style="--c:var(--bark)"><b data-copy="36">Corteza</b><span data-copy="37">La seguridad protege lo que crece.</span></p>
         <h2 data-copy="38">Protege la operación de tu empresa</h2>
         <p class="lede" data-copy="39">Empezamos por un sistema o proceso delimitado. Revisamos quién accede, qué información maneja y cómo se recupera si algo falla.</p>
         <dl class="did" style="--c:var(--bark)">
@@ -531,25 +585,27 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 
     <article class="chap" id="copa" data-plate="Copa: la IA aplicada" data-copy="44">
       <div class="chap-card">
-        <h2 data-copy="45">IA aplicada con revisión humana</h2>
-        <p class="lede" data-copy="46">Elegimos una tarea concreta, como responder consultas desde tus documentos. Definimos qué puede hacer el asistente y cuándo interviene una persona.</p>
+        <p class="kicker" style="--c:var(--leaf)"><b data-copy="45">Copa</b><span data-copy="46">La IA da fruto cuando lo demás está firme.</span></p>
+        <h2 data-copy="47">IA aplicada con revisión humana</h2>
+        <p class="lede" data-copy="48">Elegimos una tarea concreta, como responder consultas desde tus documentos. Definimos qué puede hacer el asistente y cuándo interviene una persona.</p>
         <dl class="did" style="--c:var(--leaf)">
-          <dt data-copy="47">Primera entrega posible</dt><dd data-copy="48">Un asistente para un conjunto definido de documentos y consultas, con criterios de prueba y revisión humana.</dd>
+          <dt data-copy="49">Primera entrega posible</dt><dd data-copy="50">Un asistente para un conjunto definido de documentos y consultas, con criterios de prueba y revisión humana.</dd>
         </dl>
-        <p class="story-commitment" data-copy="49">Si el proyecto no conviene, te lo decimos.</p>
-        <a class="ctx" href="#contacto" style="--c:var(--leaf)" data-copy="50">¿Qué tareas podrías automatizar? Conversemos</a>
+        <p class="story-commitment" data-copy="51">Si el proyecto no conviene, te lo decimos.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--leaf)" data-copy="52">¿Qué tareas podrías automatizar? Conversemos</a>
       </div>
     </article>
 
-    <article class="chap" id="bosque" data-plate="Bosque: proyectos de Ynera" data-copy="51">
+    <article class="chap" id="bosque" data-plate="Bosque: proyectos de Ynera" data-copy="53">
       <div class="chap-card">
-        <h2 data-copy="52">Proyectos que<br>estamos construyendo.</h2>
-        <p class="lede poem" data-copy="53">Un producto propio y un encargo de cliente.</p>
+        <p class="kicker"><b data-copy="54">Bosque</b><span data-copy="55">Lo que ya está creciendo.</span></p>
+        <h2 data-copy="56">Proyectos que<br>estamos construyendo.</h2>
+        <p class="lede poem" data-copy="57">Un producto propio y un encargo de cliente.</p>
         <div class="forest">
-<article class="case"><div hidden class="product-space" role="img" aria-label="Espacio reservado para una captura de CDI" data-copy="54"><span>CDI</span><small data-copy="55">Vista del producto</small></div><h3>CDI</h3><span class="sector" data-copy="56">Comercio exterior</span><span class="case-status" data-copy="57">Producto propio · Funcional</span><p class="res" data-copy="58">El problema: documentos y fechas repartidos entre archivos y conversaciones.</p><p class="desc" data-copy="59">CDI reúne documentos, conversaciones y fechas límite de agentes de aduanas en un solo lugar.</p></article>
-<article class="case"><div hidden class="product-space" role="img" aria-label="Espacio reservado para una captura de Agroboeda" data-copy="60"><span>Agroboeda</span><small data-copy="61">Vista del proyecto</small></div><h3>Agroboeda</h3><span class="sector" data-copy="62">Sector agro</span><span class="case-status" data-copy="63">Proyecto para un cliente · En desarrollo</span><p class="res" data-copy="64">El proyecto: conectar compradores y vendedores del sector agro.</p><p class="desc" data-copy="65">Desarrollamos una plataforma de compraventa por encargo de un cliente. El trabajo está en desarrollo; todavía no presentamos resultados de uso.</p></article>
+<article class="case"><div hidden class="product-space" role="img" aria-label="Espacio reservado para una captura de CDI" data-copy="58"><span>CDI</span><small data-copy="59">Vista del producto</small></div><h3>CDI</h3><span class="sector" data-copy="60">Comercio exterior</span><span class="case-status" data-copy="61">Producto propio · Funcional</span><p class="res" data-copy="62">El problema: documentos y fechas repartidos entre archivos y conversaciones.</p><p class="desc" data-copy="63">CDI reúne documentos, conversaciones y fechas límite de agentes de aduanas en un solo lugar.</p></article>
+<article class="case"><div hidden class="product-space" role="img" aria-label="Espacio reservado para una captura de Agroboeda" data-copy="64"><span>Agroboeda</span><small data-copy="65">Vista del proyecto</small></div><h3>Agroboeda</h3><span class="sector" data-copy="66">Sector agro</span><span class="case-status" data-copy="67">Proyecto para un cliente · En desarrollo</span><p class="res" data-copy="68">El proyecto: conectar compradores y vendedores del sector agro.</p><p class="desc" data-copy="69">Desarrollamos una plataforma de compraventa por encargo de un cliente. El trabajo está en desarrollo; todavía no presentamos resultados de uso.</p></article>
         </div>
-        <a class="ctx" href="#contacto" data-copy="66">¿Reconoces un problema parecido? Hablemos de tu empresa</a>
+        <a class="ctx" href="#contacto" data-copy="70">¿Reconoces un problema parecido? Hablemos de tu empresa</a>
       </div>
     </article>
   </div>
@@ -559,8 +615,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <section class="sec" id="para-quien" aria-labelledby="pq">
   <div class="wrap">
     <div class="fork">
-      <h2 class="h2s" id="pq" data-copy="67">Para empresas que necesitan ordenar su operación</h2>
-      <p class="lede poem" data-copy="68">Con quién trabajamos mejor.</p>
+      <h2 class="h2s" id="pq" data-copy="71">Para empresas que necesitan ordenar su operación</h2>
+      <p class="lede poem" data-copy="72">Con quién trabajamos mejor.</p>
       <svg class="fork-y draw" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="fkYes" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17131F" stop-opacity=".45"/><stop offset="1" stop-color="#1E4D3A"/></linearGradient>
@@ -571,19 +627,19 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       </svg>
       <div class="fork-cols">
         <div class="fork-col">
-          <span class="fork-hd" data-copy="69">Podemos ayudarte si</span>
+          <span class="fork-hd" data-copy="73">Podemos ayudarte si</span>
           <ul>
-            <li data-copy="70">Tu empresa depende de hojas de cálculo y tareas manuales.</li>
-            <li data-copy="71">Gestionas información sensible de clientes o pacientes.</li>
-            <li data-copy="72">Tu equipo necesita automatizar sin perder el control.</li>
+            <li data-copy="74">Tu empresa depende de hojas de cálculo y tareas manuales.</li>
+            <li data-copy="75">Gestionas información sensible de clientes o pacientes.</li>
+            <li data-copy="76">Tu equipo necesita automatizar sin perder el control.</li>
           </ul>
         </div>
         <div class="fork-col no">
-          <span class="fork-hd" data-copy="73">No encajamos si</span>
+          <span class="fork-hd" data-copy="77">No encajamos si</span>
           <ul>
-            <li data-copy="74">Buscas una herramienta sin revisar el problema que debe resolver.</li>
-            <li data-copy="75">Tu actividad son las apuestas online o productos que dañan a las personas.</li>
-            <li data-copy="76">Quieres delegar decisiones en IA sin supervisión humana.</li>
+            <li data-copy="78">Buscas una herramienta sin revisar el problema que debe resolver.</li>
+            <li data-copy="79">Tu actividad son las apuestas online o productos que dañan a las personas.</li>
+            <li data-copy="80">Quieres delegar decisiones en IA sin supervisión humana.</li>
           </ul>
         </div>
       </div>
@@ -594,9 +650,9 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <!-- ===== DUPLA ===== -->
 <section class="sec slide" id="dupla" aria-labelledby="duh">
   <div class="wrap">
-    <h2 class="h2s" id="duh" data-copy="77">Dos socios. Un equipo entre Argentina y España.</h2>
-    <p class="lede poem" data-copy="78">Dos ramas. Un mismo tronco.</p>
-    <p class="lede" data-copy="79">Somos Emiliano y Mariano. Combinamos seguridad, desarrollo y ciencia de datos. Uno de nosotros trabaja desde Argentina y el otro desde España. Hablas con quienes después diseñan y construyen tu solución.</p>
+    <h2 class="h2s" id="duh" data-copy="81">Dos socios. Un equipo entre Argentina y España.</h2>
+    <p class="lede poem" data-copy="82">Dos ramas. Un mismo tronco.</p>
+    <p class="lede" data-copy="83">Somos Emiliano y Mariano. Combinamos seguridad, desarrollo y ciencia de datos. Uno de nosotros trabaja desde Argentina y el otro desde España. Hablas con quienes después diseñan y construyen tu solución.</p>
     <!--
       FOTOS: mientras no haya fotos reales, la Y lineal (.duo-y) hace de retrato de la dupla.
       Cuando lleguen (ver Código de marca 6.2: misma luz, misma lente, cuadradas, sin radio),
@@ -607,8 +663,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
     <div class="duo">
       <article class="person l" style="--c:var(--bark)">
         <h3>Emiliano</h3>
-        <p class="role" data-copy="80">Ciberseguridad, código e IA</p>
-        <p data-copy="81">Diseña y construye sistemas, con la seguridad integrada desde la arquitectura hasta el despliegue.</p>
+        <p class="role" data-copy="84">Ciberseguridad, código e IA</p>
+        <p data-copy="85">Diseña y construye sistemas, con la seguridad integrada desde la arquitectura hasta el despliegue.</p>
         <!-- TODO: link real de LinkedIn -->
       </article>
       <div class="duo-y" aria-hidden="true">
@@ -624,8 +680,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       </div>
       <article class="person r" style="--c:var(--root)">
         <h3>Mariano</h3>
-        <p class="role" data-copy="82">Ciencia de datos y negocio</p>
-        <p data-copy="83">Convierte conversaciones de negocio en problemas que se pueden medir y resolver. Trabaja entre los datos, el contexto y las decisiones que el equipo necesita tomar.</p>
+        <p class="role" data-copy="86">Ciencia de datos y negocio</p>
+        <p data-copy="87">Convierte conversaciones de negocio en problemas que se pueden medir y resolver. Trabaja entre los datos, el contexto y las decisiones que el equipo necesita tomar.</p>
         <!-- TODO: link real de LinkedIn -->
       </article>
     </div>
@@ -635,18 +691,18 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <!-- ===== PROCESO ===== -->
 <section class="sec" id="proceso" aria-labelledby="ph">
   <div class="wrap">
-    <h2 class="h2s" id="ph" data-copy="84">Cómo trabajamos</h2>
-    <p class="lede remote-intro" data-copy="85">Una videollamada para empezar. Reuniones coordinadas con tu zona horaria y entregas por etapas, estés donde estés.</p>
+    <h2 class="h2s" id="ph" data-copy="88">Cómo trabajamos</h2>
+    <p class="lede remote-intro" data-copy="89">Una videollamada para empezar. Reuniones coordinadas con tu zona horaria y entregas por etapas, estés donde estés.</p>
     <ol class="steps" id="steps">
       <li class="grow" aria-hidden="true"></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="86">Paso 1</span><h3 data-copy="87">Escuchamos</h3><p data-copy="88">Nos cuentas qué está frenando a tu equipo. Empezamos con una videollamada y un problema concreto.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="89">Paso 2</span><h3 data-copy="90">Diagnosticamos</h3><p data-copy="91">Revisamos impacto, datos y riesgos. Acordamos prioridades y cómo medir el avance.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="92">Paso 3</span><h3 data-copy="93">Construimos</h3><p data-copy="94">Trabajamos por etapas, con entregas revisables, decisiones documentadas y revisión humana.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="95">Paso 4</span><h3 data-copy="96">Operamos</h3><p data-copy="97">Ponemos la solución en marcha y acordamos cómo mantenerla, documentarla y acompañar a tu equipo.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="90">Paso 1</span><h3 data-copy="91">Escuchamos</h3><p data-copy="92">Nos cuentas qué está frenando a tu equipo. Empezamos con una videollamada y un problema concreto.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="93">Paso 2</span><h3 data-copy="94">Diagnosticamos</h3><p data-copy="95">Revisamos impacto, datos y riesgos. Acordamos prioridades y cómo medir el avance.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="96">Paso 3</span><h3 data-copy="97">Construimos</h3><p data-copy="98">Trabajamos por etapas, con entregas revisables, decisiones documentadas y revisión humana.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="99">Paso 4</span><h3 data-copy="100">Operamos</h3><p data-copy="101">Ponemos la solución en marcha y acordamos cómo mantenerla, documentarla y acompañar a tu equipo.</p></li>
     </ol>
-    <nav class="car-controls" aria-label="Recorrido de trabajo" data-copy="98">
-      <button type="button" class="car-arrow" data-direction="-1" aria-label="Paso anterior" data-copy="99"><span aria-hidden="true">←</span></button>
-      <button type="button" class="car-arrow" data-direction="1" aria-label="Paso siguiente" data-copy="100"><span aria-hidden="true">→</span></button>
+    <nav class="car-controls" aria-label="Recorrido de trabajo" data-copy="102">
+      <button type="button" class="car-arrow" data-direction="-1" aria-label="Paso anterior" data-copy="103"><span aria-hidden="true">←</span></button>
+      <button type="button" class="car-arrow" data-direction="1" aria-label="Paso siguiente" data-copy="104"><span aria-hidden="true">→</span></button>
     </nav>
   </div>
 </section>
@@ -656,16 +712,16 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   <div class="wrap">
     <div class="faq">
       <div class="faq-side">
-        <h2 class="h2s" id="fh" data-copy="101">Preguntas frecuentes sobre datos, ciberseguridad e IA</h2>
-        <p class="lede poem" data-copy="102">Lo que nos preguntan antes de empezar.</p>
-        <a class="ctx" href="#contacto" data-copy="103">¿Tienes otra pregunta? Agenda una conversación</a>
+        <h2 class="h2s" id="fh" data-copy="105">Preguntas frecuentes sobre datos, ciberseguridad e IA</h2>
+        <p class="lede poem" data-copy="106">Lo que nos preguntan antes de empezar.</p>
+        <a class="ctx" href="#contacto" data-copy="107">¿Tienes otra pregunta? Agenda una conversación</a>
       </div>
       <div class="faq-list">
-        <details><summary data-copy="104">¿Cómo saben si vale la pena hacer el proyecto?</summary><p data-copy="105">En la conversación inicial entendemos el problema, su impacto y la información disponible. Te damos una orientación preliminar y acordamos qué revisar para decidir si conviene avanzar. Una evaluación técnica y sus entregables se presupuestan aparte.</p></details>
-        <details><summary data-copy="106">¿Qué pasa con mis datos?</summary><p data-copy="107">Trabajamos con acceso mínimo y dejamos por escrito quién accede a qué antes de tocar tus datos. Nada sale de tu control sin que lo sepas, y lo que no hace falta para el trabajo no lo pedimos.</p></details>
-        <details><summary data-copy="108">¿Cuánto cuesta y cuánto tarda?</summary><p data-copy="109">El costo y el plazo dependen del alcance. Primero entendemos el problema y reunimos la información necesaria; después te presentamos una propuesta con entregas, costo y tiempos. Cada etapa se acuerda antes de empezar.</p></details>
-        <details><summary data-copy="110">¿Cómo trabajamos si estamos en países distintos?</summary><p data-copy="111">Nuestro equipo está en Argentina y España. Trabajamos de forma remota, en español e inglés, con reuniones coordinadas según tu zona horaria. Acordamos alcance, entregas, canales de comunicación y acceso a tus sistemas antes de empezar.</p></details>
-        <details><summary data-copy="112">¿Y después de entregar?</summary><p data-copy="113">Podemos seguir operando y mejorando lo que construimos, como hacemos con nuestros propios productos, con un plan de mantenimiento que acordamos aparte. Si prefieres que tu equipo lo maneje solo, lo dejamos documentado para que funcione sin depender de nosotros. Esa es la idea de Ynera desde el principio.</p></details>
+        <details><summary data-copy="108">¿Cómo saben si vale la pena hacer el proyecto?</summary><p data-copy="109">En la conversación inicial entendemos el problema, su impacto y la información disponible. Te damos una orientación preliminar y acordamos qué revisar para decidir si conviene avanzar. Una evaluación técnica y sus entregables se presupuestan aparte.</p></details>
+        <details><summary data-copy="110">¿Qué pasa con mis datos?</summary><p data-copy="111">Trabajamos con acceso mínimo y dejamos por escrito quién accede a qué antes de tocar tus datos. Nada sale de tu control sin que lo sepas, y lo que no hace falta para el trabajo no lo pedimos.</p></details>
+        <details><summary data-copy="112">¿Cuánto cuesta y cuánto tarda?</summary><p data-copy="113">El costo y el plazo dependen del alcance. Primero entendemos el problema y reunimos la información necesaria; después te presentamos una propuesta con entregas, costo y tiempos. Cada etapa se acuerda antes de empezar.</p></details>
+        <details><summary data-copy="114">¿Cómo trabajamos si estamos en países distintos?</summary><p data-copy="115">Nuestro equipo está en Argentina y España. Trabajamos de forma remota, en español e inglés, con reuniones coordinadas según tu zona horaria. Acordamos alcance, entregas, canales de comunicación y acceso a tus sistemas antes de empezar.</p></details>
+        <details><summary data-copy="116">¿Y después de entregar?</summary><p data-copy="117">Podemos seguir operando y mejorando lo que construimos, como hacemos con nuestros propios productos, con un plan de mantenimiento que acordamos aparte. Si prefieres que tu equipo lo maneje solo, lo dejamos documentado para que funcione sin depender de nosotros. Esa es la idea de Ynera desde el principio.</p></details>
       </div>
     </div>
   </div>
@@ -675,30 +731,30 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <section class="sec close slide" id="contacto" aria-labelledby="ch">
   <div class="wrap">
     <div class="close-hd">
-      <h2 class="big" id="ch" data-copy="114">Conversemos sobre<br>un problema concreto.</h2>
-      <p class="lede poem" data-copy="115">Una primera conversación, sin costo.</p>
-      <p class="lede" data-copy="116">Nos cuentas qué proceso está frenando a tu equipo. Vemos si podemos ayudarte y qué información necesitamos para proponer una primera entrega.</p>
+      <h2 class="big" id="ch" data-copy="118">Conversemos sobre<br>un problema concreto.</h2>
+      <p class="lede poem" data-copy="119">Una primera conversación, sin costo.</p>
+      <p class="lede" data-copy="120">Nos cuentas qué proceso está frenando a tu equipo. Vemos si podemos ayudarte y qué información necesitamos para proponer una primera entrega.</p>
     </div>
-    <p class="contact-pending" data-copy="117">Canal de contacto pendiente de confirmar.</p>
+    <p class="contact-pending" data-copy="121">Canal de contacto pendiente de confirmar.</p>
   </div>
 </section>
 
 </main>
 
-<div class="mbar" id="mbar" aria-label="Contacto rápido" data-copy="118">
-  <a class="btn btn-fill" id="mbarMain" href="#contacto" data-copy="119">Consulta inicial sin costo</a>
-  <a class="btn btn-line" href="#contacto" aria-label="Agenda una conversación" data-copy="120">Agenda</a>
+<div class="mbar" id="mbar" aria-label="Contacto rápido" data-copy="122">
+  <a class="btn btn-fill" id="mbarMain" href="#contacto" data-copy="123">Consulta inicial sin costo</a>
+  <a class="btn btn-line" href="#contacto" aria-label="Agenda una conversación" data-copy="124">Agenda</a>
 </div>
 
 <footer>
   <div class="wrap"><div class="foot">
     <div class="foot-sig">
       <svg class="footer-brand" viewBox="-4 -4 491 118" role="img" aria-label="Ynera"><g fill="currentColor" transform="translate(0 -4)"><path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/><path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/><path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/></g><g fill="currentColor" fill-rule="evenodd"><path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/><path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/><path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/><path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/><path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/></g></svg>
-      <p data-copy="121">Datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas y profesionales. Argentina y España · Trabajamos de forma remota, en español e inglés.</p>
+      <p data-copy="125">Ynera es una consultora de datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas y profesionales. Argentina y España · Trabajamos de forma remota, en español e inglés.</p>
     </div>
-    <nav class="foot-links" aria-label="Pie" data-copy="122"><a href="#raices" data-copy="123">Datos</a><a href="#corteza" data-copy="124">Seguridad</a><a href="#copa" data-copy="125">IA</a><a href="#bosque" data-copy="126">Casos</a><a href="#dupla" data-copy="127">Nosotros</a></nav>
+    <nav class="foot-links" aria-label="Pie" data-copy="126"><a href="#raices" data-copy="127">Datos</a><a href="#corteza" data-copy="128">Seguridad</a><a href="#copa" data-copy="129">IA</a><a href="#bosque" data-copy="130">Casos</a><a href="#dupla" data-copy="131">Nosotros</a></nav>
     <div class="foot-meta">
-      <a href="#top" data-copy="128">Volver arriba</a>
+      <a href="#top" data-copy="132">Volver arriba</a>
       <span id="today">© 2026 Ynera</span>
     </div>
   </div></div>
@@ -708,8 +764,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <script src="tree.js?v=entry3" defer></script>
 <script src="lower-motion.js?v=story-commitments1" defer></script>
 <script src="motion.js?v=story-commitments1" defer></script>
-<script src="language-data.js?v=story-commitments1" defer></script>
-<script src="language.js?v=story-commitments1" defer></script>
+<script src="language-data.js?v=arbol-kicker1" defer></script>
+<script src="language.js?v=arbol-kicker1" defer></script>
 <script>
 window.YneraUI={"es":{"booking":"Consulta inicial sin costo","step":"Paso","of":"de"},"en":{"booking":"Free initial consultation","step":"Step","of":"of"}};
 window.YneraStepLabel=n=>{const c=window.YneraUI[document.documentElement.lang];return c.step+" <b>"+n+"</b> "+c.of+" 4";};

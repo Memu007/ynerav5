@@ -104,3 +104,13 @@ Revisados ES/EN a 390/320 px sin desborde; contraste de fondo muestreado entre 7
 ## Estilo secundario restaurado · 4 de octubre de 2026
 
 Emi rechazó el aspecto del texto bajo el hero tras la mejora de Astra y pidió volver al anterior. Retiradas las reglas nuevas de 14 px/tinta clara: condiciones, ubicación y resúmenes de proyectos recuperan tamaños, interlínea y colores anteriores. No se había cambiado su familia tipográfica; permanece Instrument Sans. Logo y titulares sin cambios. Se conservan las correcciones de visibilidad durante el desplazamiento móvil y plano de lectura nocturno. Los resultados de contraste del informe describen la prueba D8, no el estilo secundario restaurado D9.
+
+
+## Hero corto, árbol nombrado y SEO · 9 de octubre de 2026
+A pedido de Emi. Hero reducido a etiqueta de público, titular, una línea y un botón: se quitaron el segundo botón, la nota de 30 minutos y el resumen CDI/Agroboeda junto al hero (los proyectos siguen en su sección). Cada capítulo del árbol lleva ahora una etiqueta visible sobre el título que nombra la metáfora: Raíces, Corteza, Copa y Bosque, con una frase breve. Sirve también en móvil, donde el pie de figura está oculto. Los títulos h2 no cambian. ES/EN editados en espejo y traducciones regeneradas; versión de `language-data.js` y `language.js` actualizada para evitar caché.
+
+SEO y lectura por asistentes de IA, sin depender del dominio: título y descripción dicen «consultora» y «pymes»; el pie define a Ynera en una frase; datos estructurados ampliados (ProfessionalService, países, temas, oferta de los tres servicios, rol de cada socio) dentro del mismo `@graph`; `og:locale:alternate`; `llms.txt` con resumen en texto plano; `assets/og.png` (1200 × 630) lista pero sin enlazar.
+
+Pendiente al confirmar el dominio: canonical, hreflang ES/EN/x-default, `og:url`, `og:image` y `twitter:image` apuntando a `assets/og.png` con URL absoluta, `sitemap.xml` y su línea en `robots.txt`, `url` y `logo` en los datos estructurados. No se agregaron URLs supuestas. Sigue pendiente el canal de contacto real.
+
+Verificados 1440 y 390 px en ES y EN: sin desborde, consola sin errores; `verify.py`, `check-ambience` y `check-lower-motion` aprobados. Despliegue de Railway no verificado: falta la URL pública.

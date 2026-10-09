@@ -1,0 +1,26 @@
+# Ynera
+
+> Ynera es una consultora de datos, ciberseguridad e inteligencia artificial aplicada para pequeñas y medianas empresas y profesionales. Dos socios, Emiliano (ciberseguridad, desarrollo e IA) y Mariano (ciencia de datos y negocio), trabajan desde Argentina y España, de forma remota, en español e inglés.
+
+## Qué hace
+
+- Datos: paneles e informes con fuentes conectadas, para dejar de copiar cifras entre hojas de cálculo.
+- Ciberseguridad: revisión de accesos y copias de seguridad de un sistema, con hallazgos y correcciones priorizadas.
+- IA aplicada: asistentes sobre un conjunto definido de documentos y consultas, con criterios de prueba y revisión humana.
+
+## Cómo trabaja
+
+- Empieza por un proceso concreto y una primera entrega con alcance y costo acordados.
+- La primera conversación es sin costo y se hace directamente con los dos socios.
+- Etapas: escuchar, diagnosticar, construir y operar.
+- No trabaja con apuestas online ni con proyectos que deleguen decisiones en IA sin supervisión humana.
+
+## Proyectos
+
+- CDI: producto propio, en funcionamiento, que reúne documentos, conversaciones y fechas límite de agentes de aduanas.
+- Agroboeda: marketplace del sector agro, en desarrollo por encargo de un cliente.
+
+## Páginas
+
+- [Español](index.html)
+- [English](en.html)

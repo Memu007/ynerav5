@@ -5,18 +5,19 @@
 <link rel="preload" href="tree.js?v=entry3" as="script">
 <script src="ambience.js?v=3"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title data-copy="0">Ynera | Data, cybersecurity and AI for businesses</title>
-<meta name="description" content="Data, cybersecurity and AI for small and medium-sized businesses. A team in Argentina and Spain. Free consultation, in English and Spanish." data-copy="1">
+<title data-copy="0">Ynera | Data, cybersecurity and AI consultancy for SMEs</title>
+<meta name="description" content="Data, cybersecurity and applied AI consultancy for small and medium-sized businesses. A team in Argentina and Spain. Free consultation, in English and Spanish." data-copy="1">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#17131F">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB" data-copy="2">
+<meta property="og:locale:alternate" content="es_ES" data-copy="3">
 <meta property="og:site_name" content="Ynera">
-<meta property="og:title" content="Ynera | Data, cybersecurity and AI for businesses" data-copy="3">
-<meta property="og:description" content="We connect your data, reduce risks and automate tasks with AI and human review. A team in Argentina and Spain. Free consultation with both partners." data-copy="4">
+<meta property="og:title" content="Ynera | Data, cybersecurity and AI consultancy for SMEs" data-copy="4">
+<meta property="og:description" content="We connect your data, reduce risks and automate tasks with AI and human review. A team in Argentina and Spain. Free consultation with both partners." data-copy="5">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ynera | Data, cybersecurity and AI for businesses" data-copy="5">
-<meta name="twitter:description" content="We connect your data, reduce risks and automate tasks with AI and human review. A team in Argentina and Spain." data-copy="6">
+<meta name="twitter:title" content="Ynera | Data, cybersecurity and AI consultancy for SMEs" data-copy="6">
+<meta name="twitter:description" content="We connect your data, reduce risks and automate tasks with AI and human review. A team in Argentina and Spain." data-copy="7">
 <link rel="preload" href="fonts/ynera-cauce.woff2?v=1" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="brand/ynera-favicon.svg?v=d3">
 <!-- Datos estructurados sincronizados con las preguntas frecuentes. -->
@@ -24,9 +25,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "name": "Ynera",
-      "description": "A data, cybersecurity and applied AI team in Argentina and Spain. Working remotely in English and Spanish.",
+      "description": "Ynera is a data, cybersecurity and applied artificial intelligence consultancy for small and medium-sized businesses and independent professionals. Two partners, in Argentina and Spain; working remotely in English and Spanish.",
       "knowsLanguage": [
         "es",
         "en"
@@ -34,11 +38,60 @@
       "founder": [
         {
           "@type": "Person",
-          "name": "Emiliano"
+          "name": "Emiliano",
+          "jobTitle": "Cybersecurity, software and AI"
         },
         {
           "@type": "Person",
-          "name": "Mariano"
+          "name": "Mariano",
+          "jobTitle": "Data science and business"
+        }
+      ],
+      "slogan": "Your business, under control.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Argentina"
+        },
+        {
+          "@type": "Country",
+          "name": "Spain"
+        }
+      ],
+      "knowsAbout": [
+        "Data analysis",
+        "Automated dashboards and reports",
+        "Cybersecurity for small businesses",
+        "Access and backup reviews",
+        "Applied artificial intelligence",
+        "AI assistants with human review",
+        "Process automation",
+        "Custom software development"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Clear data for better decisions",
+            "description": "A dashboard for one specific report, with connected sources and agreed update rules."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Protect your business operations",
+            "description": "An access and backup review for one system, with findings and prioritized fixes."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Applied AI with human review",
+            "description": "An assistant for a defined set of documents and questions, with testing criteria and human review."
+          }
         }
       ]
     },
@@ -183,6 +236,8 @@ html.js.tree-ready #tree{opacity:1}
 .chap .lede{color:var(--luz-2);max-width:30em}
 .chap .lede.poem,.sec .lede.poem{font:320 clamp(21px,1.8vw,26px)/1.28 var(--f);letter-spacing:-.005em;text-wrap:balance}
 .chap .lede.poem{color:var(--luz);margin-top:-10px}
+.kicker{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:0 0 -8px;font:400 17px/1.35 var(--f);color:var(--luz-2)}
+.kicker b{font:620 13px/1.35 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--c,var(--luz))}
 .did{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;margin:0}
 .did dt{font:620 17px/1.45 var(--f);color:var(--c,inherit)}
 .did dd{margin:0;font-size:17px;line-height:1.5;color:var(--luz)}
@@ -461,64 +516,63 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <body>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Ynera, home" data-copy="7"><svg class="brand-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></a>
-    <nav class="nav-mid" aria-label="Sections" data-copy="8">
-      <a href="#raices" data-copy="9">Data</a>
-      <a href="#corteza" data-copy="10">Security</a>
-      <a href="#copa" data-copy="11">AI</a>
-      <a href="#bosque" data-copy="12">Our work</a>
-      <a href="#dupla" data-copy="13">About us</a>
+    <a class="brand" href="#top" aria-label="Ynera, home" data-copy="8"><svg class="brand-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></a>
+    <nav class="nav-mid" aria-label="Sections" data-copy="9">
+      <a href="#raices" data-copy="10">Data</a>
+      <a href="#corteza" data-copy="11">Security</a>
+      <a href="#copa" data-copy="12">AI</a>
+      <a href="#bosque" data-copy="13">Our work</a>
+      <a href="#dupla" data-copy="14">About us</a>
     </nav>
-    <div class="nav-actions"><nav class="language-switch" aria-label="Language"><a href="index.html" lang="es" hreflang="es" aria-label="Leer en español">ES</a><span lang="en" aria-current="page">EN</span></nav><a class="btn btn-fill" href="#contacto" data-copy="14">Free consultation</a></div>
+    <div class="nav-actions"><nav class="language-switch" aria-label="Language"><a href="index.html" lang="es" hreflang="es" aria-label="Leer en español">ES</a><span lang="en" aria-current="page">EN</span></nav><a class="btn btn-fill" href="#contacto" data-copy="15">Free consultation</a></div>
   </div>
 </header>
 
 <main id="top">
 
-<section class="story" id="story" aria-label="How a system grows" data-copy="15">
+<section class="story" id="story" aria-label="How a system grows" data-copy="16">
   <div class="plate" aria-hidden="true">
     <div class="plate-in">
       <canvas id="tree"></canvas>
       <div id="labels"></div>
       <!-- pie de figura: la marca y la parte del árbol que se ve (tree.js escribe #plateNo desde data-plate) -->
-      <div class="fig"><i><svg class="scene-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></i><span id="plateNo" data-copy="16">The seed</span></div>
+      <div class="fig"><i><svg class="scene-wordmark" viewBox="-4 -4 491 118" aria-hidden="true" focusable="false"><g fill="currentColor" transform="translate(0 -4)"> <path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/> <path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/> <path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/> </g><g fill="currentColor" fill-rule="evenodd"> <path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/> <path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/> <path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/> <path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/> <path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/> </g></svg></i><span id="plateNo" data-copy="17">The seed</span></div>
     </div>
   </div>
 
   <div class="chapters">
-    <article class="chap hero" data-plate="The seed" data-copy="17">
+    <article class="chap hero" data-plate="The seed" data-copy="18">
       <div class="chap-card">
-        <p class="audience" data-copy="18">For small and medium-sized businesses and independent professionals</p>
+        <p class="audience" data-copy="19">For small and medium-sized businesses and independent professionals</p>
         <h1 class="hero-title">
-          <span class="ln"><span data-copy="19">Fewer spreadsheets.</span></span>
-          <span class="ln"><span data-copy="20">Less risk.</span></span>
-          <span class="ln"><span data-copy="21">Your business,</span></span>
-          <span class="ln"><span class="grow-word" data-copy="22">under control.</span></span>
+          <span class="ln"><span data-copy="20">Fewer spreadsheets.</span></span>
+          <span class="ln"><span data-copy="21">Less risk.</span></span>
+          <span class="ln"><span data-copy="22">Your business,</span></span>
+          <span class="ln"><span class="grow-word" data-copy="23">under control.</span></span>
         </h1>
-        <p class="lede hero-lede hero-in" style="--d:.55s" data-copy="23">We start with one process that relies on spreadsheets, duplicate data entry or manual work. Together, we define a first deliverable with an agreed scope and cost.</p>
+        <p class="lede hero-lede hero-in" style="--d:.55s" data-copy="24">We start with one process that relies on spreadsheets or manual work, and agree on a first deliverable with a defined scope and cost.</p>
         <div class="cta-row hero-in" style="--d:.7s">
-          <a class="btn btn-fill btn-glow" href="#contacto" data-copy="24">Book a free consultation</a>
-          <a class="btn btn-line" href="#bosque" data-copy="25">See what we build <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-fill btn-glow" href="#contacto" data-copy="25">Book a free consultation</a>
         </div>
-        <p class="micro hero-in" style="--d:.8s" data-copy="26">A free 30-minute conversation with both partners to understand your problem and agree on next steps.</p>
-        <div class="hero-proof"><p data-copy="27">Argentina and Spain · We work in English and Spanish.<br>You work directly with the partners.</p><div class="project-brief"><a href="#bosque"><strong>CDI</strong><span data-copy="28">Our own working product for customs brokers.</span></a><a href="#bosque"><strong>Agroboeda</strong><span data-copy="29">An agricultural marketplace, in development for a client.</span></a></div></div>
       </div>
     </article>
 
-    <article class="chap" id="raices" data-plate="Roots: data" data-copy="30">
+    <article class="chap" id="raices" data-plate="Roots: data" data-copy="26">
       <div class="chap-card">
-        <h2 data-copy="31">Clear data for better decisions</h2>
-        <p class="lede" data-copy="32">If your weekly report means copying figures between files, we start with that workflow: its sources, how it stays up to date and who uses it.</p>
+        <p class="kicker" style="--c:var(--root)"><b data-copy="27">Roots</b><span data-copy="28">Everything starts with data.</span></p>
+        <h2 data-copy="29">Clear data for better decisions</h2>
+        <p class="lede" data-copy="30">If your weekly report means copying figures between files, we start with that workflow: its sources, how it stays up to date and who uses it.</p>
         <dl class="did" style="--c:var(--root)">
-          <dt data-copy="33">A possible first deliverable</dt><dd data-copy="34">A dashboard for one specific report, with connected sources and agreed update rules.</dd>
+          <dt data-copy="31">A possible first deliverable</dt><dd data-copy="32">A dashboard for one specific report, with connected sources and agreed update rules.</dd>
         </dl>
-        <p class="story-commitment" data-copy="35">A first deliverable with agreed scope and cost.</p>
-        <a class="ctx" href="#contacto" style="--c:var(--root)" data-copy="36">Numbers do not add up? Let’s talk</a>
+        <p class="story-commitment" data-copy="33">A first deliverable with agreed scope and cost.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--root)" data-copy="34">Numbers do not add up? Let’s talk</a>
       </div>
     </article>
 
-    <article class="chap" id="corteza" data-plate="Bark: security" data-copy="37">
+    <article class="chap" id="corteza" data-plate="Bark: security" data-copy="35">
       <div class="chap-card">
+        <p class="kicker" style="--c:var(--bark)"><b data-copy="36">Bark</b><span data-copy="37">Security protects what grows.</span></p>
         <h2 data-copy="38">Protect your business operations</h2>
         <p class="lede" data-copy="39">We start with a defined system or process: who has access, what information it handles and how it can be recovered if something fails.</p>
         <dl class="did" style="--c:var(--bark)">
@@ -531,25 +585,27 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 
     <article class="chap" id="copa" data-plate="Canopy: applied AI" data-copy="44">
       <div class="chap-card">
-        <h2 data-copy="45">Applied AI with human review</h2>
-        <p class="lede" data-copy="46">We choose a specific task, such as answering questions from your documents. We define what the assistant can do and when a person takes over.</p>
+        <p class="kicker" style="--c:var(--leaf)"><b data-copy="45">Canopy</b><span data-copy="46">AI bears fruit once the rest is solid.</span></p>
+        <h2 data-copy="47">Applied AI with human review</h2>
+        <p class="lede" data-copy="48">We choose a specific task, such as answering questions from your documents. We define what the assistant can do and when a person takes over.</p>
         <dl class="did" style="--c:var(--leaf)">
-          <dt data-copy="47">A possible first deliverable</dt><dd data-copy="48">An assistant for a defined set of documents and questions, with testing criteria and human review.</dd>
+          <dt data-copy="49">A possible first deliverable</dt><dd data-copy="50">An assistant for a defined set of documents and questions, with testing criteria and human review.</dd>
         </dl>
-        <p class="story-commitment" data-copy="49">If the project is not worthwhile, we tell you.</p>
-        <a class="ctx" href="#contacto" style="--c:var(--leaf)" data-copy="50">Which tasks could you automate? Let’s talk</a>
+        <p class="story-commitment" data-copy="51">If the project is not worthwhile, we tell you.</p>
+        <a class="ctx" href="#contacto" style="--c:var(--leaf)" data-copy="52">Which tasks could you automate? Let’s talk</a>
       </div>
     </article>
 
-    <article class="chap" id="bosque" data-plate="Forest: Ynera projects" data-copy="51">
+    <article class="chap" id="bosque" data-plate="Forest: Ynera projects" data-copy="53">
       <div class="chap-card">
-        <h2 data-copy="52">Projects we<br>are building.</h2>
-        <p class="lede poem" data-copy="53">Our own product and a client project.</p>
+        <p class="kicker"><b data-copy="54">Forest</b><span data-copy="55">What is already growing.</span></p>
+        <h2 data-copy="56">Projects we<br>are building.</h2>
+        <p class="lede poem" data-copy="57">Our own product and a client project.</p>
         <div class="forest">
-<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for a CDI product screenshot" data-copy="54"><span>CDI</span><small data-copy="55">Product preview</small></div><h3>CDI</h3><span class="sector" data-copy="56">International trade</span><span class="case-status" data-copy="57">Our own product · Working product</span><p class="res" data-copy="58">The problem: documents and deadlines spread across files and conversations.</p><p class="desc" data-copy="59">CDI brings customs brokers’ documents, conversations and deadlines together in one place.</p></article>
-<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for an Agroboeda project screenshot" data-copy="60"><span>Agroboeda</span><small data-copy="61">Project preview</small></div><h3>Agroboeda</h3><span class="sector" data-copy="62">Agriculture</span><span class="case-status" data-copy="63">Client project · In development</span><p class="res" data-copy="64">The project: connect agricultural buyers and sellers.</p><p class="desc" data-copy="65">We are building a buying and selling platform for a client. Development is ongoing; there are no usage results to report yet.</p></article>
+<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for a CDI product screenshot" data-copy="58"><span>CDI</span><small data-copy="59">Product preview</small></div><h3>CDI</h3><span class="sector" data-copy="60">International trade</span><span class="case-status" data-copy="61">Our own product · Working product</span><p class="res" data-copy="62">The problem: documents and deadlines spread across files and conversations.</p><p class="desc" data-copy="63">CDI brings customs brokers’ documents, conversations and deadlines together in one place.</p></article>
+<article class="case"><div hidden class="product-space" role="img" aria-label="Placeholder for an Agroboeda project screenshot" data-copy="64"><span>Agroboeda</span><small data-copy="65">Project preview</small></div><h3>Agroboeda</h3><span class="sector" data-copy="66">Agriculture</span><span class="case-status" data-copy="67">Client project · In development</span><p class="res" data-copy="68">The project: connect agricultural buyers and sellers.</p><p class="desc" data-copy="69">We are building a buying and selling platform for a client. Development is ongoing; there are no usage results to report yet.</p></article>
         </div>
-        <a class="ctx" href="#contacto" data-copy="66">Facing a similar problem? Let us talk about your business</a>
+        <a class="ctx" href="#contacto" data-copy="70">Facing a similar problem? Let us talk about your business</a>
       </div>
     </article>
   </div>
@@ -559,8 +615,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <section class="sec" id="para-quien" aria-labelledby="pq">
   <div class="wrap">
     <div class="fork">
-      <h2 class="h2s" id="pq" data-copy="67">For businesses that need their operations in order</h2>
-      <p class="lede poem" data-copy="68">Where we work best.</p>
+      <h2 class="h2s" id="pq" data-copy="71">For businesses that need their operations in order</h2>
+      <p class="lede poem" data-copy="72">Where we work best.</p>
       <svg class="fork-y draw" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="fkYes" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17131F" stop-opacity=".45"/><stop offset="1" stop-color="#1E4D3A"/></linearGradient>
@@ -571,19 +627,19 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       </svg>
       <div class="fork-cols">
         <div class="fork-col">
-          <span class="fork-hd" data-copy="69">We can help if</span>
+          <span class="fork-hd" data-copy="73">We can help if</span>
           <ul>
-            <li data-copy="70">Your business relies on spreadsheets and manual tasks.</li>
-            <li data-copy="71">You handle sensitive customer or patient information.</li>
-            <li data-copy="72">Your team needs automation without losing control.</li>
+            <li data-copy="74">Your business relies on spreadsheets and manual tasks.</li>
+            <li data-copy="75">You handle sensitive customer or patient information.</li>
+            <li data-copy="76">Your team needs automation without losing control.</li>
           </ul>
         </div>
         <div class="fork-col no">
-          <span class="fork-hd" data-copy="73">We are not a fit if</span>
+          <span class="fork-hd" data-copy="77">We are not a fit if</span>
           <ul>
-            <li data-copy="74">You want a tool without examining the problem it needs to solve.</li>
-            <li data-copy="75">Your business is online gambling or products that harm people.</li>
-            <li data-copy="76">You want AI to make decisions without human oversight.</li>
+            <li data-copy="78">You want a tool without examining the problem it needs to solve.</li>
+            <li data-copy="79">Your business is online gambling or products that harm people.</li>
+            <li data-copy="80">You want AI to make decisions without human oversight.</li>
           </ul>
         </div>
       </div>
@@ -594,9 +650,9 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <!-- ===== DUPLA ===== -->
 <section class="sec slide" id="dupla" aria-labelledby="duh">
   <div class="wrap">
-    <h2 class="h2s" id="duh" data-copy="77">Two partners. One team in Argentina and Spain.</h2>
-    <p class="lede poem" data-copy="78">Two branches. One trunk.</p>
-    <p class="lede" data-copy="79">We are Emiliano and Mariano. We bring together security, software development and data science. One of us works from Argentina, the other from Spain. The people you speak to are the people who design and build your solution.</p>
+    <h2 class="h2s" id="duh" data-copy="81">Two partners. One team in Argentina and Spain.</h2>
+    <p class="lede poem" data-copy="82">Two branches. One trunk.</p>
+    <p class="lede" data-copy="83">We are Emiliano and Mariano. We bring together security, software development and data science. One of us works from Argentina, the other from Spain. The people you speak to are the people who design and build your solution.</p>
     <!--
       FOTOS: mientras no haya fotos reales, la Y lineal (.duo-y) hace de retrato de la dupla.
       Cuando lleguen (ver Código de marca 6.2: misma luz, misma lente, cuadradas, sin radio),
@@ -607,8 +663,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
     <div class="duo">
       <article class="person l" style="--c:var(--bark)">
         <h3>Emiliano</h3>
-        <p class="role" data-copy="80">Cybersecurity, software and AI</p>
-        <p data-copy="81">Designs and builds systems with security integrated from architecture through deployment.</p>
+        <p class="role" data-copy="84">Cybersecurity, software and AI</p>
+        <p data-copy="85">Designs and builds systems with security integrated from architecture through deployment.</p>
         <!-- TODO: link real de LinkedIn -->
       </article>
       <div class="duo-y" aria-hidden="true">
@@ -624,8 +680,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
       </div>
       <article class="person r" style="--c:var(--root)">
         <h3>Mariano</h3>
-        <p class="role" data-copy="82">Data science and business</p>
-        <p data-copy="83">Turns business conversations into problems that can be measured and solved. Connects data and context with the decisions your team needs to make.</p>
+        <p class="role" data-copy="86">Data science and business</p>
+        <p data-copy="87">Turns business conversations into problems that can be measured and solved. Connects data and context with the decisions your team needs to make.</p>
         <!-- TODO: link real de LinkedIn -->
       </article>
     </div>
@@ -635,18 +691,18 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <!-- ===== PROCESO ===== -->
 <section class="sec" id="proceso" aria-labelledby="ph">
   <div class="wrap">
-    <h2 class="h2s" id="ph" data-copy="84">How we work</h2>
-    <p class="lede remote-intro" data-copy="85">Start with a video call. Meetings around your time zone and delivery in stages, wherever you are.</p>
+    <h2 class="h2s" id="ph" data-copy="88">How we work</h2>
+    <p class="lede remote-intro" data-copy="89">Start with a video call. Meetings around your time zone and delivery in stages, wherever you are.</p>
     <ol class="steps" id="steps">
       <li class="grow" aria-hidden="true"></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="86">Step 1</span><h3 data-copy="87">We listen</h3><p data-copy="88">Tell us what is holding your team back. We start with a video call and a specific problem.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="89">Step 2</span><h3 data-copy="90">We assess</h3><p data-copy="91">We review impact, data and risks. Together, we agree on priorities and how to measure progress.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="92">Step 3</span><h3 data-copy="93">We build</h3><p data-copy="94">We work in stages, with deliverables you can review, documented decisions and human review.</p></li>
-      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="95">Step 4</span><h3 data-copy="96">We operate</h3><p data-copy="97">We put the solution to work and agree on maintenance, documentation and support for your team.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="90">Step 1</span><h3 data-copy="91">We listen</h3><p data-copy="92">Tell us what is holding your team back. We start with a video call and a specific problem.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="93">Step 2</span><h3 data-copy="94">We assess</h3><p data-copy="95">We review impact, data and risks. Together, we agree on priorities and how to measure progress.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="96">Step 3</span><h3 data-copy="97">We build</h3><p data-copy="98">We work in stages, with deliverables you can review, documented decisions and human review.</p></li>
+      <li class="step"><span class="node" aria-hidden="true"></span><span class="step-n" data-copy="99">Step 4</span><h3 data-copy="100">We operate</h3><p data-copy="101">We put the solution to work and agree on maintenance, documentation and support for your team.</p></li>
     </ol>
-    <nav class="car-controls" aria-label="How we work navigation" data-copy="98">
-      <button type="button" class="car-arrow" data-direction="-1" aria-label="Previous step" data-copy="99"><span aria-hidden="true">←</span></button>
-      <button type="button" class="car-arrow" data-direction="1" aria-label="Next step" data-copy="100"><span aria-hidden="true">→</span></button>
+    <nav class="car-controls" aria-label="How we work navigation" data-copy="102">
+      <button type="button" class="car-arrow" data-direction="-1" aria-label="Previous step" data-copy="103"><span aria-hidden="true">←</span></button>
+      <button type="button" class="car-arrow" data-direction="1" aria-label="Next step" data-copy="104"><span aria-hidden="true">→</span></button>
     </nav>
   </div>
 </section>
@@ -656,16 +712,16 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
   <div class="wrap">
     <div class="faq">
       <div class="faq-side">
-        <h2 class="h2s" id="fh" data-copy="101">Questions about data, cybersecurity and AI</h2>
-        <p class="lede poem" data-copy="102">What people ask before we start.</p>
-        <a class="ctx" href="#contacto" data-copy="103">Another question? Book a conversation</a>
+        <h2 class="h2s" id="fh" data-copy="105">Questions about data, cybersecurity and AI</h2>
+        <p class="lede poem" data-copy="106">What people ask before we start.</p>
+        <a class="ctx" href="#contacto" data-copy="107">Another question? Book a conversation</a>
       </div>
       <div class="faq-list">
-        <details><summary data-copy="104">How do you decide whether a project is worthwhile?</summary><p data-copy="105">During the first conversation, we discuss the problem, its impact and the information available. We offer preliminary guidance and agree on what to review before deciding whether to proceed. Technical assessments and their deliverables are scoped and priced separately.</p></details>
-        <details><summary data-copy="106">What happens to my data?</summary><p data-copy="107">We use minimum necessary access and document who can access what before working with your data. Nothing leaves your control without your knowledge, and we do not request data we do not need.</p></details>
-        <details><summary data-copy="108">How much does it cost, and how long does it take?</summary><p data-copy="109">Cost and timing depend on scope. We first understand the problem and gather the information needed, then propose deliverables, cost and timing. Each stage is agreed before work begins.</p></details>
-        <details><summary data-copy="110">How do we work together across countries?</summary><p data-copy="111">Our team is in Argentina and Spain. We work remotely, in English and Spanish, with meetings arranged around your time zone. Before starting, we agree on scope, deliverables, communication channels and access to your systems.</p></details>
-        <details><summary data-copy="112">What happens after delivery?</summary><p data-copy="113">We can keep operating and improving what we build, as we do with our own products, under a separately agreed maintenance plan. If your team prefers to manage it independently, we provide documentation so it can run without relying on us. That has been our approach from the start.</p></details>
+        <details><summary data-copy="108">How do you decide whether a project is worthwhile?</summary><p data-copy="109">During the first conversation, we discuss the problem, its impact and the information available. We offer preliminary guidance and agree on what to review before deciding whether to proceed. Technical assessments and their deliverables are scoped and priced separately.</p></details>
+        <details><summary data-copy="110">What happens to my data?</summary><p data-copy="111">We use minimum necessary access and document who can access what before working with your data. Nothing leaves your control without your knowledge, and we do not request data we do not need.</p></details>
+        <details><summary data-copy="112">How much does it cost, and how long does it take?</summary><p data-copy="113">Cost and timing depend on scope. We first understand the problem and gather the information needed, then propose deliverables, cost and timing. Each stage is agreed before work begins.</p></details>
+        <details><summary data-copy="114">How do we work together across countries?</summary><p data-copy="115">Our team is in Argentina and Spain. We work remotely, in English and Spanish, with meetings arranged around your time zone. Before starting, we agree on scope, deliverables, communication channels and access to your systems.</p></details>
+        <details><summary data-copy="116">What happens after delivery?</summary><p data-copy="117">We can keep operating and improving what we build, as we do with our own products, under a separately agreed maintenance plan. If your team prefers to manage it independently, we provide documentation so it can run without relying on us. That has been our approach from the start.</p></details>
       </div>
     </div>
   </div>
@@ -675,30 +731,30 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <section class="sec close slide" id="contacto" aria-labelledby="ch">
   <div class="wrap">
     <div class="close-hd">
-      <h2 class="big" id="ch" data-copy="114">Let us discuss<br>one specific problem.</h2>
-      <p class="lede poem" data-copy="115">A free first conversation.</p>
-      <p class="lede" data-copy="116">Tell us which process is holding your team back. We discuss whether we can help and what we need to know to propose a first deliverable.</p>
+      <h2 class="big" id="ch" data-copy="118">Let us discuss<br>one specific problem.</h2>
+      <p class="lede poem" data-copy="119">A free first conversation.</p>
+      <p class="lede" data-copy="120">Tell us which process is holding your team back. We discuss whether we can help and what we need to know to propose a first deliverable.</p>
     </div>
-    <p class="contact-pending" data-copy="117">Contact channel awaiting confirmation.</p>
+    <p class="contact-pending" data-copy="121">Contact channel awaiting confirmation.</p>
   </div>
 </section>
 
 </main>
 
-<div class="mbar" id="mbar" aria-label="Quick contact" data-copy="118">
-  <a class="btn btn-fill" id="mbarMain" href="#contacto" data-copy="119">Free consultation</a>
-  <a class="btn btn-line" href="#contacto" aria-label="Book a conversation" data-copy="120">Book a call</a>
+<div class="mbar" id="mbar" aria-label="Quick contact" data-copy="122">
+  <a class="btn btn-fill" id="mbarMain" href="#contacto" data-copy="123">Free consultation</a>
+  <a class="btn btn-line" href="#contacto" aria-label="Book a conversation" data-copy="124">Book a call</a>
 </div>
 
 <footer>
   <div class="wrap"><div class="foot">
     <div class="foot-sig">
       <svg class="footer-brand" viewBox="-4 -4 491 118" role="img" aria-label="Ynera"><g fill="currentColor" transform="translate(0 -4)"><path d="M26.526 11.511 A54 54 0 0 1 81.474 11.511 L56.828 36.157 Q54 38.985 51.172 36.157 Z"/><path d="M13.918 21.813 L43.072 50.967 Q45.9 53.795 45.9 57.795 V111.389 A54 54 0 0 1 13.918 21.813 Z"/><path d="M94.082 21.813 L64.928 50.967 Q62.1 53.795 62.1 57.795 V111.389 A54 54 0 0 0 94.082 21.813 Z"/></g><g fill="currentColor" fill-rule="evenodd"><path d="M126 8 H149 L173 32 L197 8 H220 L184 44 Q181 47 181 52 V108 H165 V52 Q165 47 162 44 Z"/><path d="M212 108 V41 L223 36 Q227 34 227 38 V47 C232 39 240 34 250 34 C267 34 275 46 275 64 V108 H260 V65 C260 53 256 48 247 48 C236 48 227 57 227 70 V108 Z"/><path transform="translate(14.3 0) scale(.95 1)" d="M356 96 C348 105 338 110 324 110 C301 110 286 95 286 73 C286 50 299 34 321 34 C342 34 353 49 353 70 V75 H301 C302 89 310 97 324 97 C333 97 340 93 346 86 Z M301 64 H338 C336 53 330 47 320 47 C310 47 303 53 301 64 Z"/><path transform="translate(-4 0)" d="M368 108 V40 L383 34 V49 C388 39 396 34 405 34 C408 34 411 35 414 38 L404 48 C402 47 401 47 398 47 C388 47 383 61 383 77 V108 Z"/><path transform="translate(-9 0)" d="M430 47 C438 38 447 34 459 34 C481 34 492 46 492 65 V108 H479 L477 98 C472 106 464 110 453 110 C437 110 427 100 427 87 C427 72 441 63 462 63 C468 63 474 65 479 67 V64 C479 53 473 47 461 47 C451 47 444 52 439 58 Z M479 79 C473 76 468 75 463 75 C450 75 442 79 442 87 C442 94 447 98 455 98 C469 98 479 89 479 80 Z"/></g></svg>
-      <p data-copy="121">Data, cybersecurity and applied AI for small and medium-sized businesses and independent professionals. Argentina and Spain · Working remotely in English and Spanish.</p>
+      <p data-copy="125">Ynera is a data, cybersecurity and applied AI consultancy for small and medium-sized businesses and independent professionals. Argentina and Spain · Working remotely in English and Spanish.</p>
     </div>
-    <nav class="foot-links" aria-label="Footer" data-copy="122"><a href="#raices" data-copy="123">Data</a><a href="#corteza" data-copy="124">Security</a><a href="#copa" data-copy="125">AI</a><a href="#bosque" data-copy="126">Our work</a><a href="#dupla" data-copy="127">About us</a></nav>
+    <nav class="foot-links" aria-label="Footer" data-copy="126"><a href="#raices" data-copy="127">Data</a><a href="#corteza" data-copy="128">Security</a><a href="#copa" data-copy="129">AI</a><a href="#bosque" data-copy="130">Our work</a><a href="#dupla" data-copy="131">About us</a></nav>
     <div class="foot-meta">
-      <a href="#top" data-copy="128">Back to top</a>
+      <a href="#top" data-copy="132">Back to top</a>
       <span id="today">© 2026 Ynera</span>
     </div>
   </div></div>
@@ -708,8 +764,8 @@ html.motion.carousel .car-ind{display:flex;align-items:center;gap:16px;margin-to
 <script src="tree.js?v=entry3" defer></script>
 <script src="lower-motion.js?v=story-commitments1" defer></script>
 <script src="motion.js?v=story-commitments1" defer></script>
-<script src="language-data.js?v=story-commitments1" defer></script>
-<script src="language.js?v=story-commitments1" defer></script>
+<script src="language-data.js?v=arbol-kicker1" defer></script>
+<script src="language.js?v=arbol-kicker1" defer></script>
 <script>
 window.YneraUI={"es":{"booking":"Consulta inicial sin costo","step":"Paso","of":"de"},"en":{"booking":"Free initial consultation","step":"Step","of":"of"}};
 window.YneraStepLabel=n=>{const c=window.YneraUI[document.documentElement.lang];return c.step+" <b>"+n+"</b> "+c.of+" 4";};
