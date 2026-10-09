@@ -120,3 +120,13 @@ Verificados 1440 y 390 px en ES y EN: sin desborde, consola sin errores; `verify
 Emi aclaró que Ynera no se dirige a pymes: es una consultora internacional. Retiradas todas las menciones a pequeñas y medianas empresas en ES/EN (título, descripción, etiqueta del hero, pie, datos estructurados, `llms.txt`, README y perfil). La etiqueta del hero dice «Consultora internacional · Datos, ciberseguridad e IA»; el pie y los datos estructurados indican trabajo remoto con clientes de cualquier país. Se quitó `areaServed` limitado a Argentina y España. No volver a escribir «pymes».
 
 La palabra de cada etiqueta del árbol (Raíces, Corteza, Copa, Bosque) usa ahora Ynera Cauce en minúsculas y color del área, en lugar de mayúsculas espaciadas. `assets/og.png` regenerada. Traducciones regeneradas y versión de scripts de idioma actualizada. Verificados 1440 y 390 px, ES/EN, sin desborde ni errores.
+
+
+## Ynera Rama · 9 de octubre de 2026
+Emi pidió revisar las tipografías y hacer una propia acorde a la web; la anterior (Cauce) le resultaba genérica. Nueva fuente de titulares **Ynera Rama**, construida a partir de las cinco letras del logo aprobado: mismas medidas, curvas redondas, terminales a 45° y entrada inclinada en las astas. Detalle, método y límites en `design/propuestas/2026-10-09-rama/README.md`; constructor `build-rama.py`; muestra `specimen.png`.
+
+Aplicada a titulares, nombres de proyectos y socios, pasos del proceso, encabezados de la bifurcación, etiquetas del árbol y rótulos «Primera entrega posible» / «Paso n». Se retiraron las mayúsculas espaciadas de esos rótulos, de la etiqueta del hero y del sector de cada proyecto. Párrafos, botones y navegación siguen en Instrument Sans. Logo sin cambios. `assets/og.png` regenerada.
+
+Volver atrás: en `typography.css`, cambiar «Ynera Rama» por «Ynera Cauce» en las reglas de titulares y quitar el bloque final; los archivos de Cauce siguen en `fonts/`.
+
+Verificado en navegador: ES/EN a 1440, 390 y 320 px sin desborde, la fuente carga y cubre todos los caracteres que la usan, cambio de idioma en página correcto, consola sin errores. Es más ancha y pesada que Cauce: revisar cualquier titular nuevo largo. Un solo peso, sin hinting manual. Despliegue de Railway no verificado: falta la URL pública.

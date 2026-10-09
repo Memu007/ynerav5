@@ -119,8 +119,10 @@ h1,h2{font-family:var(--f);font-weight:550;letter-spacing:-.045em;line-height:1.
 
 /* Ynera Cauce: approved headline direction; body copy retains Instrument Sans. */
 @font-face{font-family:"Ynera Cauce";src:url("fonts/ynera-cauce.woff2?v=1") format("woff2");font-weight:400;font-display:swap}
-h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Cauce",var(--f);font-weight:400;font-synthesis:none;letter-spacing:-.012em}
-.hero-title{font-family:"Ynera Cauce",var(--f);font-size:clamp(50px,6.6vw,92px);line-height:1.08;letter-spacing:-.015em}
+/* Ynera Rama: display face drawn from the logo lettering (9 Oct 2026). Cauce stays above for a one-line revert. */
+@font-face{font-family:"Ynera Rama";src:url("fonts/ynera-rama.woff2?v=1") format("woff2");font-weight:400;font-display:swap}
+h1,h2,.case h3,#bosque .case h3,.big,.offer-hd strong{font-family:"Ynera Rama",var(--f);font-weight:400;font-synthesis:none;letter-spacing:-.012em}
+.hero-title{font-family:"Ynera Rama",var(--f);font-size:clamp(50px,6.6vw,92px);line-height:1.08;letter-spacing:-.015em}
 .hero-title .ln:nth-child(-n+2){font-family:var(--f);font-weight:400}
 .hero-title .ln:nth-child(n+3)>span{font-weight:400}
 .chap h2,.h2s,#bosque h2{letter-spacing:-.012em;line-height:1.16}
@@ -245,3 +247,10 @@ html.on-paper .brand{color:#51406A}
 
 /* Equal edges for stacked hero actions; retain their primary/secondary styles. */
 @media(max-width:480px){.chap.hero .cta-row{display:grid;grid-template-columns:minmax(0,1fr);width:max-content;max-width:100%}.chap.hero .cta-row .btn{justify-content:center;text-align:center;min-width:0}}
+
+/* Ynera Rama también en nombres, pasos y rótulos: una sola voz de marca. Las mayúsculas espaciadas se retiran. */
+.person h3,#proceso .step h3,.fork-hd{font-family:"Ynera Rama",var(--f);font-weight:400;font-synthesis:none;letter-spacing:-.01em}
+.did dt,.step-n,.col-h{font-family:"Ynera Rama",var(--f);font-size:16px;font-weight:400;font-synthesis:none;letter-spacing:.005em;text-transform:none}
+.audience{font:500 14px/1.5 var(--f);letter-spacing:0;text-transform:none}
+#bosque .case .sector{font-size:13px;letter-spacing:.01em;text-transform:none}
+.kicker b{letter-spacing:.005em}
