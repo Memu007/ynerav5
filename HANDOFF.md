@@ -114,3 +114,9 @@ SEO y lectura por asistentes de IA, sin depender del dominio: título y descripc
 Pendiente al confirmar el dominio: canonical, hreflang ES/EN/x-default, `og:url`, `og:image` y `twitter:image` apuntando a `assets/og.png` con URL absoluta, `sitemap.xml` y su línea en `robots.txt`, `url` y `logo` en los datos estructurados. No se agregaron URLs supuestas. Sigue pendiente el canal de contacto real.
 
 Verificados 1440 y 390 px en ES y EN: sin desborde, consola sin errores; `verify.py`, `check-ambience` y `check-lower-motion` aprobados. Despliegue de Railway no verificado: falta la URL pública.
+
+
+## Alcance internacional · 9 de octubre de 2026
+Emi aclaró que Ynera no se dirige a pymes: es una consultora internacional. Retiradas todas las menciones a pequeñas y medianas empresas en ES/EN (título, descripción, etiqueta del hero, pie, datos estructurados, `llms.txt`, README y perfil). La etiqueta del hero dice «Consultora internacional · Datos, ciberseguridad e IA»; el pie y los datos estructurados indican trabajo remoto con clientes de cualquier país. Se quitó `areaServed` limitado a Argentina y España. No volver a escribir «pymes».
+
+La palabra de cada etiqueta del árbol (Raíces, Corteza, Copa, Bosque) usa ahora Ynera Cauce en minúsculas y color del área, en lugar de mayúsculas espaciadas. `assets/og.png` regenerada. Traducciones regeneradas y versión de scripts de idioma actualizada. Verificados 1440 y 390 px, ES/EN, sin desborde ni errores.

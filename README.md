@@ -1,6 +1,6 @@
 # Ynera
 
-Web de la consultora Ynera: datos, ciberseguridad e IA aplicada para pequeñas y medianas empresas y profesionales. Socios en Argentina y España; atención en español e inglés.
+Web de la consultora Ynera: datos, ciberseguridad e IA aplicada, con alcance internacional. Socios en Argentina y España; atención en español e inglés.
 
 ## Abrir localmente
 
