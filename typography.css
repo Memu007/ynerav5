@@ -274,3 +274,25 @@ html.on-paper .brand{color:#51406A}
 @media (max-width:360px){
   .mbar .btn{font-size:14px;padding:13px 10px}
 }
+
+/* Proceso cinematográfico: sólo cuando lower-motion.js añade .cine (nunca con movimiento reducido). */
+#proceso.cine{overflow:clip}
+#proceso.cine>.wrap{position:relative;z-index:1}
+#proceso.cine::before{content:"";position:absolute;inset:-12% -35%;pointer-events:none;background:radial-gradient(34% 52% at 28% 32%,rgb(126 170 138/.17),transparent 70%),radial-gradient(26% 42% at 72% 72%,rgb(217 190 133/.11),transparent 70%),radial-gradient(18% 30% at 55% 12%,rgb(141 120 190/.10),transparent 70%);translate:calc(var(--p,0) * -20%) 0;animation:proc-drift 14s ease-in-out infinite alternate}
+@keyframes proc-drift{from{transform:translate3d(-2%,-2%,0) scale(1)}to{transform:translate3d(3%,3%,0) scale(1.08)}}
+#proceso.cine .steps{counter-reset:paso}
+#proceso.cine .step{counter-increment:paso}
+#proceso.cine .step:nth-child(2){--i:0}#proceso.cine .step:nth-child(3){--i:1}#proceso.cine .step:nth-child(4){--i:2}#proceso.cine .step:nth-child(5){--i:3}
+#proceso.cine .step::before{content:counter(paso);position:absolute;z-index:-1;right:4%;top:-.1em;font:400 clamp(190px,25vw,360px)/1 "Ynera Rama",var(--f);color:transparent;-webkit-text-stroke:1.5px rgb(241 240 233/.13);pointer-events:none;translate:calc((var(--p,0) * 3 - var(--i,0)) * -90px) 0;opacity:.55;transition:opacity .7s var(--ease),-webkit-text-stroke-color .7s var(--ease)}
+#proceso.cine .step.now::before{opacity:1;-webkit-text-stroke-color:rgb(217 190 133/.42)}
+#proceso.cine .steps .step>h3,#proceso.cine .steps .step>p,#proceso.cine .steps .step>.step-n{transition:transform .8s var(--ease),opacity .8s var(--ease),letter-spacing .8s var(--ease)}
+#proceso.cine .steps .step:not(.take)>.step-n{opacity:.45}
+#proceso.cine .steps .step:not(.take)>h3{transform:translate3d(0,30px,24px);letter-spacing:.025em}
+#proceso.cine .steps .step:not(.take)>p{opacity:0;transform:translate3d(0,26px,12px)}
+#proceso.cine .steps .step.take>h3{transition-delay:.1s}
+#proceso.cine .steps .step.take>p{transition-delay:.26s}
+.car-light{position:absolute;left:0;top:5px;width:0;height:0;margin:0;padding:0;list-style:none;pointer-events:none;opacity:0;transition:opacity .6s}
+.car-light.lit{opacity:1}
+.car-light::before{content:"";position:absolute;left:-110px;top:-110px;width:220px;height:220px;background:radial-gradient(circle,rgb(255 230 170/.5),rgb(217 190 133/.16) 28%,transparent 62%);mix-blend-mode:screen}
+.car-light::after{content:"";position:absolute;right:0;top:-1px;width:190px;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,#ffe9b8);box-shadow:0 0 12px rgb(255 226 160/.7)}
+@media(max-width:599px){#proceso.cine .step::before{font-size:170px;right:8%;top:.1em}}

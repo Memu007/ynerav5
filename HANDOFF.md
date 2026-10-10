@@ -136,3 +136,11 @@ Verificado en navegador: ES/EN a 1440, 390 y 320 px sin desborde, la fuente carg
 Emi notó que en el celular el árbol se perdía. Causa: el texto y sus velos oscuros cubrían la escena casi todo el recorrido. Hasta 980 px de ancho, la escena queda ahora por encima del texto y sólo se ve nítida en una ventana superior (31% del alto, fundido hasta 41%); el texto pasa por debajo y se desvanece al entrar en esa franja. Se quitaron los velos y sombras de texto del móvil y se acortaron los vacíos entre capítulos. En pantallas de menos de 620 px de alto la ventana baja a 26%. Barra inferior con texto más chico hasta 360 px. Sólo CSS, al final de `typography.css`; `tree.js` y `motion.js` sin cambios. Escritorio sin cambios.
 
 Verificado en navegador a 390×844, 390×664, 375×553, 360×640, 320×568 y 768×1024, ES/EN, noche, día y atardecer: árbol visible en todos los capítulos y escena sincronizada con el capítulo en lectura. No probado en un teléfono real ni medido el rendimiento.
+
+
+## Carrusel cinematográfico · 9 de octubre de 2026
+Emi sintió que la parte inferior perdía vida después del árbol y pidió que el carrusel de «Cómo trabajamos» tuviera más movimiento. Primer paso, sólo el carrusel: una luz recorre la línea de pasos al avanzar; cada paso tiene su número grande en contorno, que se desplaza a otra velocidad que el texto y se enciende en dorado cuando el paso está activo; título y párrafo entran escalonados cuando el paso llega; el fondo verde tiene tres luces que derivan lentamente y se corren con el avance. Pose de cámara más marcada (profundidad 340, giro 15°, antes 220 y 10°). El indicador «Paso n de 4» con su línea se conserva.
+
+Todo se activa con la clase `.cine` que añade `lower-motion.js`; con movimiento reducido no se añade y el carrusel queda como antes. En celular (tira deslizable) funcionan luz, números y entrada, sin la cámara 3D. `check-lower-motion.cjs` actualizado a la nueva pose. Árbol, `motion.js` y cambio de idioma sin cambios.
+
+Verificado en navegador a 1440 px (ES) y 390 px (EN), sin errores de consola ni desbordes. No medido el rendimiento en teléfonos reales. Pendiente a pedido de Emi: revisar movimiento del resto de la parte inferior después de ver esto.
