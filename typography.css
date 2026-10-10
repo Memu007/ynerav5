@@ -1,5 +1,5 @@
 /* Ynera — contraste editorial / precisión funcional */
-@font-face{font-family:"Instrument Sans";src:url("fonts/instrument-sans.ttf") format("truetype");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("fonts/instrument-sans.woff2?v=1") format("woff2"),url("fonts/instrument-sans.ttf") format("truetype");font-weight:400 700;font-display:swap}
 @font-face{font-family:"Ynera Bifurca";src:url("fonts/ynera-bifurca.woff2?v=2") format("woff2");font-weight:400;font-display:swap}
 body{font-family:var(--f);line-height:1.6;word-spacing:normal;font-variant-numeric:lining-nums proportional-nums}
 h1,h2{font-family:var(--display);font-weight:400;font-synthesis:none;letter-spacing:-.02em;word-spacing:normal;line-height:1.08}

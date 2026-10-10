@@ -144,3 +144,9 @@ Emi sintió que la parte inferior perdía vida después del árbol y pidió que 
 Todo se activa con la clase `.cine` que añade `lower-motion.js`; con movimiento reducido no se añade y el carrusel queda como antes. En celular (tira deslizable) funcionan luz, números y entrada, sin la cámara 3D. `check-lower-motion.cjs` actualizado a la nueva pose. Árbol, `motion.js` y cambio de idioma sin cambios.
 
 Verificado en navegador a 1440 px (ES) y 390 px (EN), sin errores de consola ni desbordes. No medido el rendimiento en teléfonos reales. Pendiente a pedido de Emi: revisar movimiento del resto de la parte inferior después de ver esto.
+
+
+## Medición y carga · 9 de octubre de 2026
+Emi pidió medir con Lighthouse y aligerar la carga del árbol sin tocar geometría ni calidad. Hallazgo: `tree.js` ya construía la escena después de `load` y en tiempo ocioso, ya entraba con fundido (`tree-ready`) y ya pausaba el dibujo fuera de pantalla y en reposo; no hacía falta cambiar el árbol. Lo que frenaba la primera pintura era otra cosa. Cambios: `ambience.js` va ahora en línea en el `<head>` de ambas páginas (el archivo se conserva para los checks y `verify.py` exige que coincidan); Instrument Sans se sirve en WOFF2 (89 KB frente a 194 KB del TTF, que queda de respaldo) con precarga; la precarga de `tree.js` pasa a prioridad baja. Geometría, materiales, resolución y efectos sin cambios.
+
+Lighthouse local (servidor con gzip, móvil simulado 4G lento): primera pintura 3,1 s → 0,9 s; LCP 3,1 s → 2,9 s; CLS 0; peso total 355 → 332 KiB; SEO 100, buenas prácticas 100, accesibilidad 96 móvil / 100 escritorio. Escritorio: primera pintura 0,7 → 0,3 s. JavaScript: `tree.js` (Three.js + árbol) 564 KB, 146 KB comprimido; `motion.js` 131 KB, 52 KB comprimido. El tiempo de bloqueo (TBT) y la nota de rendimiento no son válidos en este entorno: no hay GPU y el árbol se dibuja por software. Medir en producción con PageSpeed cuando exista la URL.

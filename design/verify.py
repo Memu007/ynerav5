@@ -39,4 +39,6 @@ for name, lang, other in [('index.html', 'es', 'en.html'), ('en.html', 'en', 'in
     process = re.search(r'<section[^>]*id="proceso".*?</section>', text, re.S)[0]
     assert process.count('class="step"') == 4 and 'pledges' not in process, name + ': process ends at fourth stage'
     assert visible == [(q['name'], q['acceptedAnswer']['text']) for q in faq['mainEntity']], name + ': FAQ mismatch'
+    inline = re.search(r'<script id="ambience-inline">(.*?)</script>', text, re.S)
+    assert inline and inline[1].strip() == (root/'ambience.js').read_text().strip(), name + ': inline ambience must match ambience.js'
     print(name + ': language, local links, contact, spaces and FAQ OK')
