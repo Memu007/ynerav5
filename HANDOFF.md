@@ -130,3 +130,9 @@ Aplicada a titulares, nombres de proyectos y socios, pasos del proceso, encabeza
 Volver atrás: en `typography.css`, cambiar «Ynera Rama» por «Ynera Cauce» en las reglas de titulares y quitar el bloque final; los archivos de Cauce siguen en `fonts/`.
 
 Verificado en navegador: ES/EN a 1440, 390 y 320 px sin desborde, la fuente carga y cubre todos los caracteres que la usan, cambio de idioma en página correcto, consola sin errores. Es más ancha y pesada que Cauce: revisar cualquier titular nuevo largo. Un solo peso, sin hinting manual. Despliegue de Railway no verificado: falta la URL pública.
+
+
+## Árbol siempre visible en móvil · 9 de octubre de 2026
+Emi notó que en el celular el árbol se perdía. Causa: el texto y sus velos oscuros cubrían la escena casi todo el recorrido. Hasta 980 px de ancho, la escena queda ahora por encima del texto y sólo se ve nítida en una ventana superior (31% del alto, fundido hasta 41%); el texto pasa por debajo y se desvanece al entrar en esa franja. Se quitaron los velos y sombras de texto del móvil y se acortaron los vacíos entre capítulos. En pantallas de menos de 620 px de alto la ventana baja a 26%. Barra inferior con texto más chico hasta 360 px. Sólo CSS, al final de `typography.css`; `tree.js` y `motion.js` sin cambios. Escritorio sin cambios.
+
+Verificado en navegador a 390×844, 390×664, 375×553, 360×640, 320×568 y 768×1024, ES/EN, noche, día y atardecer: árbol visible en todos los capítulos y escena sincronizada con el capítulo en lectura. No probado en un teléfono real ni medido el rendimiento.
